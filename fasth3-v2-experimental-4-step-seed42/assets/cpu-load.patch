@@ -1,0 +1,28 @@
+diff --git a/fastvideo/models/loader/component_loader.py b/fastvideo/models/loader/component_loader.py
+index 148a6d1..6596dfe 100644
+--- a/fastvideo/models/loader/component_loader.py
++++ b/fastvideo/models/loader/component_loader.py
+@@ -1127,11 +1127,11 @@ class TransformerLoader(ComponentLoader):
+                     "hf_config": hf_config
+                 },
+                 weight_dir_list=safetensors_list,
+-                device=get_local_torch_device(),
++                device=torch.device("cpu") if fastvideo_args.dit_layerwise_offload else get_local_torch_device(),
+                 hsdp_replicate_dim=fastvideo_args.hsdp_replicate_dim,
+                 hsdp_shard_dim=fastvideo_args.hsdp_shard_dim,
+                 strict=strict_load,
+-                cpu_offload=fastvideo_args.dit_cpu_offload,
++                cpu_offload=fastvideo_args.dit_cpu_offload or fastvideo_args.dit_layerwise_offload,
+                 pin_cpu_memory=fastvideo_args.pin_cpu_memory,
+                 fsdp_inference=fastvideo_args.use_fsdp_inference,
+                 # TODO(will): make these configurable
+@@ -1166,6 +1166,9 @@ class TransformerLoader(ComponentLoader):
+             has_module_list = any(isinstance(m, nn.ModuleList) for m in model.children())
+             if has_module_list:
+                 enable_layerwise_offload(model)
++                # Block weights now live in pinned CPU storage behind offload
++                # hooks; place only remaining parameters and buffers on CUDA.
++                model.to(get_local_torch_device())
+             else:
+                 logger.warning(
+                     "Layerwise offload requested but model %s does not have "

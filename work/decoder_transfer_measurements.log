@@ -1,0 +1,104 @@
+INFO 09-16 15:28:17.815 [__init__.py:47] CUDA is available
+Loading vae
+INFO 09-16 15:28:19.034 [cuda.py:174] Trying FASTVIDEO_ATTENTION_BACKEND=None
+INFO 09-16 15:28:19.035 [cuda.py:175] Selected backend: None
+INFO 09-16 15:28:19.054 [cuda.py:332] Cannot use FlashAttention-2 backend because the flash_attn package is not found. Make sure that flash_attn was built and installed (on by default).
+INFO 09-16 15:28:19.054 [cuda.py:339] Using Torch SDPA backend.
+vae 0 {'cpu_to_gpu_s': 1.0579680330120027, 'gpu_to_cpu_s': 2.2183230868540704}
+vae 1 {'cpu_to_gpu_s': 0.9329870950896293, 'gpu_to_cpu_s': 1.8202500611077994}
+vae 2 {'cpu_to_gpu_s': 0.8754614919889718, 'gpu_to_cpu_s': 1.5592231231275946}
+vae 3 {'cpu_to_gpu_s': 0.8534810249693692, 'gpu_to_cpu_s': 1.4883727701380849}
+vae 4 {'cpu_to_gpu_s': 0.8328775099944323, 'gpu_to_cpu_s': 1.4221804200205952}
+vae 5 {'cpu_to_gpu_s': 0.8170118101406842, 'gpu_to_cpu_s': 1.3548892829567194}
+Loading audio_vae
+/home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/lib/python3.12/site-packages/torch/nn/utils/weight_norm.py:144: FutureWarning: `torch.nn.utils.weight_norm` is deprecated in favor of `torch.nn.utils.parametrizations.weight_norm`.
+  WeightNorm.apply(module, name, dim)
+audio_vae 0 {'cpu_to_gpu_s': 0.0520372970495373, 'gpu_to_cpu_s': 0.050494723953306675}
+audio_vae 1 {'cpu_to_gpu_s': 0.048754018964245915, 'gpu_to_cpu_s': 0.050453927135095}
+audio_vae 2 {'cpu_to_gpu_s': 0.04881878104060888, 'gpu_to_cpu_s': 0.05041519505903125}
+audio_vae 3 {'cpu_to_gpu_s': 0.048748189117759466, 'gpu_to_cpu_s': 0.05028084199875593}
+audio_vae 4 {'cpu_to_gpu_s': 0.048699225997552276, 'gpu_to_cpu_s': 0.050379248103126884}
+audio_vae 5 {'cpu_to_gpu_s': 0.048719865968450904, 'gpu_to_cpu_s': 0.050297443056479096}
+{
+  "method": "Actual checkpoint-loaded FP32 VAE modules; synchronous module.to(device), CUDA synchronized before/after; one excluded round trip then five measurements. No decoding or denoising. Not an in-pipeline attribution.",
+  "torch": "2.12.0+cu130",
+  "gpu": "NVIDIA GeForce RTX 5090",
+  "components": {
+    "vae": {
+      "bytes": 10415476184,
+      "gib": 9.70016809552908,
+      "samples": [
+        {
+          "cpu_to_gpu_s": 0.9329870950896293,
+          "gpu_to_cpu_s": 1.8202500611077994
+        },
+        {
+          "cpu_to_gpu_s": 0.8754614919889718,
+          "gpu_to_cpu_s": 1.5592231231275946
+        },
+        {
+          "cpu_to_gpu_s": 0.8534810249693692,
+          "gpu_to_cpu_s": 1.4883727701380849
+        },
+        {
+          "cpu_to_gpu_s": 0.8328775099944323,
+          "gpu_to_cpu_s": 1.4221804200205952
+        },
+        {
+          "cpu_to_gpu_s": 0.8170118101406842,
+          "gpu_to_cpu_s": 1.3548892829567194
+        }
+      ],
+      "median": {
+        "cpu_to_gpu_s": 0.8534810249693692,
+        "gpu_to_cpu_s": 1.4883727701380849
+      },
+      "min": {
+        "cpu_to_gpu_s": 0.8170118101406842,
+        "gpu_to_cpu_s": 1.3548892829567194
+      },
+      "max": {
+        "cpu_to_gpu_s": 0.9329870950896293,
+        "gpu_to_cpu_s": 1.8202500611077994
+      }
+    },
+    "audio_vae": {
+      "bytes": 605306596,
+      "gib": 0.5637356974184513,
+      "samples": [
+        {
+          "cpu_to_gpu_s": 0.048754018964245915,
+          "gpu_to_cpu_s": 0.050453927135095
+        },
+        {
+          "cpu_to_gpu_s": 0.04881878104060888,
+          "gpu_to_cpu_s": 0.05041519505903125
+        },
+        {
+          "cpu_to_gpu_s": 0.048748189117759466,
+          "gpu_to_cpu_s": 0.05028084199875593
+        },
+        {
+          "cpu_to_gpu_s": 0.048699225997552276,
+          "gpu_to_cpu_s": 0.050379248103126884
+        },
+        {
+          "cpu_to_gpu_s": 0.048719865968450904,
+          "gpu_to_cpu_s": 0.050297443056479096
+        }
+      ],
+      "median": {
+        "cpu_to_gpu_s": 0.048748189117759466,
+        "gpu_to_cpu_s": 0.050379248103126884
+      },
+      "min": {
+        "cpu_to_gpu_s": 0.048699225997552276,
+        "gpu_to_cpu_s": 0.05028084199875593
+      },
+      "max": {
+        "cpu_to_gpu_s": 0.04881878104060888,
+        "gpu_to_cpu_s": 0.050453927135095
+      }
+    }
+  }
+}

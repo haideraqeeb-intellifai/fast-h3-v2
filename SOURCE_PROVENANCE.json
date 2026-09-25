@@ -1,0 +1,13 @@
+{
+  "fastvideo_repository": "https://github.com/hao-ai-lab/FastVideo",
+  "fastvideo_commit": "9b0e57fe4b3a8c112ff24cc22f752eb0608ccfab",
+  "model_id": "FastVideo/FastVideo-FastH3-8-Step-V2",
+  "model_revision": "3da2ddfe1954d9cda4c05b643dc0f26007a655c5",
+  "decoder_path": "work/FastVideo/fastvideo/pipelines/basic/minimax_h3/stages/minimax_h3_decoding.py",
+  "decoder_sha256": {
+    "copyback": "741064bfcd18bdbd0b18987efdfaead642bf2fc8f10d578fe7be6c87f8001592",
+    "no_copyback": "8e361c630392d0b7fbf7ca194e895d7d299c30ba4533cc5d138532c0f9225acc"
+  },
+  "loader_path": "work/FastVideo/fastvideo/models/loader/component_loader.py",
+  "loader_sha256": "0e10afc9ee53e654fb2e7f8e1979617334c215f605e0256309800316bc87c202"
+}

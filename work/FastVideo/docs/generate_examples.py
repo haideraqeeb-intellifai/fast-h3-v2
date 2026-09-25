@@ -1,0 +1,869 @@
+# SPDX-License-Identifier: Apache-2.0
+# adapted from vllm: https://github.com/vllm-project/vllm/blob/v0.7.3/docs/source/generate_examples.py
+
+import itertools
+import json
+import os
+import re
+from dataclasses import dataclass, field
+from pathlib import Path
+
+import yaml
+
+ROOT_DIR = Path(__file__).parent.parent.resolve()
+ROOT_DIR_RELATIVE = '../..'
+EXAMPLE_DIR = ROOT_DIR / "examples"
+EXAMPLE_DOC_DIR = ROOT_DIR / "docs/getting_started/examples"
+GITHUB_REPO = "hao-ai-lab/FastVideo"  # Update this to your repo
+GENERATED_DOC_PREFIXES = (
+    "examples/",
+    "getting_started/examples/",
+    "inference/examples/",
+    "training/examples/",
+    "distillation/examples/",
+)
+COOKBOOK_DATA = ROOT_DIR / "docs/assets/cookbook-recipes.json"
+COOKBOOK_SERVING_DATA = ROOT_DIR / "docs/assets/cookbook-serving.json"
+COOKBOOK_CLIENTS = {
+    "python": ("video.py", "python -m pip install openai==3.6.0"),
+    "javascript": ("video.mjs", "npm install openai@7.8.0"),
+    "curl": ("video.sh", "# Requires curl and jq"),
+}
+COOKBOOK_SOURCE_ROOTS = (
+    ROOT_DIR / "examples/inference",
+    ROOT_DIR / "scripts/inference",
+)
+# Cookbook families mirror the `model_family` values declared in
+# fastvideo/registry.py, plus "flux" for models that register no family
+# (e.g. black-forest-labs/FLUX.1-dev) and are grouped for documentation only.
+COOKBOOK_FAMILIES = {
+    "wan",
+    "turbodiffusion",
+    "ltx2",
+    "hunyuan",
+    "cosmos",
+    "kandinsky5",
+    "flux",
+    "glm_image",
+    "zimage",
+    "sd35",
+    "minimax_h3",
+    "longcat",
+    "stable_audio",
+    "mmaudio",
+    "matrixgame",
+}
+# Lifecycle stages a recipe can belong to. Only "inference" has recipes today;
+# the rest exist so the schema (and UI) can grow without another migration.
+COOKBOOK_STAGES = {
+    "inference",
+    "distillation",
+    "fine-tuning",
+    "training",
+    "lora-training",
+    "evaluation",
+    "optimization",
+    "deployment",
+}
+# Explicit evidence states; never conflate these in recipe entries.
+COOKBOOK_EVIDENCE_STATES = {
+    "Verified",
+    "Source-backed",
+    "Estimated",
+    "Community-reported",
+    "Unknown",
+    "Unsupported",
+}
+COOKBOOK_HARDWARE_EVIDENCE = {"validated", "source-configured", "estimated", "unknown"}
+COOKBOOK_HARDWARE_PLATFORMS = {"cuda", "mlx", "mps"}
+COOKBOOK_HARDWARE_DEVICES = {"spark"}
+COOKBOOK_GPU_TYPES = {"NVIDIA", "Apple Silicon"}
+COOKBOOK_HARDWARE_TEXT_FIELDS = {
+    "accelerator",
+    "system_memory",
+    "minimum_memory",
+    "peak_memory",
+    "evidence_url",
+}
+
+
+def validate_cookbook() -> None:
+    """Keep cookbook entries tied to checked-in runnable sources."""
+    data = json.loads(COOKBOOK_DATA.read_text(encoding="utf-8"))
+    version = data.get("version")
+    if not isinstance(version, int):
+        raise ValueError(f"{COOKBOOK_DATA}: version must be an integer")
+    recipes = data.get("recipes")
+    if not isinstance(recipes, list) or not recipes:
+        raise ValueError(f"{COOKBOOK_DATA}: recipes must be a non-empty list")
+
+    seen: set[str] = set()
+    for recipe in recipes:
+        required = ("id", "family", "task", "label", "model", "source", "command")
+        missing = {key for key in required if not recipe.get(key)}
+        if missing:
+            raise ValueError(f"Cookbook recipe is missing: {', '.join(sorted(missing))}")
+        if recipe["id"] in seen:
+            raise ValueError(f"Duplicate cookbook recipe id: {recipe['id']}")
+        seen.add(recipe["id"])
+
+        if recipe["family"] not in COOKBOOK_FAMILIES:
+            raise ValueError(f"Cookbook recipe has an unknown family: {recipe['id']}: {recipe['family']}")
+
+        stage = recipe.get("stage", "inference")
+        if stage not in COOKBOOK_STAGES:
+            raise ValueError(f"Cookbook recipe has an unknown stage: {recipe['id']}: {stage}")
+
+        evidence = recipe.get("evidence", "Source-backed")
+        if evidence not in COOKBOOK_EVIDENCE_STATES:
+            raise ValueError(f"Cookbook recipe has an unknown evidence state: {recipe['id']}: {evidence}")
+
+        hardware = recipe.get("hardware")
+        if not isinstance(hardware, dict):
+            raise ValueError(f"Cookbook recipe is missing hardware info: {recipe['id']}")
+        platform = hardware.get("platform", "cuda")
+        if platform not in COOKBOOK_HARDWARE_PLATFORMS:
+            raise ValueError(f"Cookbook recipe has an unknown hardware platform: {recipe['id']}: {platform}")
+        gpu_count = hardware.get("gpu_count")
+        if platform == "cuda" and (not isinstance(gpu_count, int) or gpu_count < 1):
+            raise ValueError(f"CUDA cookbook recipe needs an integer gpu_count >= 1: {recipe['id']}")
+        if platform != "cuda" and gpu_count is not None:
+            raise ValueError(f"Non-CUDA cookbook recipe must not use gpu_count: {recipe['id']}")
+        device = hardware.get("device")
+        if device is not None:
+            if device not in COOKBOOK_HARDWARE_DEVICES:
+                raise ValueError(f"Cookbook recipe has an unknown hardware device: {recipe['id']}: {device}")
+            if platform != "cuda":
+                raise ValueError(f"Cookbook hardware device requires platform cuda: {recipe['id']}: {device}")
+        hardware_evidence = hardware.get("evidence")
+        if hardware_evidence not in COOKBOOK_HARDWARE_EVIDENCE:
+            raise ValueError(f"Cookbook recipe has unknown hardware evidence: {recipe['id']}: {hardware_evidence}\n"
+                             f"Expected one of {sorted(COOKBOOK_HARDWARE_EVIDENCE)}. Never guess GPU compatibility.")
+        for field_name in COOKBOOK_HARDWARE_TEXT_FIELDS:
+            value = hardware.get(field_name)
+            if value is not None and not (isinstance(value, str) and value.strip()):
+                raise ValueError(f"Cookbook hardware field must be a non-empty string: {recipe['id']}: {field_name}")
+        if hardware_evidence == "validated" and not hardware.get("accelerator"):
+            raise ValueError(f"Validated cookbook hardware needs an exact accelerator: {recipe['id']}")
+        if hardware_evidence == "source-configured":
+            recorded_fields = {"accelerator", "system_memory", "peak_memory"}.intersection(hardware)
+            if recorded_fields:
+                raise ValueError(f"Source-configured hardware cannot claim recorded run details: {recipe['id']}: "
+                                 f"{', '.join(sorted(recorded_fields))}")
+        evidence_url = hardware.get("evidence_url")
+        if evidence_url is not None and not evidence_url.startswith("https://github.com/hao-ai-lab/FastVideo/"):
+            raise ValueError(f"Cookbook hardware evidence must link to the FastVideo repository: {recipe['id']}")
+        gpu_types = recipe.get("gpu_types", [])
+        if not isinstance(gpu_types, list) or any(gpu not in COOKBOOK_GPU_TYPES for gpu in gpu_types):
+            raise ValueError(f"Cookbook recipe has an unknown gpu_types entry: {recipe['id']}: {gpu_types}")
+
+        revision = recipe.get("revision")
+        if revision is not None and not (isinstance(revision, str) and revision.strip()):
+            raise ValueError(f"Cookbook recipe revision must be a non-empty string when present: {recipe['id']}")
+
+        related = recipe.get("related", [])
+        if not isinstance(related, list):
+            raise ValueError(f"Cookbook recipe related must be a list of recipe ids: {recipe['id']}")
+
+        modes = recipe.get("modes")
+        if modes is not None and (not isinstance(modes, list) or not modes
+                                  or any(not isinstance(item, str) or not item.strip() for item in modes)):
+            raise ValueError(f"Cookbook recipe modes must be a non-empty list of strings: {recipe['id']}")
+
+        knobs = recipe.get("knobs", [])
+        if not isinstance(knobs, list):
+            raise ValueError(f"Cookbook recipe knobs must be a list: {recipe['id']}")
+        knob_keys: set[str] = set()
+        for knob in knobs:
+            if not isinstance(knob, dict):
+                raise ValueError(f"Cookbook recipe knob must be an object: {recipe['id']}")
+            required_knob = ("key", "label", "flag", "options", "default")
+            missing_knob = {key for key in required_knob if key not in knob}
+            if missing_knob:
+                raise ValueError(f"Cookbook recipe knob is missing: {recipe['id']}: {', '.join(sorted(missing_knob))}")
+            if knob["key"] in knob_keys:
+                raise ValueError(f"Duplicate cookbook recipe knob key: {recipe['id']}: {knob['key']}")
+            knob_keys.add(knob["key"])
+            if not isinstance(knob["flag"], str) or not knob["flag"].startswith("--"):
+                raise ValueError(f"Cookbook recipe knob flag must start with --: {recipe['id']}: {knob['key']}")
+            options = knob["options"]
+            if not isinstance(options, list) or not options:
+                raise ValueError(
+                    f"Cookbook recipe knob options must be a non-empty list: {recipe['id']}: {knob['key']}")
+            option_values = [option["value"] if isinstance(option, dict) else option for option in options]
+            if knob["default"] not in option_values:
+                raise ValueError(
+                    f"Cookbook recipe knob default must be one of its options: {recipe['id']}: {knob['key']}")
+
+        source = (ROOT_DIR / recipe["source"]).resolve()
+        if not any(source.is_relative_to(root.resolve()) for root in COOKBOOK_SOURCE_ROOTS):
+            raise ValueError(f"Cookbook source is outside an approved directory: {recipe['source']}")
+        if not source.is_file():
+            raise ValueError(f"Cookbook source does not exist: {recipe['source']}")
+
+        source_text = source.read_text(encoding="utf-8")
+        if knobs:
+            # A script that shares its argument parser with a sibling module
+            # (e.g. `from . import basic_fasth3`) inherits that module's
+            # flags without the flag text appearing in its own source.
+            knob_source_text = source_text
+            for match in re.finditer(r'(?:from\s+\.\s+import|^\s*import)\s+(\w+)', source_text, flags=re.MULTILINE):
+                sibling = source.parent / f"{match.group(1)}.py"
+                if sibling.is_file() and sibling != source:
+                    knob_source_text += "\n" + sibling.read_text(encoding="utf-8")
+            for knob in knobs:
+                if knob["flag"] not in knob_source_text:
+                    raise ValueError(f"Cookbook recipe knob flag is not in its source: {recipe['id']}: {knob['flag']}")
+
+        # The model must be traceable to the checked-in source itself, or be
+        # passed explicitly on the command line (e.g. --model-path <model> or
+        # MODEL_PATH=<model>) when the source reads it from arguments/env.
+        if recipe["model"] not in source_text and recipe["model"] not in recipe["command"]:
+            raise ValueError(f"Cookbook model is not present in {recipe['source']} or its command: {recipe['id']}")
+        if recipe["source"] not in recipe["command"]:
+            raise ValueError(f"Cookbook command does not invoke its source: {recipe['id']}")
+
+        if "serving" in recipe:
+            cookbook_serving_profile(recipe)
+
+    # Second pass so `related` may point forward at recipes defined later.
+    ids = {recipe["id"] for recipe in recipes}
+    for recipe in recipes:
+        for related_id in recipe.get("related", []):
+            if related_id not in ids:
+                raise ValueError(f"Cookbook recipe references unknown related id: {recipe['id']}: {related_id}")
+
+    cache_bust = f"cookbook-recipes.json?v={version}"
+    cookbook_pages = ROOT_DIR / "docs/cookbook"
+    for page in sorted(cookbook_pages.glob("*.md")):
+        text = page.read_text(encoding="utf-8")
+        if "cookbook-recipes.json" not in text:
+            continue
+        if cache_bust not in text:
+            raise ValueError(f"{page}: recipe JSON cache-bust must be {cache_bust}")
+
+
+def cookbook_serving_profile(recipe: dict) -> dict:
+    """Read server facts separately from the local inference run's evidence."""
+    serving = recipe["serving"]
+    if not isinstance(serving, dict) or not serving.get("source") or not serving.get("install"):
+        raise ValueError(f"Serving recipe needs source and install fields: {recipe['id']}")
+    source = (ROOT_DIR / serving["source"]).resolve()
+    if not source.is_relative_to(ROOT_DIR / "examples/serving") or not source.is_file():
+        raise ValueError(f"Serving config must exist under examples/serving: {recipe['id']}")
+    config = yaml.safe_load(source.read_text(encoding="utf-8"))
+    runtime = config.get("runtime", "cuda")
+    if runtime not in {"cuda", "mlx"} or runtime != recipe["hardware"].get("platform", "cuda"):
+        raise ValueError(f"Serving runtime does not match recipe: {recipe['id']}")
+    generator = config["generator"]
+    if generator["model_path"] != recipe["model"]:
+        raise ValueError(f"Serving checkpoint does not match recipe: {recipe['id']}")
+    if config.get("streaming") is not None:
+        raise ValueError(f"Cookbook OpenAI serving requires a REST config: {recipe['id']}")
+    server = config["server"]
+    model = server["served_model_name"]
+    if not isinstance(model, str) or not re.fullmatch(r"[A-Za-z0-9._/-]+", model):
+        raise ValueError(f"Serving model alias must be safe for client examples: {recipe['id']}")
+    port = server["port"]
+    if type(port) is not int or not 1 <= port <= 65535:
+        raise ValueError(f"Serving config needs a valid port: {recipe['id']}")
+    hardware = {"platform": runtime, "evidence": "source-configured"}
+    device = recipe["hardware"].get("device")
+    if device:
+        hardware["device"] = device
+    if runtime == "cuda":
+        count = generator["engine"]["num_gpus"]
+        if type(count) is not int or count < 1:
+            raise ValueError(f"Serving config needs a valid GPU count: {recipe['id']}")
+        hardware["gpu_count"] = count
+        env = serving.get("env")
+        if env is not None:
+            if not isinstance(env, str) or not env.strip() or "\n" in env:
+                raise ValueError(f"Serving env must be a single-line command prefix: {recipe['id']}")
+            prefix = env.strip() + " "
+        else:
+            prefix = ""
+        command = f"{prefix}fastvideo serve --config {serving['source']} --server.host 127.0.0.1"
+    else:
+        if server.get("host") != "127.0.0.1":
+            raise ValueError(f"MLX cookbook server must bind to loopback: {recipe['id']}")
+        command = f"python -m fastvideo.entrypoints.openai.mlx_server --config {serving['source']}"
+    base_url = f"http://127.0.0.1:{port}/v1"
+    clients = {}
+    for language, (filename, install) in COOKBOOK_CLIENTS.items():
+        path = ROOT_DIR / "examples/serving/clients" / filename
+        text = path.read_text(encoding="utf-8")
+        # Keep displayed snippets identical to executable sources for the
+        # checked-in H3 profile, with only endpoint and alias substitutions.
+        text = text.replace("http://127.0.0.1:8000/v1", base_url)
+        text = text.replace('"fasth3"', json.dumps(model)).replace("${FASTVIDEO_MODEL:-fasth3}",
+                                                                   "${FASTVIDEO_MODEL:-" + model + "}")
+        clients[language] = {"source": path.relative_to(ROOT_DIR).as_posix(), "code": text, "install": install}
+    return {
+        "source": serving["source"],
+        "install": serving["install"],
+        "command": command,
+        "runtime": runtime,
+        "prepare": serving.get("prepare", ""),
+        "model": model,
+        "base_url": base_url,
+        "playground_url": f"http://127.0.0.1:{port}/playground/",
+        "health_command": f"curl --fail-with-body http://127.0.0.1:{port}/health",
+        "hardware": hardware,
+        "sampling": config["default_request"]["sampling"],
+        "clients": clients,
+    }
+
+
+def generate_cookbook_serving() -> None:
+    """Publish executable clients and config facts through the docs build."""
+    data = json.loads(COOKBOOK_DATA.read_text(encoding="utf-8"))
+    profiles = {recipe["id"]: cookbook_serving_profile(recipe) for recipe in data["recipes"] if "serving" in recipe}
+    COOKBOOK_SERVING_DATA.write_text(json.dumps(profiles, indent=2) + "\n", encoding="utf-8")
+
+
+def fix_case(text: str) -> str:
+    subs = {
+        "api": "API",
+        "cli": "CLI",
+        "cpu": "CPU",
+        "llm": "LLM",
+        "tpu": "TPU",
+        "aqlm": "AQLM",
+        "gguf": "GGUF",
+        "lora": "LoRA",
+        "rlhf": "RLHF",
+        "vllm": "vLLM",
+        "openai": "OpenAI",
+        "multilora": "MultiLoRA",
+        "mlpspeculator": "MLPSpeculator",
+        "finetune": "Finetune",
+        "distillation": "Distillation",
+        "wan": "Wan",
+        "i2v": "I2V",
+        "t2v": "T2V",
+        "1.3b": "1.3B",
+        "14b": "14B",
+        "480p": "480P",
+        "720p": "720P",
+        r"fp\d+": lambda x: x.group(0).upper(),  # e.g. fp16, fp32
+        r"int\d+": lambda x: x.group(0).upper(),  # e.g. int8, int16
+    }
+    for pattern, repl in subs.items():
+        text = re.sub(rf'\b{pattern}\b', repl, text, flags=re.IGNORECASE)  # type: ignore[call-overload]
+    return text
+
+
+@dataclass
+class Index:
+    """
+    Index class to generate a structured document index.
+
+    Attributes:
+        path (Path): The path save the index file to.
+        title (str): The title of the index.
+        description (str): A brief description of the index.
+        caption (str): An optional caption for the table of contents.
+        maxdepth (int): The maximum depth of the table of contents. Defaults to 1.
+        documents (list[str]): A list of document paths to include in the index. Defaults to an empty list.
+
+    Methods:
+        generate() -> str:
+            Generates the index content as a string in the specified format.
+    """ # noqa: E501
+    path: Path
+    title: str
+    description: str
+    caption: str
+    maxdepth: int = 1
+    documents: list[str] = field(default_factory=list)
+
+    def generate(self) -> str:
+        content = f"# {self.title}\n\n{self.description}\n\n"
+        if self.caption:
+            content += f"## {self.caption}\n\n"
+        # Generate a simple list of links for MkDocs
+        for doc in self.documents:
+            # Convert document path to proper link
+            doc_link = doc.replace("\\", "/")
+            # Get just the filename for the link text
+            doc_title = fix_case(Path(doc).stem.replace("_", " ").title())
+            content += f"- [{doc_title}]({doc_link}.md)\n"
+        content += "\n"
+        return content
+
+
+@dataclass
+class Example:
+    """
+    Example class for generating documentation content from a given path.
+
+    Attributes:
+        path (Path): The path to the main directory or file.
+        category (str): The category of the document.
+        main_file (Path): The main file in the directory.
+        other_files (list[Path]): list of other files in the directory.
+        title (str): The title of the document.
+
+    Methods:
+        __post_init__(): Initializes the main_file, other_files, and title attributes.
+        determine_main_file() -> Path: Determines the main file in the given path.
+        determine_other_files() -> list[Path]: Determines other files in the directory excluding the main file.
+        determine_title() -> str: Determines the title of the document.
+        generate() -> str: Generates the documentation content.
+    """ # noqa: E501
+    path: Path
+    category: str | None = None
+    main_file: Path = field(init=False)
+    other_files: list[Path] = field(init=False)
+    title: str = field(init=False)
+
+    def __post_init__(self):
+        self.main_file = self.determine_main_file()
+        self.other_files = self.determine_other_files()
+        self.title = self.determine_title()
+
+    def determine_main_file(self) -> Path:
+        """
+        Determines the main file in the given path.
+        If the path is a file, it returns the path itself. Otherwise, it searches
+        for Markdown files (*.md) in the directory and returns the first one found.
+        Returns:
+            Path: The main file path, either the original path if it's a file or the first
+            Markdown file found in the directory.
+        Raises:
+            IndexError: If no Markdown files are found in the directory.
+        """ # noqa: E501
+        if self.path.is_file():
+            return self.path
+
+        markdown_files = sorted(self.path.glob("*.md"))
+        if not markdown_files:
+            raise IndexError(f"No Markdown files found in {self.path}")
+
+        readme_files = [f for f in markdown_files if f.name.lower() == "readme.md"]
+        if readme_files:
+            return readme_files[0]
+
+        return markdown_files[0]
+
+    def determine_other_files(self) -> list[Path]:
+        """
+        Determine other files in the directory excluding the main file.
+
+        This method checks if the given path is a file. If it is, it returns an empty list.
+        Otherwise, it recursively searches through the directory and returns a list of all
+        files that are not the main file.
+
+        Returns:
+            list[Path]: A list of Path objects representing the other files in the directory.
+        """ # noqa: E501
+        if self.path.is_file():
+            return []
+        other_files = []
+        for directory, subdirectories, filenames in os.walk(self.path):
+            # Local client dependencies and caches are not example sources.
+            subdirectories[:] = [
+                name for name in subdirectories
+                if not name.startswith(".") and name not in {"node_modules", "__pycache__"}
+            ]
+            for name in filenames:
+                file = Path(directory) / name
+                if not name.startswith(".") and file != self.main_file:
+                    other_files.append(file)
+        return other_files
+
+    def determine_title(self) -> str:
+        return fix_case(self.path.stem.replace("_", " ").title())
+
+    def generate(self) -> str:
+        # Create GitHub link to source
+        github_path = str(self.path.relative_to(ROOT_DIR)).replace("\\", "/")
+        github_url = f"https://github.com/{GITHUB_REPO}/blob/main/{github_path}"
+        content = f"**Source:** [{github_path}]({github_url})\n\n"
+
+        # Add title for code files
+        if self.main_file.suffix != ".md":
+            content += f"# {self.title}\n\n"
+
+        # Include main file content
+        if self.main_file.suffix == ".md":
+            # For markdown files, include the content directly
+            with open(self.main_file, encoding='utf-8') as f:
+                content += f.read() + "\n\n"
+        else:
+            # For code files, use code blocks
+            language = self.main_file.suffix[1:] if self.main_file.suffix else ""
+            with open(self.main_file, encoding='utf-8') as f:
+                file_content = f.read()
+            content += f"```{language}\n{file_content}\n```\n\n"
+
+        if not self.other_files:
+            return content
+
+        content += "## Additional Files\n\n"
+        # Define binary/non-text file extensions to skip
+        binary_extensions = {
+            '.mp4', '.avi', '.mov', '.mkv', '.gif', '.jpg', '.jpeg', '.png', '.webp', '.bmp', '.pdf', '.zip', '.tar',
+            '.gz', '.mp3', '.wav'
+        }
+
+        for file in sorted(self.other_files):
+            # Skip binary files
+            if file.suffix.lower() in binary_extensions:
+                continue
+
+            file_rel_path = file.relative_to(self.path)
+            # Use collapsible admonition syntax for MkDocs
+            content += f"??? note \"{file_rel_path}\"\n\n"
+
+            try:
+                if file.suffix == ".md":
+                    # Include markdown content with indentation
+                    with open(file, encoding='utf-8') as f:
+                        for line in f:
+                            content += f"    {line}"
+                else:
+                    # Include code with proper formatting
+                    language = file.suffix[1:] if file.suffix else ""
+                    with open(file, encoding='utf-8') as f:
+                        file_content = f.read()
+                    # Indent the code block for the admonition
+                    content += f"    ```{language}\n"
+                    for line in file_content.split('\n'):
+                        content += f"    {line}\n"
+                    content += "    ```\n"
+                content += "\n"
+            except UnicodeDecodeError:
+                # Skip files that can't be decoded as UTF-8
+                continue
+
+        return content
+
+
+@dataclass
+class NestedStructure:
+    """Helper class to manage nested documentation structures for training/distillation."""
+    category: str
+    method: str
+    model: str
+    dataset: str
+    example: Example
+
+    @property
+    def filename(self) -> str:
+        return f"{self.model}_{self.dataset}"
+
+    @property
+    def title(self) -> str:
+        return fix_case(self.dataset.replace('_', ' '))
+
+    @property
+    def description(self) -> str:
+        category_name = self.category.title()
+        return f"{category_name} example using the {self.dataset} dataset with the {self.model} model."
+
+
+def create_category_indices() -> dict[str, Index]:
+    """Create category indices with their respective configurations."""
+    main_index_dir = ROOT_DIR / "docs/examples"
+    if not main_index_dir.exists():
+        main_index_dir.mkdir(parents=True)
+
+    category_indices = {
+        "inference":
+        Index(
+            path=ROOT_DIR / "docs/inference/examples/examples_inference_index.md",
+            title="🚀 Examples",
+            description=
+            "Inference examples demonstrate how to use FastVideo inference. We recommend starting with [basic.md](basic.md).",
+            caption="Examples",
+            maxdepth=1,
+        ),
+        "training":
+        Index(
+            path=ROOT_DIR / "docs/training/examples/examples_training_index.md",
+            title="🚀 Examples",
+            description="Training examples demonstrate how to use FastVideo training.",
+            caption="Examples",
+            maxdepth=3,
+        ),
+        "distillation":
+        Index(
+            path=ROOT_DIR / "docs/distillation/examples/examples_distillation_index.md",
+            title="🚀 Examples",
+            description="Distillation examples demonstrate how to use FastVideo distillation.",
+            caption="Examples",
+            maxdepth=3,
+        ),
+    }
+
+    # Ensure all category doc directories exist
+    for index in category_indices.values():
+        if not index.path.parent.exists():
+            index.path.parent.mkdir(parents=True)
+
+    return category_indices
+
+
+def find_examples(category_indices: dict[str, Index], generate_main_index: bool) -> list[Example]:
+    """Find all examples from the examples directory."""
+    examples = []
+    glob_patterns = ["*.py", "*.md", "*.sh"]
+
+    # Map category names to actual directory names
+    category_dir_mapping = {
+        "distillation": "distill",  # examples/distill/ -> distillation category
+    }
+
+    # Find categorised examples
+    for category in category_indices:
+        # Use mapped directory name if available, otherwise use category name
+        dir_name = category_dir_mapping.get(category, category)
+        category_dir = EXAMPLE_DIR / dir_name
+
+        # Skip if directory doesn't exist
+        if not category_dir.exists():
+            continue
+
+        globs = [category_dir.glob(pattern) for pattern in glob_patterns]
+        for path in itertools.chain(*globs):
+            examples.append(Example(path, category))
+        # Find examples in subdirectories (recursively)
+        for path in category_dir.glob("**/*.md"):
+            examples.append(Example(path.parent, category))
+
+    # Find uncategorised examples only if we're generating a main index
+    if generate_main_index:
+        globs = [EXAMPLE_DIR.glob(pattern) for pattern in glob_patterns]
+        for path in itertools.chain(*globs):
+            examples.append(Example(path))
+        # Find examples in subdirectories
+        for path in EXAMPLE_DIR.glob("*/*.md"):
+            # Skip categorised examples
+            if path.parent.name in category_indices:
+                continue
+            examples.append(Example(path.parent))
+
+    return examples
+
+
+def create_nested_structures(examples: list[Example]) -> dict[str, dict[str, dict[str, dict[str, NestedStructure]]]]:
+    """Create nested structures for training and distillation categories."""
+    nested_structures: dict[str, dict[str, dict[str, dict[str, NestedStructure]]]] = {}
+
+    # Map category names to actual directory names
+    category_dir_mapping = {
+        "distillation": "distill",
+    }
+
+    for example in examples:
+        if example.category not in ["training", "distillation"]:
+            continue
+
+        # Use mapped directory name if available
+        dir_name = category_dir_mapping.get(example.category, example.category)
+        category_dir = EXAMPLE_DIR / dir_name
+        relative_path = example.path.relative_to(category_dir)
+        path_parts = relative_path.parts
+
+        if example.category == "training":
+            # For training examples like finetune/wan_i2v_14b_480p/crush_smol
+            if len(path_parts) >= 3:
+                method = path_parts[0]  # e.g., "finetune"
+                model = path_parts[1]  # e.g., "wan_i2v_14b_480p"
+                dataset = path_parts[2]  # e.g., "crush_smol"
+
+                # Initialize nested structure
+                if example.category not in nested_structures:
+                    nested_structures[example.category] = {}
+                if method not in nested_structures[example.category]:
+                    nested_structures[example.category][method] = {}
+                if model not in nested_structures[example.category][method]:
+                    nested_structures[example.category][method][model] = {}
+
+                # Store the nested structure
+                nested_structures[example.category][method][model][dataset] = NestedStructure(category=example.category,
+                                                                                              method=method,
+                                                                                              model=model,
+                                                                                              dataset=dataset,
+                                                                                              example=example)
+
+        elif example.category == "distillation" and len(path_parts) >= 2:
+            # For distillation examples like Wan2.1-T2V/Wan-Syn-Data-480P
+            model = path_parts[0]  # e.g., "Wan2.1-T2V"
+            dataset = path_parts[1]  # e.g., "Wan-Syn-Data-480P"
+            method = "DMD"  # Default method for distillation
+
+            # Initialize nested structure
+            if example.category not in nested_structures:
+                nested_structures[example.category] = {}
+            if method not in nested_structures[example.category]:
+                nested_structures[example.category][method] = {}
+            if model not in nested_structures[example.category][method]:
+                nested_structures[example.category][method][model] = {}
+
+            # Store the nested structure
+            nested_structures[example.category][method][model][dataset] = NestedStructure(category=example.category,
+                                                                                          method=method,
+                                                                                          model=model,
+                                                                                          dataset=dataset,
+                                                                                          example=example)
+
+    return nested_structures
+
+
+def generate_flat_examples(examples: list[Example], category_indices: dict[str, Index], examples_index: Index | None,
+                           generate_main_index: bool) -> None:
+    """Generate documentation for flat structure examples (inference, etc.)."""
+    for example in examples:
+        if example.category in ["training", "distillation"]:
+            continue  # Skip nested structure examples
+
+        # Determine which index to use for this example
+        if example.category is not None and example.category in category_indices:
+            index = category_indices[example.category]
+        elif generate_main_index:
+            assert examples_index is not None
+            index = examples_index
+        else:
+            continue
+
+        # Generate the example documentation
+        doc_path = index.path.parent / f"{example.path.stem}.md"
+        with open(doc_path, "w+", encoding="utf-8") as f:
+            f.write(example.generate())
+        index.documents.append(example.path.stem)
+
+
+def generate_nested_examples(nested_structures: dict[str, dict[str, dict[str, dict[str, NestedStructure]]]],
+                             category_indices: dict[str, Index]) -> None:
+    """Generate documentation for nested structure examples (training, distillation)."""
+    for category_name in ["training", "distillation"]:
+        if category_name not in category_indices or category_name not in nested_structures:
+            continue
+
+        category_index = category_indices[category_name]
+        category_base_dir = category_index.path.parent
+
+        for method, models in nested_structures[category_name].items():
+            # Create method-level index
+            method_index = Index(path=category_base_dir / f"{method}.md",
+                                 title=fix_case(method),
+                                 description=f"Examples using {method}.",
+                                 caption=f"{fix_case(method)} Examples",
+                                 maxdepth=2)
+
+            for model, datasets in models.items():
+                # Generate dataset examples using the Example class
+                for dataset, nested_struct in datasets.items():
+                    doc_path = category_base_dir / f"{nested_struct.filename}.md"
+                    with open(doc_path, "w+", encoding="utf-8") as f:
+                        f.write(nested_struct.example.generate())
+
+                # Create model-level index
+                model_index = Index(path=category_base_dir / f"{model}.md",
+                                    title=fix_case(model.replace('_', ' ')),
+                                    description=f"Examples for the {model} model.",
+                                    caption=f"{fix_case(model.replace('_', ' '))} Datasets",
+                                    maxdepth=1)
+
+                # Add dataset indices to model index
+                for dataset, nested_struct in datasets.items():
+                    model_index.documents.append(nested_struct.filename)
+
+                # Write model index
+                with open(model_index.path, "w+", encoding="utf-8") as f:
+                    f.write(model_index.generate())
+
+                # Add model to method index
+                method_index.documents.append(model)
+
+            # Write method index
+            with open(method_index.path, "w+", encoding="utf-8") as f:
+                f.write(method_index.generate())
+
+            # Add method to main category index
+            category_index.documents.append(method)
+
+
+def generate_examples(generate_main_index: bool = False) -> None:
+    """
+    Generate example documentation.
+    
+    Args:
+        generate_main_index (bool): Whether to generate the main examples index.
+            If False, only category-specific indices will be generated.
+    """
+    # Create category indices
+    category_indices = create_category_indices()
+
+    # Create the main examples index only if requested
+    examples_index = None
+    if generate_main_index:
+        main_index_dir = ROOT_DIR / "docs/examples"
+        examples_index = Index(
+            path=main_index_dir / "examples_index.md",
+            title="💡 Examples",
+            description="A collection of examples demonstrating usage of FastVideo.\n\n"
+            f"All documented examples are autogenerated using [generate_examples.py](https://github.com/{GITHUB_REPO}/blob/main/docs/generate_examples.py) "
+            f"from examples found in the [examples](https://github.com/{GITHUB_REPO}/tree/main/examples) directory.",
+            caption="Examples",
+            maxdepth=2)
+
+    # Find all examples
+    examples = find_examples(category_indices, generate_main_index)
+
+    # Create nested structures for training and distillation
+    nested_structures = create_nested_structures(examples)
+
+    # Generate flat structure examples (inference, etc.)
+    generate_flat_examples(examples, category_indices, examples_index, generate_main_index)
+
+    # Generate nested structure examples (training, distillation)
+    generate_nested_examples(nested_structures, category_indices)
+
+    # Generate the index files for categories
+    for category_index in category_indices.values():
+        if category_index.documents:
+            # Add to main index if it exists
+            if generate_main_index and examples_index:
+                main_index_dir = examples_index.path.parent
+                rel_path = os.path.relpath(category_index.path, start=main_index_dir)
+                examples_index.documents.insert(0, str(rel_path).replace("\\", "/").replace(".md", ""))
+
+            # Write the category index file
+            with open(category_index.path, "w+", encoding="utf-8") as f:
+                f.write(category_index.generate())
+
+    # Write the main index file if requested
+    if generate_main_index and examples_index:
+        with open(examples_index.path, "w+", encoding="utf-8") as f:
+            f.write(examples_index.generate())
+
+
+def on_pre_build(config, **kwargs):
+    """
+    MkDocs hook to generate examples before building the documentation.
+    This function is called automatically by MkDocs' native hook system.
+    """
+    validate_cookbook()
+    generate_cookbook_serving()
+    print("Generating example documentation...")
+    generate_examples(generate_main_index=True)
+    print("Example documentation generated successfully!")
+
+
+def on_page_context(context, page, **kwargs):
+    """Hide repository edit actions for pages that only exist at build time."""
+    if page.file.src_uri.startswith(GENERATED_DOC_PREFIXES):
+        page.edit_url = None
+    return context
+
+
+if __name__ == "__main__":
+    validate_cookbook()
+    generate_cookbook_serving()
+    print("Generating example documentation...")
+    generate_examples(generate_main_index=True)
+    print("Example documentation generated successfully!")

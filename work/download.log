@@ -1,0 +1,4 @@
+Hint: A new version of huggingface_hub (1.31.0) is available! You are using version 1.26.0.
+To update, run: hf update
+Still waiting to acquire lock on /home/raqeeb/code/h3-optimization/fast-h3-v2/models/FastH3-8-Step-V2/.cache/huggingface/.gitignore.lock (elapsed: 0.1 seconds)
+path=/home/raqeeb/code/h3-optimization/fast-h3-v2/models/FastH3-8-Step-V2

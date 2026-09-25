@@ -1,0 +1,13 @@
+integrated_multimodal_description: A polished vertical social-media podcast advertisement in a warm modern studio with wooden shelves, soft amber practical lights, two beige lounge chairs, and bright pink broadcast microphones. Keep both hosts' faces, clothing, hair, and the studio layout consistent across all shots.
+
+Shot 1, 0.0-3.5 seconds: Medium close-up of a confident Black woman with long straight black hair, black rectangular glasses, a fitted white top, and blue jeans, seated naturally beside the pink microphone. She gestures casually and says <d>[English] Have you tried that late-night taco place everyone keeps posting?</d>
+
+Shot 2, 3.5-6.5 seconds: Clean cinematic food B-roll, an overhead close-up of black-gloved hands plating two colorful street tacos on brown paper, warm tortillas, grilled filling, purple cabbage, cilantro, lime, and glossy red salsa. Visible steam and crisp, realistic food texture. The second host begins speaking off camera: <d>[English] Yes. Fresh tortillas, incredible flavor, and honestly much better than I expected.</d>
+
+Shot 3, 6.5-10.0 seconds: Cut back to the same podcast studio, medium close-up of the second host, a light-skinned brunette woman with shoulder-length wavy hair wearing a charcoal ribbed top, seated in the opposite beige chair. She finishes the sentence with natural conversational timing while the first host listens just off camera.
+
+Realistic skin, restrained hand gestures, accurate anatomy, stable microphones, natural blinking and lip synchronization, native-looking UGC pacing. Do not render subtitles, logos, watermarks, signs, or on-screen text.
+
+overall_soundscape: Clean close-mic podcast dialogue with two distinct natural female voices, subtle quiet studio room tone, and a brief soft tortilla sizzle and plating sound during the taco B-roll. Dialogue stays continuous across the visual cut and remains easy to understand.
+
+non_diegetic_music: None.

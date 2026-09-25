@@ -1,0 +1,5 @@
+{
+  "cpu": "AMD Ryzen 9 9950X 16-Core Processor",
+  "logical_cpus": 32,
+  "platform": "Linux-6.8.0-90-generic-x86_64-with-glibc2.35"
+}

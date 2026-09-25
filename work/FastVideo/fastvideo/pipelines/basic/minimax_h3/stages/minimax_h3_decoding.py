@@ -1,0 +1,275 @@
+# SPDX-License-Identifier: Apache-2.0
+"""MiniMax H3 video and stereo-audio decoding."""
+
+from __future__ import annotations
+
+import time
+from typing import Any
+
+import torch
+
+from fastvideo.distributed import get_local_torch_device, get_sp_group, get_world_group, model_parallel_is_initialized
+from fastvideo.fastvideo_args import FastVideoArgs
+from fastvideo.logger import init_logger
+from fastvideo.models.vaes.minimax_h3_audio import MiniMaxH3AudioVAE
+from fastvideo.models.vaes.minimax_h3_parallel import DEFAULT_DECODE_GATHER_STRATEGY, decode_to_pixels_parallel
+from fastvideo.models.vaes.minimax_h3_video import AutoencoderKLMiniMaxH3
+from fastvideo.profiler import nvtx_range
+from fastvideo.pipelines.basic.minimax_h3.packing import (
+    MiniMaxH3PackedLayout,
+    h3_dit_patch_size,
+    unpack_audio_tokens,
+    unpatchify_video_tokens,
+)
+from fastvideo.pipelines.basic.minimax_h3.stages.minimax_h3_latent_preparation import MINIMAX_H3_LAYOUT_KEY
+from fastvideo.pipelines.pipeline_batch_info import ForwardBatch
+from fastvideo.pipelines.stages.base import PipelineStage
+from fastvideo.pipelines.stages.validators import StageValidators as V
+from fastvideo.pipelines.stages.validators import VerificationResult
+from fastvideo.utils import is_pin_memory_available
+
+logger = init_logger(__name__)
+
+
+def _retain_cpu_weights(module: torch.nn.Module) -> list[tuple[torch.nn.Module, str, str, torch.Tensor]]:
+    """Retain original CPU storage while immutable inference weights visit CUDA."""
+    if torch.is_grad_enabled():
+        raise RuntimeError("Decoder CPU retention is inference-only.")
+    saved = []
+    for child in module.modules():
+        for kind in ("_parameters", "_buffers"):
+            for name, tensor in getattr(child, kind).items():
+                if tensor is None:
+                    continue
+                if tensor.device.type != "cpu":
+                    raise RuntimeError("Decoder CPU retention requires initially CPU-resident weights.")
+                saved.append((child, kind, name, tensor.detach()))
+    return saved
+
+
+def _restore_cpu_weights(saved: list[tuple[torch.nn.Module, str, str, torch.Tensor]]) -> dict[str, Any]:
+    """Drop CUDA storage and restore retained CPU references; never copy D2H."""
+    started = time.perf_counter()
+    for child, kind, name, tensor in saved:
+        if kind == "_parameters":
+            child._parameters[name].data = tensor
+        else:
+            child._buffers[name] = tensor
+    return {
+        "policy": "retain_cpu_weights_discard_gpu_copies",
+        "weight_copy_back_bytes": 0,
+        "retained_cpu_bytes": sum(t.numel() * t.element_size() for _, _, _, t in saved),
+        "release_seconds": time.perf_counter() - started,
+    }
+
+
+def _layout(batch: ForwardBatch) -> MiniMaxH3PackedLayout:
+    layout = batch.extra.get(MINIMAX_H3_LAYOUT_KEY)
+    if not isinstance(layout, MiniMaxH3PackedLayout):
+        raise ValueError("MiniMax-H3 packed layout is missing at decode.")
+    return layout
+
+
+def _decode_participation(fastvideo_args: FastVideoArgs, want_parallel: bool) -> tuple[Any, bool, bool]:
+    """Resolve (sp_group, is_output_rank, parallel) for the VAE decode stages.
+
+    The existing serial path keeps its global-rank-zero output ownership.
+    Parallel decode assembles once per sequence-parallel group, on that
+    group's first rank. ``parallel`` is only true when every group rank will
+    run the decode body — the collectives inside require uniform
+    participation, so no rank-dependent branch may guard them.
+    """
+    if not model_parallel_is_initialized():
+        return None, True, False
+    sp_group = get_sp_group()
+    if bool(want_parallel) and sp_group.world_size > 1:
+        return sp_group, sp_group.is_first_rank, True
+    return sp_group, get_world_group().is_first_rank, False
+
+
+class MiniMaxH3VideoDecodingStage(PipelineStage):
+    """Drop visual condition rows, unpatchify, and decode the target video."""
+
+    performance_component_metric = "vae_decode_time_s"
+
+    def __init__(self, vae: AutoencoderKLMiniMaxH3 | None) -> None:
+        super().__init__()
+        self.vae = vae
+
+    def verify_input(self, batch: ForwardBatch, fastvideo_args: FastVideoArgs) -> VerificationResult:
+        result = VerificationResult()
+        result.add_check("layout", batch.extra.get(MINIMAX_H3_LAYOUT_KEY), V.not_none)
+        result.add_check("latents", batch.latents, V.with_dims(2))
+        result.add_check("raw_latent_shape", batch.raw_latent_shape, V.not_none)
+        return result
+
+    def verify_output(self, batch: ForwardBatch, fastvideo_args: FastVideoArgs) -> VerificationResult:
+        result = VerificationResult()
+        result.add_check("output", batch.output, V.with_dims(5))
+        return result
+
+    @torch.no_grad()
+    def forward(self, batch: ForwardBatch, fastvideo_args: FastVideoArgs) -> ForwardBatch:
+        """Decode H3 video latents into normalized CPU pixels."""
+        placeholder = torch.empty((0, 3, 0, 0, 0), device="cpu", dtype=torch.float32)
+        sp_group, is_output_rank, parallel = _decode_participation(fastvideo_args, fastvideo_args.vae_parallel_decode)
+        if not is_output_rank and not parallel:
+            # Consumers read the output rank's ForwardBatch. Keep a
+            # verifier-compatible placeholder on other ranks and avoid
+            # duplicating the full VAE decode and CPU output buffer.
+            batch.output = placeholder
+            return batch
+
+        layout = _layout(batch)
+        if batch.latents is None or batch.raw_latent_shape is None or len(batch.raw_latent_shape) != 5:
+            raise ValueError("MiniMax-H3 video latents or raw geometry are missing at decode.")
+        _, channels, num_frames, latent_height, latent_width = batch.raw_latent_shape
+        latents = unpatchify_video_tokens(
+            batch.latents[layout.num_condition_video_rows:],
+            num_frames,
+            latent_height,
+            latent_width,
+            channels,
+            h3_dit_patch_size(fastvideo_args),
+        )
+        device = get_local_torch_device()
+        backend = getattr(fastvideo_args, "video_decode_backend", "h3-vae")
+        if backend == "taeh3":
+            from fastvideo.models.vaes.minimax_h3_taeh3 import decode_ncthw_latents_taeh3, taeh3_decoded_pixel_shape
+
+            if fastvideo_args.output_type == "latent":
+                batch.output = latents.detach().float().cpu() if is_output_rank else placeholder
+                return batch
+            expected = taeh3_decoded_pixel_shape(tuple(latents.shape))
+            logger.info("MiniMax-H3 video decode: TAEH3 preview (%s -> %s)", tuple(latents.shape), expected)
+            with nvtx_range("minimax_h3.taeh3"):
+                pixels = decode_ncthw_latents_taeh3(
+                    latents,
+                    device=device,
+                    checkpoint_path=getattr(fastvideo_args, "taeh3_checkpoint", None),
+                    chunk_size=int(getattr(fastvideo_args, "taeh3_chunk_size", 5) or 5),
+                )
+            batch.output = pixels.float().cpu() if is_output_rank else placeholder
+            if is_output_rank and tuple(batch.output.shape) != expected:
+                raise RuntimeError(f"TAEH3 wrote {tuple(batch.output.shape)}, expected {expected}.")
+            return batch
+
+        if self.vae is None:
+            raise RuntimeError("MiniMax-H3 full VAE decode requires a loaded video VAE.")
+        saved_cpu_weights = _retain_cpu_weights(self.vae) if fastvideo_args.vae_cpu_offload else None
+        try:
+            self.vae.to(device)
+            latents = self.vae.denormalize_latents(latents.to(device=device, dtype=torch.float32))
+            if fastvideo_args.output_type == "latent":
+                # No collectives on this path, so uniform participation is
+                # trivial: every rank returns here.
+                batch.output = latents.detach().float().cpu() if is_output_rank else placeholder
+                return batch
+
+            output = None
+            if is_output_rank:
+                output = torch.empty(
+                    self.vae.decoded_pixel_shape(latents.shape),
+                    device="cpu",
+                    dtype=torch.float32,
+                    pin_memory=fastvideo_args.pin_cpu_memory and is_pin_memory_available(),
+                )
+            # Attribute the streamed decoder computation while retaining
+            # per-chunk device-to-host transfer and pinned-buffer reuse.
+            with (
+                    nvtx_range("minimax_h3.vae"),
+                    torch.autocast(device_type=device.type, dtype=torch.float16, enabled=device.type == "cuda"),
+            ):
+                if parallel:
+                    strategy = fastvideo_args.vae_parallel_decode_strategy or DEFAULT_DECODE_GATHER_STRATEGY
+                    logger.info("MiniMax-H3 VAE decode: sequence-parallel chunks across %d ranks (%s)",
+                                sp_group.world_size, strategy)
+                    decode_to_pixels_parallel(self.vae, latents, output, sp_group, strategy=strategy)
+                else:
+                    self.vae.decode_to_pixels(latents, output)
+            batch.output = output if is_output_rank else placeholder
+            return batch
+        finally:
+            if saved_cpu_weights is not None:
+                metrics = _restore_cpu_weights(saved_cpu_weights)
+                logger.info("Video VAE weight release (no D2H copy): %s", metrics)
+
+
+class MiniMaxH3AudioDecodingStage(PipelineStage):
+    """Drop audio condition rows and decode the target stereo waveform."""
+
+    performance_component_metric = "audio_decode_time_s"
+
+    def __init__(self, audio_vae: MiniMaxH3AudioVAE) -> None:
+        super().__init__()
+        self.audio_vae = audio_vae
+
+    def verify_input(self, batch: ForwardBatch, fastvideo_args: FastVideoArgs) -> VerificationResult:
+        result = VerificationResult()
+        result.add_check("layout", batch.extra.get(MINIMAX_H3_LAYOUT_KEY), V.not_none)
+        result.add_check("audio_latents", batch.audio_latents, V.with_dims(2))
+        return result
+
+    def verify_output(self, batch: ForwardBatch, fastvideo_args: FastVideoArgs) -> VerificationResult:
+        result = VerificationResult()
+        result.add_check("audio", batch.extra.get("audio"), V.is_tensor)
+        result.add_check("audio_sample_rate", batch.extra.get("audio_sample_rate"), V.positive_int)
+        return result
+
+    @torch.no_grad()
+    def forward(self, batch: ForwardBatch, fastvideo_args: FastVideoArgs) -> ForwardBatch:
+        """Decode H3 audio latents into a stereo CPU waveform."""
+        # Audio decode is sub-second, so preserve the serial path's global
+        # rank-zero ownership.
+        if model_parallel_is_initialized() and not get_world_group().is_first_rank:
+            batch.extra["audio"] = torch.empty((0, 2), device="cpu", dtype=torch.float32)
+            batch.extra["audio_sample_rate"] = self.audio_vae.sampling_rate
+            self._clear_runtime(batch)
+            return batch
+
+        layout = _layout(batch)
+        if batch.audio_latents is None:
+            raise ValueError("MiniMax-H3 audio latents are missing at decode.")
+        latents = unpack_audio_tokens(
+            batch.audio_latents[layout.num_condition_audio_rows:],
+            layout.num_audio_latents,
+        )
+        device = get_local_torch_device()
+        saved_cpu_weights = _retain_cpu_weights(self.audio_vae) if fastvideo_args.vae_cpu_offload else None
+        try:
+            self.audio_vae.to(device)
+            latents = self.audio_vae.denormalize_latents(latents.to(device=device, dtype=torch.float32))
+            if fastvideo_args.output_type == "latent":
+                batch.extra["audio"] = latents.detach().float().cpu()
+                batch.extra["audio_sample_rate"] = self.audio_vae.sampling_rate
+                self._clear_runtime(batch)
+                return batch
+
+            # The range isolates waveform synthesis from packing and runtime
+            # cleanup so the audio decoder has one stable timeline boundary.
+            with nvtx_range("minimax_h3.audio_vae"):
+                decoded = self.audio_vae.decode(latents).sample.float()
+            if decoded.ndim != 3 or decoded.shape[0] != 2 or decoded.shape[1] != 1:
+                raise ValueError("MiniMax-H3 audio VAE must decode stereo channels as two mono batch items; "
+                                 f"got {tuple(decoded.shape)}.")
+            batch.extra["audio"] = decoded[:, 0].transpose(0, 1).contiguous().cpu()
+            batch.extra["audio_sample_rate"] = self.audio_vae.sampling_rate
+            self._clear_runtime(batch)
+            return batch
+        finally:
+            if saved_cpu_weights is not None:
+                metrics = _restore_cpu_weights(saved_cpu_weights)
+                logger.info("Audio VAE weight release (no D2H copy): %s", metrics)
+
+    @staticmethod
+    def _clear_runtime(batch: ForwardBatch) -> None:
+        batch.prompt_embeds = []
+        batch.latents = None
+        batch.audio_latents = None
+        batch.references = None
+        for key in tuple(batch.extra):
+            if key.startswith("minimax_h3_"):
+                batch.extra.pop(key)
+
+
+__all__ = ["MiniMaxH3AudioDecodingStage", "MiniMaxH3VideoDecodingStage"]

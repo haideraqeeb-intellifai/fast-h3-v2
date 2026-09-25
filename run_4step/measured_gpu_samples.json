@@ -1,0 +1,1782 @@
+[
+  {
+    "unix_time": 1789571122.9071398,
+    "host_memory_kib": {
+      "MemAvailable": 71762584,
+      "SwapFree": 3711220,
+      "Shmem": 101033776
+    },
+    "gpu": "26502, 0, 99.01, 60",
+    "processes": "2277279, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 26286"
+  },
+  {
+    "unix_time": 1789571123.9361913,
+    "host_memory_kib": {
+      "MemAvailable": 71460288,
+      "SwapFree": 3711220,
+      "Shmem": 101033776
+    },
+    "gpu": "26502, 0, 84.32, 59",
+    "processes": "2277279, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 26286"
+  },
+  {
+    "unix_time": 1789571124.9640596,
+    "host_memory_kib": {
+      "MemAvailable": 71061860,
+      "SwapFree": 3711220,
+      "Shmem": 101033776
+    },
+    "gpu": "26502, 0, 80.38, 58",
+    "processes": "2277279, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 26286"
+  },
+  {
+    "unix_time": 1789571125.995846,
+    "host_memory_kib": {
+      "MemAvailable": 66744868,
+      "SwapFree": 3710964,
+      "Shmem": 101033776
+    },
+    "gpu": "26502, 0, 79.77, 58",
+    "processes": "2277279, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 26286"
+  },
+  {
+    "unix_time": 1789571127.0233188,
+    "host_memory_kib": {
+      "MemAvailable": 61406080,
+      "SwapFree": 3710708,
+      "Shmem": 101033776
+    },
+    "gpu": "26502, 0, 79.38, 58",
+    "processes": "2277279, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 26286"
+  },
+  {
+    "unix_time": 1789571128.0631814,
+    "host_memory_kib": {
+      "MemAvailable": 58390324,
+      "SwapFree": 2757364,
+      "Shmem": 101033776
+    },
+    "gpu": "26502, 0, 79.08, 57",
+    "processes": "2277279, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 26286"
+  },
+  {
+    "unix_time": 1789571129.2027092,
+    "host_memory_kib": {
+      "MemAvailable": 56357412,
+      "SwapFree": 2222580,
+      "Shmem": 101033776
+    },
+    "gpu": "26502, 0, 78.41, 57",
+    "processes": "2277279, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 26286"
+  },
+  {
+    "unix_time": 1789571130.2449603,
+    "host_memory_kib": {
+      "MemAvailable": 53858056,
+      "SwapFree": 2222068,
+      "Shmem": 101033776
+    },
+    "gpu": "26502, 0, 77.97, 57",
+    "processes": "2277279, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 26286"
+  },
+  {
+    "unix_time": 1789571131.9132676,
+    "host_memory_kib": {
+      "MemAvailable": 48967172,
+      "SwapFree": 2075892,
+      "Shmem": 101028492
+    },
+    "gpu": "26502, 0, 78.28, 56",
+    "processes": "2277279, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 26286"
+  },
+  {
+    "unix_time": 1789571132.9469833,
+    "host_memory_kib": {
+      "MemAvailable": 43438084,
+      "SwapFree": 2075892,
+      "Shmem": 101028492
+    },
+    "gpu": "26502, 0, 78.09, 56",
+    "processes": "2277279, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 26286"
+  },
+  {
+    "unix_time": 1789571133.9866824,
+    "host_memory_kib": {
+      "MemAvailable": 38543824,
+      "SwapFree": 2075892,
+      "Shmem": 101028492
+    },
+    "gpu": "26502, 0, 77.85, 56",
+    "processes": "2277279, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 26286"
+  },
+  {
+    "unix_time": 1789571135.0238018,
+    "host_memory_kib": {
+      "MemAvailable": 36934432,
+      "SwapFree": 2042868,
+      "Shmem": 101028492
+    },
+    "gpu": "26502, 0, 77.04, 55",
+    "processes": "2277279, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 26286"
+  },
+  {
+    "unix_time": 1789571137.4806955,
+    "host_memory_kib": {
+      "MemAvailable": 37648864,
+      "SwapFree": 183968,
+      "Shmem": 101025192
+    },
+    "gpu": "26502, 0, 77.02, 55",
+    "processes": "2277279, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 26286"
+  },
+  {
+    "unix_time": 1789571138.6335056,
+    "host_memory_kib": {
+      "MemAvailable": 35885800,
+      "SwapFree": 256,
+      "Shmem": 101025172
+    },
+    "gpu": "26502, 0, 50.79, 54",
+    "processes": "2277279, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 26286"
+  },
+  {
+    "unix_time": 1789571139.9206865,
+    "host_memory_kib": {
+      "MemAvailable": 32615860,
+      "SwapFree": 15248,
+      "Shmem": 101025172
+    },
+    "gpu": "26502, 0, 34.99, 53",
+    "processes": "2277279, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 26286"
+  },
+  {
+    "unix_time": 1789571140.9664602,
+    "host_memory_kib": {
+      "MemAvailable": 25952104,
+      "SwapFree": 33400,
+      "Shmem": 101025172
+    },
+    "gpu": "26502, 0, 19.38, 53",
+    "processes": "2277279, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 26286"
+  },
+  {
+    "unix_time": 1789571142.0154798,
+    "host_memory_kib": {
+      "MemAvailable": 25992140,
+      "SwapFree": 61852,
+      "Shmem": 101025172
+    },
+    "gpu": "26502, 13, 37.85, 54",
+    "processes": "2277279, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 26286"
+  },
+  {
+    "unix_time": 1789571143.0454304,
+    "host_memory_kib": {
+      "MemAvailable": 25554108,
+      "SwapFree": 62256,
+      "Shmem": 101025172
+    },
+    "gpu": "26502, 14, 79.93, 54",
+    "processes": "2277279, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 26286"
+  },
+  {
+    "unix_time": 1789571144.0790923,
+    "host_memory_kib": {
+      "MemAvailable": 25919092,
+      "SwapFree": 62952,
+      "Shmem": 101025172
+    },
+    "gpu": "26502, 27, 79.60, 54",
+    "processes": "2277279, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 26286"
+  },
+  {
+    "unix_time": 1789571145.115995,
+    "host_memory_kib": {
+      "MemAvailable": 25940100,
+      "SwapFree": 63684,
+      "Shmem": 101025172
+    },
+    "gpu": "26502, 42, 80.42, 54",
+    "processes": "2277279, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 26286"
+  },
+  {
+    "unix_time": 1789571146.1470723,
+    "host_memory_kib": {
+      "MemAvailable": 25443112,
+      "SwapFree": 64312,
+      "Shmem": 101025172
+    },
+    "gpu": "26502, 22, 80.25, 53",
+    "processes": "2277279, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 26286"
+  },
+  {
+    "unix_time": 1789571147.1825662,
+    "host_memory_kib": {
+      "MemAvailable": 25678772,
+      "SwapFree": 81056,
+      "Shmem": 101025172
+    },
+    "gpu": "26502, 12, 79.70, 53",
+    "processes": "2277279, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 26286"
+  },
+  {
+    "unix_time": 1789571148.2181952,
+    "host_memory_kib": {
+      "MemAvailable": 25397648,
+      "SwapFree": 82232,
+      "Shmem": 101025172
+    },
+    "gpu": "26502, 13, 79.26, 53",
+    "processes": "2277279, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 26286"
+  },
+  {
+    "unix_time": 1789571149.251064,
+    "host_memory_kib": {
+      "MemAvailable": 25369256,
+      "SwapFree": 82752,
+      "Shmem": 101025172
+    },
+    "gpu": "26502, 36, 80.01, 53",
+    "processes": "2277279, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 26286"
+  },
+  {
+    "unix_time": 1789571150.2847908,
+    "host_memory_kib": {
+      "MemAvailable": 25262088,
+      "SwapFree": 127360,
+      "Shmem": 101025172
+    },
+    "gpu": "26502, 10, 79.29, 53",
+    "processes": "2277279, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 26286"
+  },
+  {
+    "unix_time": 1789571151.3146458,
+    "host_memory_kib": {
+      "MemAvailable": 25160768,
+      "SwapFree": 213112,
+      "Shmem": 101025172
+    },
+    "gpu": "26502, 13, 77.73, 53",
+    "processes": "2277279, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 26286"
+  },
+  {
+    "unix_time": 1789571152.3475718,
+    "host_memory_kib": {
+      "MemAvailable": 25905936,
+      "SwapFree": 313212,
+      "Shmem": 101025172
+    },
+    "gpu": "26502, 6, 77.40, 53",
+    "processes": "2277279, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 26286"
+  },
+  {
+    "unix_time": 1789571153.3780336,
+    "host_memory_kib": {
+      "MemAvailable": 25136272,
+      "SwapFree": 342676,
+      "Shmem": 101025172
+    },
+    "gpu": "26502, 13, 78.34, 52",
+    "processes": "2277279, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 26286"
+  },
+  {
+    "unix_time": 1789571154.4065487,
+    "host_memory_kib": {
+      "MemAvailable": 25340408,
+      "SwapFree": 447048,
+      "Shmem": 101025172
+    },
+    "gpu": "26502, 7, 76.83, 52",
+    "processes": "2277279, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 26286"
+  },
+  {
+    "unix_time": 1789571155.4383914,
+    "host_memory_kib": {
+      "MemAvailable": 24810732,
+      "SwapFree": 536416,
+      "Shmem": 101025172
+    },
+    "gpu": "26502, 14, 76.84, 52",
+    "processes": "2277279, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 26286"
+  },
+  {
+    "unix_time": 1789571156.4658267,
+    "host_memory_kib": {
+      "MemAvailable": 24399628,
+      "SwapFree": 542340,
+      "Shmem": 101025172
+    },
+    "gpu": "26502, 14, 79.31, 52",
+    "processes": "2277279, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 26286"
+  },
+  {
+    "unix_time": 1789571157.498637,
+    "host_memory_kib": {
+      "MemAvailable": 24521600,
+      "SwapFree": 547328,
+      "Shmem": 101025172
+    },
+    "gpu": "26502, 34, 79.15, 52",
+    "processes": "2277279, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 26286"
+  },
+  {
+    "unix_time": 1789571158.538566,
+    "host_memory_kib": {
+      "MemAvailable": 24670736,
+      "SwapFree": 555988,
+      "Shmem": 101025172
+    },
+    "gpu": "26502, 42, 78.73, 52",
+    "processes": "2277279, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 26286"
+  },
+  {
+    "unix_time": 1789571159.5690672,
+    "host_memory_kib": {
+      "MemAvailable": 24426460,
+      "SwapFree": 632900,
+      "Shmem": 101025172
+    },
+    "gpu": "26502, 7, 77.00, 52",
+    "processes": "2277279, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 26286"
+  },
+  {
+    "unix_time": 1789571160.5969946,
+    "host_memory_kib": {
+      "MemAvailable": 24510676,
+      "SwapFree": 741848,
+      "Shmem": 101025172
+    },
+    "gpu": "26502, 12, 76.08, 51",
+    "processes": "2277279, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 26286"
+  },
+  {
+    "unix_time": 1789571161.6295953,
+    "host_memory_kib": {
+      "MemAvailable": 24793012,
+      "SwapFree": 828176,
+      "Shmem": 101025172
+    },
+    "gpu": "26502, 7, 76.96, 51",
+    "processes": "2277279, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 26286"
+  },
+  {
+    "unix_time": 1789571162.6609032,
+    "host_memory_kib": {
+      "MemAvailable": 24217072,
+      "SwapFree": 880824,
+      "Shmem": 101025172
+    },
+    "gpu": "26502, 17, 84.00, 53",
+    "processes": "2277279, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 26286"
+  },
+  {
+    "unix_time": 1789571163.706084,
+    "host_memory_kib": {
+      "MemAvailable": 24316680,
+      "SwapFree": 880856,
+      "Shmem": 101025172
+    },
+    "gpu": "26502, 87, 126.86, 53",
+    "processes": "2277279, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 26286"
+  },
+  {
+    "unix_time": 1789571164.7441237,
+    "host_memory_kib": {
+      "MemAvailable": 24325000,
+      "SwapFree": 881936,
+      "Shmem": 101025176
+    },
+    "gpu": "26502, 87, 127.08, 53",
+    "processes": "2277279, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 26286"
+  },
+  {
+    "unix_time": 1789571165.7801101,
+    "host_memory_kib": {
+      "MemAvailable": 24322252,
+      "SwapFree": 885968,
+      "Shmem": 101025176
+    },
+    "gpu": "26502, 87, 125.34, 53",
+    "processes": "2277279, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 26286"
+  },
+  {
+    "unix_time": 1789571166.805908,
+    "host_memory_kib": {
+      "MemAvailable": 24273976,
+      "SwapFree": 978160,
+      "Shmem": 101025176
+    },
+    "gpu": "26502, 0, 97.02, 52",
+    "processes": "2277279, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 26286"
+  },
+  {
+    "unix_time": 1789571167.832825,
+    "host_memory_kib": {
+      "MemAvailable": 55246492,
+      "SwapFree": 978344,
+      "Shmem": 101025176
+    },
+    "gpu": "26502, 0, 91.04, 51",
+    "processes": "2277279, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 26286"
+  },
+  {
+    "unix_time": 1789571168.8593938,
+    "host_memory_kib": {
+      "MemAvailable": 72964340,
+      "SwapFree": 980736,
+      "Shmem": 101025176
+    },
+    "gpu": "32024, 100, 240.29, 68",
+    "processes": "2277279, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31808"
+  },
+  {
+    "unix_time": 1789571169.890995,
+    "host_memory_kib": {
+      "MemAvailable": 72958028,
+      "SwapFree": 980936,
+      "Shmem": 101025176
+    },
+    "gpu": "32024, 100, 576.20, 68",
+    "processes": "2277279, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31808"
+  },
+  {
+    "unix_time": 1789571170.9208415,
+    "host_memory_kib": {
+      "MemAvailable": 72965128,
+      "SwapFree": 981016,
+      "Shmem": 101025176
+    },
+    "gpu": "32024, 100, 574.58, 69",
+    "processes": "2277279, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31808"
+  },
+  {
+    "unix_time": 1789571171.9536386,
+    "host_memory_kib": {
+      "MemAvailable": 72932824,
+      "SwapFree": 981196,
+      "Shmem": 101025176
+    },
+    "gpu": "32024, 100, 574.49, 69",
+    "processes": "2277279, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31808"
+  },
+  {
+    "unix_time": 1789571172.9890528,
+    "host_memory_kib": {
+      "MemAvailable": 72970184,
+      "SwapFree": 981296,
+      "Shmem": 101025176
+    },
+    "gpu": "31924, 100, 547.56, 69",
+    "processes": "2277279, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31708"
+  },
+  {
+    "unix_time": 1789571174.021888,
+    "host_memory_kib": {
+      "MemAvailable": 72961700,
+      "SwapFree": 981312,
+      "Shmem": 101025176
+    },
+    "gpu": "31924, 100, 574.35, 72",
+    "processes": "2277279, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31708"
+  },
+  {
+    "unix_time": 1789571175.052308,
+    "host_memory_kib": {
+      "MemAvailable": 72953360,
+      "SwapFree": 981456,
+      "Shmem": 101025176
+    },
+    "gpu": "31924, 100, 574.83, 71",
+    "processes": "2277279, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31708"
+  },
+  {
+    "unix_time": 1789571176.0868192,
+    "host_memory_kib": {
+      "MemAvailable": 72994720,
+      "SwapFree": 981820,
+      "Shmem": 101025176
+    },
+    "gpu": "31924, 96, 548.24, 73",
+    "processes": "2277279, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31708"
+  },
+  {
+    "unix_time": 1789571177.1215909,
+    "host_memory_kib": {
+      "MemAvailable": 73025912,
+      "SwapFree": 982424,
+      "Shmem": 101025176
+    },
+    "gpu": "31924, 100, 575.70, 73",
+    "processes": "2277279, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31708"
+  },
+  {
+    "unix_time": 1789571178.1577203,
+    "host_memory_kib": {
+      "MemAvailable": 73031284,
+      "SwapFree": 982488,
+      "Shmem": 101025176
+    },
+    "gpu": "31924, 100, 575.46, 70",
+    "processes": "2277279, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31708"
+  },
+  {
+    "unix_time": 1789571179.1938088,
+    "host_memory_kib": {
+      "MemAvailable": 73055156,
+      "SwapFree": 983644,
+      "Shmem": 101025176
+    },
+    "gpu": "31924, 100, 575.00, 73",
+    "processes": "2277279, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31708"
+  },
+  {
+    "unix_time": 1789571180.2266078,
+    "host_memory_kib": {
+      "MemAvailable": 73100276,
+      "SwapFree": 984976,
+      "Shmem": 101025176
+    },
+    "gpu": "31924, 100, 549.67, 73",
+    "processes": "2277279, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31708"
+  },
+  {
+    "unix_time": 1789571181.2597053,
+    "host_memory_kib": {
+      "MemAvailable": 73096148,
+      "SwapFree": 985036,
+      "Shmem": 101025176
+    },
+    "gpu": "31924, 100, 574.61, 74",
+    "processes": "2277279, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31708"
+  },
+  {
+    "unix_time": 1789571182.2921815,
+    "host_memory_kib": {
+      "MemAvailable": 73090496,
+      "SwapFree": 985048,
+      "Shmem": 101025176
+    },
+    "gpu": "31924, 100, 575.36, 74",
+    "processes": "2277279, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31708"
+  },
+  {
+    "unix_time": 1789571183.3224022,
+    "host_memory_kib": {
+      "MemAvailable": 73096520,
+      "SwapFree": 985628,
+      "Shmem": 101025176
+    },
+    "gpu": "31764, 89, 547.91, 70",
+    "processes": "2277279, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31708"
+  },
+  {
+    "unix_time": 1789571184.3605273,
+    "host_memory_kib": {
+      "MemAvailable": 73084452,
+      "SwapFree": 985660,
+      "Shmem": 101025176
+    },
+    "gpu": "31924, 100, 578.03, 74",
+    "processes": "2277279, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31708"
+  },
+  {
+    "unix_time": 1789571185.3897917,
+    "host_memory_kib": {
+      "MemAvailable": 73078692,
+      "SwapFree": 985728,
+      "Shmem": 101025176
+    },
+    "gpu": "31924, 100, 575.66, 74",
+    "processes": "2277279, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31708"
+  },
+  {
+    "unix_time": 1789571186.4200482,
+    "host_memory_kib": {
+      "MemAvailable": 73035432,
+      "SwapFree": 985732,
+      "Shmem": 101025176
+    },
+    "gpu": "31924, 100, 574.52, 70",
+    "processes": "2277279, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31708"
+  },
+  {
+    "unix_time": 1789571187.450231,
+    "host_memory_kib": {
+      "MemAvailable": 73057876,
+      "SwapFree": 985732,
+      "Shmem": 101025176
+    },
+    "gpu": "31924, 100, 554.16, 70",
+    "processes": "2277279, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31708"
+  },
+  {
+    "unix_time": 1789571188.4837162,
+    "host_memory_kib": {
+      "MemAvailable": 73053672,
+      "SwapFree": 985732,
+      "Shmem": 101025176
+    },
+    "gpu": "31924, 100, 574.58, 72",
+    "processes": "2277279, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31708"
+  },
+  {
+    "unix_time": 1789571189.5160913,
+    "host_memory_kib": {
+      "MemAvailable": 73038348,
+      "SwapFree": 985740,
+      "Shmem": 101025176
+    },
+    "gpu": "31924, 100, 575.68, 73",
+    "processes": "2277279, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31708"
+  },
+  {
+    "unix_time": 1789571190.549221,
+    "host_memory_kib": {
+      "MemAvailable": 73092804,
+      "SwapFree": 985748,
+      "Shmem": 101025176
+    },
+    "gpu": "24544, 100, 558.32, 69",
+    "processes": "2277279, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 25048"
+  },
+  {
+    "unix_time": 1789571191.5883996,
+    "host_memory_kib": {
+      "MemAvailable": 73112176,
+      "SwapFree": 985784,
+      "Shmem": 101025176
+    },
+    "gpu": "31924, 100, 584.66, 73",
+    "processes": "2277279, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31708"
+  },
+  {
+    "unix_time": 1789571192.6203227,
+    "host_memory_kib": {
+      "MemAvailable": 73068948,
+      "SwapFree": 985788,
+      "Shmem": 101025176
+    },
+    "gpu": "31924, 100, 574.76, 73",
+    "processes": "2277279, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31708"
+  },
+  {
+    "unix_time": 1789571193.6513815,
+    "host_memory_kib": {
+      "MemAvailable": 73056432,
+      "SwapFree": 985804,
+      "Shmem": 101025176
+    },
+    "gpu": "31924, 100, 574.88, 73",
+    "processes": "2277279, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31708"
+  },
+  {
+    "unix_time": 1789571194.6815448,
+    "host_memory_kib": {
+      "MemAvailable": 73078872,
+      "SwapFree": 985900,
+      "Shmem": 101025176
+    },
+    "gpu": "23744, 83, 552.22, 74",
+    "processes": "2277279, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 23528"
+  },
+  {
+    "unix_time": 1789571195.7145867,
+    "host_memory_kib": {
+      "MemAvailable": 73062952,
+      "SwapFree": 985900,
+      "Shmem": 101025176
+    },
+    "gpu": "31924, 100, 577.22, 74",
+    "processes": "2277279, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31708"
+  },
+  {
+    "unix_time": 1789571196.7462447,
+    "host_memory_kib": {
+      "MemAvailable": 73097300,
+      "SwapFree": 985948,
+      "Shmem": 101025176
+    },
+    "gpu": "31924, 100, 574.56, 74",
+    "processes": "2277279, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31708"
+  },
+  {
+    "unix_time": 1789571197.7797718,
+    "host_memory_kib": {
+      "MemAvailable": 73120232,
+      "SwapFree": 985956,
+      "Shmem": 101025176
+    },
+    "gpu": "31924, 100, 575.43, 74",
+    "processes": "2277279, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31708"
+  },
+  {
+    "unix_time": 1789571198.8139431,
+    "host_memory_kib": {
+      "MemAvailable": 73129076,
+      "SwapFree": 986316,
+      "Shmem": 101025176
+    },
+    "gpu": "31984, 100, 551.34, 77",
+    "processes": "2277279, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31768"
+  },
+  {
+    "unix_time": 1789571199.8469965,
+    "host_memory_kib": {
+      "MemAvailable": 73103024,
+      "SwapFree": 986360,
+      "Shmem": 101025176
+    },
+    "gpu": "31984, 100, 576.32, 75",
+    "processes": "2277279, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31768"
+  },
+  {
+    "unix_time": 1789571200.8780599,
+    "host_memory_kib": {
+      "MemAvailable": 73099900,
+      "SwapFree": 986396,
+      "Shmem": 101025176
+    },
+    "gpu": "31984, 100, 574.68, 75",
+    "processes": "2277279, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31768"
+  },
+  {
+    "unix_time": 1789571201.9093013,
+    "host_memory_kib": {
+      "MemAvailable": 73102180,
+      "SwapFree": 986400,
+      "Shmem": 101025176
+    },
+    "gpu": "31984, 100, 574.87, 77",
+    "processes": "2277279, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31768"
+  },
+  {
+    "unix_time": 1789571202.9412894,
+    "host_memory_kib": {
+      "MemAvailable": 73109192,
+      "SwapFree": 986400,
+      "Shmem": 101025176
+    },
+    "gpu": "31984, 100, 554.62, 77",
+    "processes": "2277279, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31768"
+  },
+  {
+    "unix_time": 1789571203.9721994,
+    "host_memory_kib": {
+      "MemAvailable": 73076496,
+      "SwapFree": 986408,
+      "Shmem": 101025176
+    },
+    "gpu": "31984, 100, 574.96, 77",
+    "processes": "2277279, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31768"
+  },
+  {
+    "unix_time": 1789571205.0029368,
+    "host_memory_kib": {
+      "MemAvailable": 73067436,
+      "SwapFree": 986412,
+      "Shmem": 101025176
+    },
+    "gpu": "31984, 100, 575.05, 77",
+    "processes": "2277279, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31768"
+  },
+  {
+    "unix_time": 1789571206.0323286,
+    "host_memory_kib": {
+      "MemAvailable": 73078104,
+      "SwapFree": 986416,
+      "Shmem": 101025176
+    },
+    "gpu": "31704, 100, 551.03, 76",
+    "processes": "2277279, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31768"
+  },
+  {
+    "unix_time": 1789571207.073516,
+    "host_memory_kib": {
+      "MemAvailable": 73042316,
+      "SwapFree": 986416,
+      "Shmem": 101025176
+    },
+    "gpu": "31984, 100, 576.16, 77",
+    "processes": "2277279, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31768"
+  },
+  {
+    "unix_time": 1789571208.103922,
+    "host_memory_kib": {
+      "MemAvailable": 73023476,
+      "SwapFree": 986420,
+      "Shmem": 101025176
+    },
+    "gpu": "31984, 100, 574.49, 74",
+    "processes": "2277279, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31768"
+  },
+  {
+    "unix_time": 1789571209.1327584,
+    "host_memory_kib": {
+      "MemAvailable": 73028528,
+      "SwapFree": 986556,
+      "Shmem": 101025176
+    },
+    "gpu": "31984, 100, 574.62, 75",
+    "processes": "2277279, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31768"
+  },
+  {
+    "unix_time": 1789571210.1627033,
+    "host_memory_kib": {
+      "MemAvailable": 73038872,
+      "SwapFree": 986576,
+      "Shmem": 101025176
+    },
+    "gpu": "31984, 100, 554.40, 75",
+    "processes": "2277279, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31768"
+  },
+  {
+    "unix_time": 1789571211.1955228,
+    "host_memory_kib": {
+      "MemAvailable": 73048012,
+      "SwapFree": 986592,
+      "Shmem": 101025176
+    },
+    "gpu": "31984, 100, 575.02, 75",
+    "processes": "2277279, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31768"
+  },
+  {
+    "unix_time": 1789571212.2285206,
+    "host_memory_kib": {
+      "MemAvailable": 73060352,
+      "SwapFree": 986604,
+      "Shmem": 101025176
+    },
+    "gpu": "31984, 100, 574.78, 75",
+    "processes": "2277279, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31768"
+  },
+  {
+    "unix_time": 1789571213.2605896,
+    "host_memory_kib": {
+      "MemAvailable": 73092596,
+      "SwapFree": 986604,
+      "Shmem": 101025176
+    },
+    "gpu": "10724, 100, 575.23, 67",
+    "processes": "2277279, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 12108"
+  },
+  {
+    "unix_time": 1789571214.2961004,
+    "host_memory_kib": {
+      "MemAvailable": 73063764,
+      "SwapFree": 986608,
+      "Shmem": 101025176
+    },
+    "gpu": "31984, 100, 552.33, 76",
+    "processes": "2277279, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31768"
+  },
+  {
+    "unix_time": 1789571215.3322675,
+    "host_memory_kib": {
+      "MemAvailable": 73112908,
+      "SwapFree": 986620,
+      "Shmem": 101025176
+    },
+    "gpu": "31984, 100, 575.42, 76",
+    "processes": "2277279, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31768"
+  },
+  {
+    "unix_time": 1789571216.3641064,
+    "host_memory_kib": {
+      "MemAvailable": 73086140,
+      "SwapFree": 986640,
+      "Shmem": 101025176
+    },
+    "gpu": "31984, 100, 574.54, 76",
+    "processes": "2277279, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31768"
+  },
+  {
+    "unix_time": 1789571217.3940816,
+    "host_memory_kib": {
+      "MemAvailable": 73086696,
+      "SwapFree": 986652,
+      "Shmem": 101025176
+    },
+    "gpu": "31984, 100, 554.28, 76",
+    "processes": "2277279, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31768"
+  },
+  {
+    "unix_time": 1789571218.4254308,
+    "host_memory_kib": {
+      "MemAvailable": 73093868,
+      "SwapFree": 986656,
+      "Shmem": 101025176
+    },
+    "gpu": "31984, 100, 576.05, 78",
+    "processes": "2277279, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31768"
+  },
+  {
+    "unix_time": 1789571219.4560912,
+    "host_memory_kib": {
+      "MemAvailable": 73086060,
+      "SwapFree": 986680,
+      "Shmem": 101025176
+    },
+    "gpu": "31984, 100, 575.02, 77",
+    "processes": "2277279, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31768"
+  },
+  {
+    "unix_time": 1789571220.4864676,
+    "host_memory_kib": {
+      "MemAvailable": 73050452,
+      "SwapFree": 986684,
+      "Shmem": 101025176
+    },
+    "gpu": "31984, 100, 575.32, 78",
+    "processes": "2277279, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31768"
+  },
+  {
+    "unix_time": 1789571221.5186398,
+    "host_memory_kib": {
+      "MemAvailable": 73058324,
+      "SwapFree": 986696,
+      "Shmem": 101025176
+    },
+    "gpu": "31984, 100, 552.67, 78",
+    "processes": "2277279, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31768"
+  },
+  {
+    "unix_time": 1789571222.5487707,
+    "host_memory_kib": {
+      "MemAvailable": 73078392,
+      "SwapFree": 986708,
+      "Shmem": 101025176
+    },
+    "gpu": "31984, 100, 574.40, 79",
+    "processes": "2277279, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31768"
+  },
+  {
+    "unix_time": 1789571223.5770202,
+    "host_memory_kib": {
+      "MemAvailable": 73095652,
+      "SwapFree": 987680,
+      "Shmem": 101025176
+    },
+    "gpu": "31984, 100, 574.81, 78",
+    "processes": "2277279, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31768"
+  },
+  {
+    "unix_time": 1789571224.607476,
+    "host_memory_kib": {
+      "MemAvailable": 73088564,
+      "SwapFree": 987684,
+      "Shmem": 101025176
+    },
+    "gpu": "29124, 100, 548.19, 77",
+    "processes": "2277279, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 29708"
+  },
+  {
+    "unix_time": 1789571225.6486485,
+    "host_memory_kib": {
+      "MemAvailable": 73102692,
+      "SwapFree": 997148,
+      "Shmem": 101025176
+    },
+    "gpu": "31924, 100, 587.93, 77",
+    "processes": "2277279, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31708"
+  },
+  {
+    "unix_time": 1789571226.6805298,
+    "host_memory_kib": {
+      "MemAvailable": 73082964,
+      "SwapFree": 1025968,
+      "Shmem": 101025176
+    },
+    "gpu": "31924, 100, 574.57, 76",
+    "processes": "2277279, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31708"
+  },
+  {
+    "unix_time": 1789571227.7145405,
+    "host_memory_kib": {
+      "MemAvailable": 73084532,
+      "SwapFree": 1026004,
+      "Shmem": 101025176
+    },
+    "gpu": "31924, 100, 575.35, 77",
+    "processes": "2277279, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31708"
+  },
+  {
+    "unix_time": 1789571228.744589,
+    "host_memory_kib": {
+      "MemAvailable": 73093032,
+      "SwapFree": 1028904,
+      "Shmem": 101025176
+    },
+    "gpu": "31924, 69, 552.48, 77",
+    "processes": "2277279, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31708"
+  },
+  {
+    "unix_time": 1789571229.7752461,
+    "host_memory_kib": {
+      "MemAvailable": 73075168,
+      "SwapFree": 1028908,
+      "Shmem": 101025176
+    },
+    "gpu": "31924, 100, 574.74, 75",
+    "processes": "2277279, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31708"
+  },
+  {
+    "unix_time": 1789571230.8067718,
+    "host_memory_kib": {
+      "MemAvailable": 73053788,
+      "SwapFree": 1028912,
+      "Shmem": 101025176
+    },
+    "gpu": "31924, 100, 574.76, 76",
+    "processes": "2277279, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31708"
+  },
+  {
+    "unix_time": 1789571231.838859,
+    "host_memory_kib": {
+      "MemAvailable": 73027560,
+      "SwapFree": 1029076,
+      "Shmem": 101025176
+    },
+    "gpu": "28264, 100, 574.85, 77",
+    "processes": "2277279, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 24648"
+  },
+  {
+    "unix_time": 1789571232.8681843,
+    "host_memory_kib": {
+      "MemAvailable": 73008396,
+      "SwapFree": 1031180,
+      "Shmem": 101025176
+    },
+    "gpu": "31924, 100, 549.07, 77",
+    "processes": "2277279, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31708"
+  },
+  {
+    "unix_time": 1789571233.8988867,
+    "host_memory_kib": {
+      "MemAvailable": 73029928,
+      "SwapFree": 1031248,
+      "Shmem": 101025176
+    },
+    "gpu": "31924, 100, 574.67, 77",
+    "processes": "2277279, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31708"
+  },
+  {
+    "unix_time": 1789571234.928431,
+    "host_memory_kib": {
+      "MemAvailable": 73033160,
+      "SwapFree": 1031276,
+      "Shmem": 101025176
+    },
+    "gpu": "31924, 100, 574.82, 79",
+    "processes": "2277279, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31708"
+  },
+  {
+    "unix_time": 1789571235.9589667,
+    "host_memory_kib": {
+      "MemAvailable": 73063496,
+      "SwapFree": 1031496,
+      "Shmem": 101025176
+    },
+    "gpu": "31924, 75, 551.50, 80",
+    "processes": "2277279, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31708"
+  },
+  {
+    "unix_time": 1789571236.9897249,
+    "host_memory_kib": {
+      "MemAvailable": 73068904,
+      "SwapFree": 1031612,
+      "Shmem": 101025176
+    },
+    "gpu": "31924, 100, 576.54, 79",
+    "processes": "2277279, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31708"
+  },
+  {
+    "unix_time": 1789571238.0201123,
+    "host_memory_kib": {
+      "MemAvailable": 73041436,
+      "SwapFree": 1031628,
+      "Shmem": 101025176
+    },
+    "gpu": "31924, 100, 575.44, 79",
+    "processes": "2277279, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31708"
+  },
+  {
+    "unix_time": 1789571239.050953,
+    "host_memory_kib": {
+      "MemAvailable": 73072220,
+      "SwapFree": 1031788,
+      "Shmem": 101025176
+    },
+    "gpu": "31924, 100, 574.49, 79",
+    "processes": "2277279, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31708"
+  },
+  {
+    "unix_time": 1789571240.082711,
+    "host_memory_kib": {
+      "MemAvailable": 73082320,
+      "SwapFree": 1031788,
+      "Shmem": 101025176
+    },
+    "gpu": "31924, 100, 552.11, 76",
+    "processes": "2277279, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31708"
+  },
+  {
+    "unix_time": 1789571241.1135204,
+    "host_memory_kib": {
+      "MemAvailable": 73035884,
+      "SwapFree": 1031796,
+      "Shmem": 101025176
+    },
+    "gpu": "31924, 100, 575.28, 77",
+    "processes": "2277279, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31708"
+  },
+  {
+    "unix_time": 1789571242.1439822,
+    "host_memory_kib": {
+      "MemAvailable": 73004212,
+      "SwapFree": 1031816,
+      "Shmem": 101025176
+    },
+    "gpu": "31924, 100, 574.70, 76",
+    "processes": "2277279, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31708"
+  },
+  {
+    "unix_time": 1789571243.176865,
+    "host_memory_kib": {
+      "MemAvailable": 73064736,
+      "SwapFree": 1032008,
+      "Shmem": 101025176
+    },
+    "gpu": "23904, 100, 539.61, 68",
+    "processes": "2277279, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 24848"
+  },
+  {
+    "unix_time": 1789571244.2137156,
+    "host_memory_kib": {
+      "MemAvailable": 73075972,
+      "SwapFree": 1032016,
+      "Shmem": 101025176
+    },
+    "gpu": "31924, 100, 556.52, 77",
+    "processes": "2277279, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31708"
+  },
+  {
+    "unix_time": 1789571245.2441833,
+    "host_memory_kib": {
+      "MemAvailable": 73086924,
+      "SwapFree": 1032036,
+      "Shmem": 101025176
+    },
+    "gpu": "31924, 100, 575.21, 77",
+    "processes": "2277279, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31708"
+  },
+  {
+    "unix_time": 1789571246.2808661,
+    "host_memory_kib": {
+      "MemAvailable": 73089592,
+      "SwapFree": 1032040,
+      "Shmem": 101025176
+    },
+    "gpu": "31924, 100, 575.18, 77",
+    "processes": "2277279, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31708"
+  },
+  {
+    "unix_time": 1789571247.3145733,
+    "host_memory_kib": {
+      "MemAvailable": 73080228,
+      "SwapFree": 1032044,
+      "Shmem": 101025176
+    },
+    "gpu": "31924, 100, 554.36, 77",
+    "processes": "2277279, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31708"
+  },
+  {
+    "unix_time": 1789571248.346778,
+    "host_memory_kib": {
+      "MemAvailable": 73086192,
+      "SwapFree": 1032048,
+      "Shmem": 101025176
+    },
+    "gpu": "31924, 100, 575.88, 78",
+    "processes": "2277279, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31708"
+  },
+  {
+    "unix_time": 1789571249.378658,
+    "host_memory_kib": {
+      "MemAvailable": 73077748,
+      "SwapFree": 1032152,
+      "Shmem": 101025176
+    },
+    "gpu": "31924, 100, 574.54, 78",
+    "processes": "2277279, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31708"
+  },
+  {
+    "unix_time": 1789571250.4100688,
+    "host_memory_kib": {
+      "MemAvailable": 73035468,
+      "SwapFree": 1032168,
+      "Shmem": 101025176
+    },
+    "gpu": "31924, 100, 574.91, 80",
+    "processes": "2277279, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31708"
+  },
+  {
+    "unix_time": 1789571251.4424052,
+    "host_memory_kib": {
+      "MemAvailable": 73092056,
+      "SwapFree": 1032696,
+      "Shmem": 101025180
+    },
+    "gpu": "31984, 100, 554.93, 80",
+    "processes": "2277279, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31768"
+  },
+  {
+    "unix_time": 1789571252.4713626,
+    "host_memory_kib": {
+      "MemAvailable": 73083776,
+      "SwapFree": 1032708,
+      "Shmem": 101025180
+    },
+    "gpu": "31984, 100, 574.48, 80",
+    "processes": "2277279, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31768"
+  },
+  {
+    "unix_time": 1789571253.501226,
+    "host_memory_kib": {
+      "MemAvailable": 73094944,
+      "SwapFree": 1032976,
+      "Shmem": 101025180
+    },
+    "gpu": "31984, 100, 574.92, 80",
+    "processes": "2277279, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31768"
+  },
+  {
+    "unix_time": 1789571254.531947,
+    "host_memory_kib": {
+      "MemAvailable": 73050016,
+      "SwapFree": 1032984,
+      "Shmem": 101025180
+    },
+    "gpu": "29844, 100, 550.52, 78",
+    "processes": "2277279, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 30408"
+  },
+  {
+    "unix_time": 1789571255.5768857,
+    "host_memory_kib": {
+      "MemAvailable": 73045504,
+      "SwapFree": 1032988,
+      "Shmem": 101025180
+    },
+    "gpu": "31984, 100, 576.77, 76",
+    "processes": "2277279, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31768"
+  },
+  {
+    "unix_time": 1789571256.6072578,
+    "host_memory_kib": {
+      "MemAvailable": 73073036,
+      "SwapFree": 1033104,
+      "Shmem": 101025180
+    },
+    "gpu": "31984, 100, 575.24, 78",
+    "processes": "2277279, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31768"
+  },
+  {
+    "unix_time": 1789571257.6362479,
+    "host_memory_kib": {
+      "MemAvailable": 73047224,
+      "SwapFree": 1033108,
+      "Shmem": 101025180
+    },
+    "gpu": "31984, 100, 575.34, 78",
+    "processes": "2277279, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31768"
+  },
+  {
+    "unix_time": 1789571258.6674771,
+    "host_memory_kib": {
+      "MemAvailable": 73042304,
+      "SwapFree": 1033112,
+      "Shmem": 101025180
+    },
+    "gpu": "31984, 89, 552.96, 76",
+    "processes": "2277279, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31768"
+  },
+  {
+    "unix_time": 1789571259.6994839,
+    "host_memory_kib": {
+      "MemAvailable": 73062080,
+      "SwapFree": 1033412,
+      "Shmem": 101025180
+    },
+    "gpu": "31984, 100, 574.90, 78",
+    "processes": "2277279, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31768"
+  },
+  {
+    "unix_time": 1789571260.7305014,
+    "host_memory_kib": {
+      "MemAvailable": 73024456,
+      "SwapFree": 1033416,
+      "Shmem": 101025180
+    },
+    "gpu": "31984, 100, 575.08, 78",
+    "processes": "2277279, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31768"
+  },
+  {
+    "unix_time": 1789571261.7649581,
+    "host_memory_kib": {
+      "MemAvailable": 73025764,
+      "SwapFree": 1033428,
+      "Shmem": 101025180
+    },
+    "gpu": "31984, 100, 575.36, 78",
+    "processes": "2277279, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31728"
+  },
+  {
+    "unix_time": 1789571262.7965722,
+    "host_memory_kib": {
+      "MemAvailable": 73028472,
+      "SwapFree": 1033564,
+      "Shmem": 101025188
+    },
+    "gpu": "31984, 100, 553.96, 79",
+    "processes": "2277279, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31768"
+  },
+  {
+    "unix_time": 1789571263.8274748,
+    "host_memory_kib": {
+      "MemAvailable": 73016176,
+      "SwapFree": 1033568,
+      "Shmem": 101025188
+    },
+    "gpu": "31984, 100, 574.84, 80",
+    "processes": "2277279, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31768"
+  },
+  {
+    "unix_time": 1789571264.859451,
+    "host_memory_kib": {
+      "MemAvailable": 73024684,
+      "SwapFree": 1033728,
+      "Shmem": 101025188
+    },
+    "gpu": "31984, 100, 575.54, 79",
+    "processes": "2277279, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31768"
+  },
+  {
+    "unix_time": 1789571265.8894694,
+    "host_memory_kib": {
+      "MemAvailable": 73016076,
+      "SwapFree": 1033732,
+      "Shmem": 101025188
+    },
+    "gpu": "31984, 86, 552.10, 80",
+    "processes": "2277279, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31768"
+  },
+  {
+    "unix_time": 1789571266.9200807,
+    "host_memory_kib": {
+      "MemAvailable": 73034740,
+      "SwapFree": 1033744,
+      "Shmem": 101025188
+    },
+    "gpu": "31984, 100, 578.46, 80",
+    "processes": "2277279, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31768"
+  },
+  {
+    "unix_time": 1789571267.9504461,
+    "host_memory_kib": {
+      "MemAvailable": 73036732,
+      "SwapFree": 1033960,
+      "Shmem": 101025188
+    },
+    "gpu": "31984, 100, 574.42, 80",
+    "processes": "2277279, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31768"
+  },
+  {
+    "unix_time": 1789571268.9806597,
+    "host_memory_kib": {
+      "MemAvailable": 73040688,
+      "SwapFree": 1034012,
+      "Shmem": 101025188
+    },
+    "gpu": "31984, 100, 574.60, 79",
+    "processes": "2277279, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31768"
+  },
+  {
+    "unix_time": 1789571270.0124576,
+    "host_memory_kib": {
+      "MemAvailable": 73014184,
+      "SwapFree": 1034028,
+      "Shmem": 101025188
+    },
+    "gpu": "31984, 100, 555.14, 78",
+    "processes": "2277279, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31768"
+  },
+  {
+    "unix_time": 1789571271.0442543,
+    "host_memory_kib": {
+      "MemAvailable": 73021484,
+      "SwapFree": 1034028,
+      "Shmem": 101025188
+    },
+    "gpu": "31984, 100, 574.81, 78",
+    "processes": "2277279, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31768"
+  },
+  {
+    "unix_time": 1789571272.0766075,
+    "host_memory_kib": {
+      "MemAvailable": 72983552,
+      "SwapFree": 1034044,
+      "Shmem": 101025188
+    },
+    "gpu": "31984, 100, 575.25, 78",
+    "processes": "2277279, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31768"
+  },
+  {
+    "unix_time": 1789571273.1079683,
+    "host_memory_kib": {
+      "MemAvailable": 73016520,
+      "SwapFree": 1034072,
+      "Shmem": 101025188
+    },
+    "gpu": "21724, 100, 574.56, 78",
+    "processes": "2277279, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 18208"
+  },
+  {
+    "unix_time": 1789571274.1365697,
+    "host_memory_kib": {
+      "MemAvailable": 73024160,
+      "SwapFree": 1034084,
+      "Shmem": 101025188
+    },
+    "gpu": "26424, 100, 551.97, 79",
+    "processes": "2277279, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 26208"
+  },
+  {
+    "unix_time": 1789571275.1685922,
+    "host_memory_kib": {
+      "MemAvailable": 73860060,
+      "SwapFree": 1081560,
+      "Shmem": 101025188
+    },
+    "gpu": "26424, 100, 424.77, 65",
+    "processes": "2277279, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 26208"
+  },
+  {
+    "unix_time": 1789571276.198558,
+    "host_memory_kib": {
+      "MemAvailable": 75074672,
+      "SwapFree": 1303236,
+      "Shmem": 101025188
+    },
+    "gpu": "26424, 5, 112.32, 63",
+    "processes": "2277279, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 26208"
+  },
+  {
+    "unix_time": 1789571277.226595,
+    "host_memory_kib": {
+      "MemAvailable": 77061184,
+      "SwapFree": 1458684,
+      "Shmem": 101025188
+    },
+    "gpu": "26424, 8, 97.06, 61",
+    "processes": "2277279, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 26208"
+  },
+  {
+    "unix_time": 1789571278.255403,
+    "host_memory_kib": {
+      "MemAvailable": 78286480,
+      "SwapFree": 1741396,
+      "Shmem": 101025188
+    },
+    "gpu": "26424, 4, 85.56, 60",
+    "processes": "2277279, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 26208"
+  },
+  {
+    "unix_time": 1789571279.2835565,
+    "host_memory_kib": {
+      "MemAvailable": 79631620,
+      "SwapFree": 1857608,
+      "Shmem": 101025188
+    },
+    "gpu": "26428, 100, 299.78, 75",
+    "processes": "2277279, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 26212"
+  },
+  {
+    "unix_time": 1789571280.3136845,
+    "host_memory_kib": {
+      "MemAvailable": 79637412,
+      "SwapFree": 1857628,
+      "Shmem": 101025188
+    },
+    "gpu": "26428, 100, 575.53, 77",
+    "processes": "2277279, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 26212"
+  },
+  {
+    "unix_time": 1789571281.3450108,
+    "host_memory_kib": {
+      "MemAvailable": 79493312,
+      "SwapFree": 1857644,
+      "Shmem": 101025188
+    },
+    "gpu": "26428, 100, 570.84, 77",
+    "processes": "2277279, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 26212"
+  },
+  {
+    "unix_time": 1789571282.376555,
+    "host_memory_kib": {
+      "MemAvailable": 79506336,
+      "SwapFree": 1857700,
+      "Shmem": 101025188
+    },
+    "gpu": "26428, 100, 574.99, 77",
+    "processes": "2277279, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 26212"
+  },
+  {
+    "unix_time": 1789571283.4078639,
+    "host_memory_kib": {
+      "MemAvailable": 79325804,
+      "SwapFree": 1857912,
+      "Shmem": 101025188
+    },
+    "gpu": "26428, 100, 570.29, 77",
+    "processes": "2277279, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 26212"
+  },
+  {
+    "unix_time": 1789571284.4404576,
+    "host_memory_kib": {
+      "MemAvailable": 79124908,
+      "SwapFree": 1857980,
+      "Shmem": 101025188
+    },
+    "gpu": "26428, 100, 555.11, 79",
+    "processes": "2277279, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 26212"
+  },
+  {
+    "unix_time": 1789571285.4725003,
+    "host_memory_kib": {
+      "MemAvailable": 79148108,
+      "SwapFree": 1857984,
+      "Shmem": 101025188
+    },
+    "gpu": "26428, 100, 588.42, 78",
+    "processes": "2277279, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 26212"
+  },
+  {
+    "unix_time": 1789571286.5018227,
+    "host_memory_kib": {
+      "MemAvailable": 78972988,
+      "SwapFree": 1857988,
+      "Shmem": 101025188
+    },
+    "gpu": "26428, 77, 569.72, 78",
+    "processes": "2277279, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 26212"
+  },
+  {
+    "unix_time": 1789571287.5349522,
+    "host_memory_kib": {
+      "MemAvailable": 78978704,
+      "SwapFree": 1857988,
+      "Shmem": 101025188
+    },
+    "gpu": "26428, 100, 575.82, 78",
+    "processes": "2277279, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 26212"
+  },
+  {
+    "unix_time": 1789571288.5658782,
+    "host_memory_kib": {
+      "MemAvailable": 78785320,
+      "SwapFree": 1858288,
+      "Shmem": 101025188
+    },
+    "gpu": "26428, 100, 569.56, 78",
+    "processes": "2277279, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 26212"
+  },
+  {
+    "unix_time": 1789571289.5980437,
+    "host_memory_kib": {
+      "MemAvailable": 78796212,
+      "SwapFree": 1858300,
+      "Shmem": 101025188
+    },
+    "gpu": "26428, 100, 575.05, 78",
+    "processes": "2277279, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 26212"
+  },
+  {
+    "unix_time": 1789571290.6301618,
+    "host_memory_kib": {
+      "MemAvailable": 78588464,
+      "SwapFree": 1858312,
+      "Shmem": 101025188
+    },
+    "gpu": "26428, 100, 569.75, 78",
+    "processes": "2277279, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 26212"
+  },
+  {
+    "unix_time": 1789571291.662712,
+    "host_memory_kib": {
+      "MemAvailable": 78572224,
+      "SwapFree": 1858428,
+      "Shmem": 101025188
+    },
+    "gpu": "26428, 100, 575.03, 78",
+    "processes": "2277279, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 26212"
+  },
+  {
+    "unix_time": 1789571292.6949446,
+    "host_memory_kib": {
+      "MemAvailable": 78386300,
+      "SwapFree": 1858536,
+      "Shmem": 101025188
+    },
+    "gpu": "26428, 100, 571.20, 78",
+    "processes": "2277279, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 26212"
+  },
+  {
+    "unix_time": 1789571293.7253804,
+    "host_memory_kib": {
+      "MemAvailable": 78220700,
+      "SwapFree": 1858872,
+      "Shmem": 101025188
+    },
+    "gpu": "26428, 100, 568.16, 80",
+    "processes": "2277279, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 26212"
+  },
+  {
+    "unix_time": 1789571294.7585723,
+    "host_memory_kib": {
+      "MemAvailable": 78192712,
+      "SwapFree": 1858880,
+      "Shmem": 101025188
+    },
+    "gpu": "26428, 100, 578.03, 78",
+    "processes": "2277279, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 26212"
+  },
+  {
+    "unix_time": 1789571295.7900589,
+    "host_memory_kib": {
+      "MemAvailable": 78006800,
+      "SwapFree": 1858884,
+      "Shmem": 101025188
+    },
+    "gpu": "26428, 100, 571.56, 78",
+    "processes": "2277279, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 26212"
+  },
+  {
+    "unix_time": 1789571296.8218005,
+    "host_memory_kib": {
+      "MemAvailable": 77983368,
+      "SwapFree": 1858912,
+      "Shmem": 101025188
+    },
+    "gpu": "26428, 100, 575.25, 79",
+    "processes": "2277279, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 26212"
+  },
+  {
+    "unix_time": 1789571297.8537126,
+    "host_memory_kib": {
+      "MemAvailable": 77835656,
+      "SwapFree": 1858912,
+      "Shmem": 101025188
+    },
+    "gpu": "26428, 100, 571.36, 79",
+    "processes": "2277279, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 26212"
+  },
+  {
+    "unix_time": 1789571298.8857603,
+    "host_memory_kib": {
+      "MemAvailable": 77840800,
+      "SwapFree": 1858924,
+      "Shmem": 101025188
+    },
+    "gpu": "26428, 100, 575.03, 79",
+    "processes": "2277279, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 26212"
+  },
+  {
+    "unix_time": 1789571299.9182594,
+    "host_memory_kib": {
+      "MemAvailable": 77656752,
+      "SwapFree": 1858944,
+      "Shmem": 101025188
+    },
+    "gpu": "26428, 100, 571.10, 79",
+    "processes": "2277279, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 26212"
+  },
+  {
+    "unix_time": 1789571300.9493074,
+    "host_memory_kib": {
+      "MemAvailable": 77483556,
+      "SwapFree": 1858944,
+      "Shmem": 101025188
+    },
+    "gpu": "26428, 100, 567.21, 79",
+    "processes": "2277279, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 26212"
+  },
+  {
+    "unix_time": 1789571301.9814522,
+    "host_memory_kib": {
+      "MemAvailable": 77446368,
+      "SwapFree": 1858968,
+      "Shmem": 101025188
+    },
+    "gpu": "26428, 100, 582.46, 79",
+    "processes": "2277279, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 26212"
+  },
+  {
+    "unix_time": 1789571303.0115104,
+    "host_memory_kib": {
+      "MemAvailable": 77243496,
+      "SwapFree": 1858976,
+      "Shmem": 101025188
+    },
+    "gpu": "26428, 100, 570.52, 79",
+    "processes": "2277279, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 26212"
+  },
+  {
+    "unix_time": 1789571304.0428064,
+    "host_memory_kib": {
+      "MemAvailable": 77245656,
+      "SwapFree": 1858980,
+      "Shmem": 101025188
+    },
+    "gpu": "26428, 100, 576.34, 79",
+    "processes": "2277279, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 26212"
+  },
+  {
+    "unix_time": 1789571305.072614,
+    "host_memory_kib": {
+      "MemAvailable": 76058900,
+      "SwapFree": 1858988,
+      "Shmem": 101025188
+    },
+    "gpu": "26428, 45, 330.36, 65",
+    "processes": "2277279, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 26212"
+  },
+  {
+    "unix_time": 1789571306.1034682,
+    "host_memory_kib": {
+      "MemAvailable": 71651496,
+      "SwapFree": 1858996,
+      "Shmem": 101025188
+    },
+    "gpu": "26428, 14, 113.91, 63",
+    "processes": "2277279, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 26212"
+  },
+  {
+    "unix_time": 1789571307.1318378,
+    "host_memory_kib": {
+      "MemAvailable": 70675256,
+      "SwapFree": 1899496,
+      "Shmem": 101031148
+    },
+    "gpu": "26444, 28, 130.50, 61",
+    "processes": "2277279, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 26228"
+  },
+  {
+    "unix_time": 1789571308.1630766,
+    "host_memory_kib": {
+      "MemAvailable": 72033956,
+      "SwapFree": 2047896,
+      "Shmem": 101033776
+    },
+    "gpu": "26444, 0, 83.32, 60",
+    "processes": "2277279, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 26228"
+  }
+]

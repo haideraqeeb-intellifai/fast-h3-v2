@@ -1,0 +1,8 @@
+{
+  "CPU(s):": "32",
+  "Model name:": "AMD Ryzen 9 9950X 16-Core Processor",
+  "Thread(s) per core:": "2",
+  "Core(s) per socket:": "16",
+  "platform": "Linux-6.8.0-90-generic-x86_64-with-glibc2.35",
+  "mem_total_kib": 195394384
+}

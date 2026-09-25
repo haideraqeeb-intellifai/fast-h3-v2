@@ -1,0 +1,127 @@
+{
+  "url": "https://s3.renderplatform.com/agent-assets/Raqeeb/h3-ref2va-4step-nsight-reproduction/index.html",
+  "html_sha256": "f362d7a6c9a55cbeff0700fa1ddb0cbd24296e891cd60c66ac2e094dbb003a32",
+  "matches_local": true,
+  "downloads": [
+    {
+      "path": "assets/METHODOLOGY.md",
+      "status": 200,
+      "bytes": 6451
+    },
+    {
+      "path": "assets/analysis.json",
+      "status": 200,
+      "bytes": 991942
+    },
+    {
+      "path": "assets/benchmark.py",
+      "status": 200,
+      "bytes": 25840
+    },
+    {
+      "path": "assets/gpu_metrics_raw.csv.gz",
+      "status": 200,
+      "bytes": 72638763
+    },
+    {
+      "path": "assets/input_provenance.json",
+      "status": 200,
+      "bytes": 1400
+    },
+    {
+      "path": "assets/kernels.ncu-rep",
+      "status": 200,
+      "bytes": 12892470
+    },
+    {
+      "path": "assets/measured.nsys-rep",
+      "status": 200,
+      "bytes": 211196091
+    },
+    {
+      "path": "assets/measured.sqlite.gz",
+      "status": 200,
+      "bytes": 469217311
+    },
+    {
+      "path": "assets/memory_samples.csv",
+      "status": 200,
+      "bytes": 430860
+    },
+    {
+      "path": "assets/model_checksums.json",
+      "status": 200,
+      "bytes": 867
+    },
+    {
+      "path": "assets/ncu_command.json",
+      "status": 200,
+      "bytes": 1299
+    },
+    {
+      "path": "assets/ncu_raw.csv",
+      "status": 200,
+      "bytes": 109901
+    },
+    {
+      "path": "assets/nsys_stats_cuda_api_sum.csv",
+      "status": 200,
+      "bytes": 2192
+    },
+    {
+      "path": "assets/nsys_stats_cuda_gpu_kern_sum.csv",
+      "status": 200,
+      "bytes": 61512
+    },
+    {
+      "path": "assets/nsys_stats_cuda_gpu_mem_size_sum.csv",
+      "status": 200,
+      "bytes": 366
+    },
+    {
+      "path": "assets/nsys_stats_cuda_gpu_mem_time_sum.csv",
+      "status": 200,
+      "bytes": 408
+    },
+    {
+      "path": "assets/phase_metrics.csv",
+      "status": 200,
+      "bytes": 26084
+    },
+    {
+      "path": "assets/poster.jpg",
+      "status": 200,
+      "bytes": 120646
+    },
+    {
+      "path": "assets/preview.webm",
+      "status": 200,
+      "bytes": 9301935
+    },
+    {
+      "path": "assets/reference_output_comparison.json",
+      "status": 200,
+      "bytes": 685
+    },
+    {
+      "path": "assets/run.json",
+      "status": 200,
+      "bytes": 26224
+    },
+    {
+      "path": "assets/verification.json",
+      "status": 200,
+      "bytes": 6930
+    },
+    {
+      "path": "assets/workflow.json",
+      "status": 200,
+      "bytes": 4752
+    },
+    {
+      "path": "measured.mp4",
+      "status": 200,
+      "bytes": 13764960
+    }
+  ]
+}

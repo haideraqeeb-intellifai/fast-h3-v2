@@ -1,0 +1,26 @@
+[
+  {
+    "policy": "retain_cpu_weights_discard_gpu_copies",
+    "weight_copy_back_bytes": 0,
+    "retained_cpu_bytes": 10415476184,
+    "release_seconds": 0.0009013460949063301
+  },
+  {
+    "policy": "retain_cpu_weights_discard_gpu_copies",
+    "weight_copy_back_bytes": 0,
+    "retained_cpu_bytes": 605306596,
+    "release_seconds": 0.0012347828596830368
+  },
+  {
+    "policy": "retain_cpu_weights_discard_gpu_copies",
+    "weight_copy_back_bytes": 0,
+    "retained_cpu_bytes": 10415476184,
+    "release_seconds": 0.0008533960208296776
+  },
+  {
+    "policy": "retain_cpu_weights_discard_gpu_copies",
+    "weight_copy_back_bytes": 0,
+    "retained_cpu_bytes": 605306596,
+    "release_seconds": 0.000987498089671135
+  }
+]

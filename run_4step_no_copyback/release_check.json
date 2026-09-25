@@ -1,0 +1,8 @@
+{
+  "check": "Two GPU forwards through a small module with parameters and a nonpersistent buffer, using the same retention/release helpers",
+  "result": "passed",
+  "cpu_storage_pointers_preserved": true,
+  "original_weight_values_preserved": true,
+  "release_profiler_to_copy_or_copy_operators": 0,
+  "note": "Small-module check; complete output parity will be verified after the full benchmark."
+}

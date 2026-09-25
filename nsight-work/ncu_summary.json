@@ -1,0 +1,320 @@
+[
+  {
+    "id": "ncu_0",
+    "run_id": "measured",
+    "kernel_name": "void cutlass::Kernel2<cutlass_80_simt_sgemm_256x128_8x4_tn_align1>(T1::Params)",
+    "source_id": "ncu",
+    "representative": true,
+    "launch": {
+      "diagnostic_id": "0",
+      "context": "1",
+      "stream": "7",
+      "grid": "(4256, 3, 1)",
+      "block": "(256, 1, 1)",
+      "phase": "DiT_step_3"
+    },
+    "counters": [
+      {
+        "name": "sm__throughput.avg.pct_of_peak_sustained_elapsed",
+        "label": "Compute / SM throughput",
+        "value": 50.666037,
+        "unit": "%",
+        "status": "collected",
+        "reason": ""
+      },
+      {
+        "name": "sm__warps_active.avg.pct_of_peak_sustained_active",
+        "label": "Achieved occupancy",
+        "value": 16.638533,
+        "unit": "%",
+        "status": "collected",
+        "reason": ""
+      },
+      {
+        "name": "sm__pipe_tensor_cycles_active.avg.pct_of_peak_sustained_elapsed",
+        "label": "Tensor pipe active cycles (elapsed denominator)",
+        "value": 0.0,
+        "unit": "%",
+        "status": "collected",
+        "reason": ""
+      },
+      {
+        "name": "gpu__compute_memory_throughput.avg.pct_of_peak_sustained_elapsed",
+        "label": "Memory throughput",
+        "value": 62.068237,
+        "unit": "%",
+        "status": "collected",
+        "reason": ""
+      },
+      {
+        "name": "dram__cycles_active.avg.pct_of_peak_sustained_elapsed",
+        "label": "DRAM active cycles",
+        "value": 49.591536,
+        "unit": "%",
+        "status": "collected",
+        "reason": ""
+      },
+      {
+        "name": "l1tex__throughput.avg.pct_of_peak_sustained_active",
+        "label": "L1/TEX throughput (active denominator)",
+        "value": 62.995499,
+        "unit": "%",
+        "status": "collected",
+        "reason": ""
+      },
+      {
+        "name": "lts__throughput.avg.pct_of_peak_sustained_elapsed",
+        "label": "L2 throughput",
+        "value": 51.964573,
+        "unit": "%",
+        "status": "collected",
+        "reason": ""
+      },
+      {
+        "name": "lts__t_sector_hit_rate.pct",
+        "label": "L2 hit rate",
+        "value": 51.564889,
+        "unit": "%",
+        "status": "collected",
+        "reason": ""
+      },
+      {
+        "name": "smsp__pcsamp_warps_issue_stalled_mio_throttle_not_issued / sum(all not-issued reasons)",
+        "label": "Not-issued warp samples: mio_throttle",
+        "value": 33.436341161928304,
+        "unit": "% of not-issued samples",
+        "status": "derived",
+        "reason": "Normalized PC-sampling reason counts; not percentage of total kernel time"
+      },
+      {
+        "name": "smsp__pcsamp_warps_issue_stalled_lg_throttle_not_issued / sum(all not-issued reasons)",
+        "label": "Not-issued warp samples: lg_throttle",
+        "value": 18.475484136794396,
+        "unit": "% of not-issued samples",
+        "status": "derived",
+        "reason": "Normalized PC-sampling reason counts; not percentage of total kernel time"
+      },
+      {
+        "name": "smsp__pcsamp_warps_issue_stalled_short_scoreboard_not_issued / sum(all not-issued reasons)",
+        "label": "Not-issued warp samples: short_scoreboard",
+        "value": 18.018129377832715,
+        "unit": "% of not-issued samples",
+        "status": "derived",
+        "reason": "Normalized PC-sampling reason counts; not percentage of total kernel time"
+      }
+    ],
+    "notes": "Separate diagnostic execution, first matching launch in DiT step3; counter replay time and memory are excluded from benchmark aggregates. Nsight default clock/cache controls apply. This matrix-multiply sample is FP32 SIMT. The dominant INT8 GEMMs are characterized by Systems timings; their per-kernel counters were not sampled."
+  },
+  {
+    "id": "ncu_1",
+    "run_id": "measured",
+    "kernel_name": "void comfy::<unnamed>::quantize_int8_rowwise_convrot64_kernel<__nv_bfloat16, 1024, 0, 0>(const T1 *, signed char *, float *, int, unsigned long)",
+    "source_id": "ncu",
+    "representative": true,
+    "launch": {
+      "diagnostic_id": "1",
+      "context": "1",
+      "stream": "7",
+      "grid": "(71148, 1, 1)",
+      "block": "(1024, 1, 1)",
+      "phase": "DiT_step_3"
+    },
+    "counters": [
+      {
+        "name": "sm__throughput.avg.pct_of_peak_sustained_elapsed",
+        "label": "Compute / SM throughput",
+        "value": 49.39697,
+        "unit": "%",
+        "status": "collected",
+        "reason": ""
+      },
+      {
+        "name": "sm__warps_active.avg.pct_of_peak_sustained_active",
+        "label": "Achieved occupancy",
+        "value": 65.057991,
+        "unit": "%",
+        "status": "collected",
+        "reason": ""
+      },
+      {
+        "name": "sm__pipe_tensor_cycles_active.avg.pct_of_peak_sustained_elapsed",
+        "label": "Tensor pipe active cycles (elapsed denominator)",
+        "value": 0.0,
+        "unit": "%",
+        "status": "collected",
+        "reason": ""
+      },
+      {
+        "name": "gpu__compute_memory_throughput.avg.pct_of_peak_sustained_elapsed",
+        "label": "Memory throughput",
+        "value": 54.340614,
+        "unit": "%",
+        "status": "collected",
+        "reason": ""
+      },
+      {
+        "name": "dram__cycles_active.avg.pct_of_peak_sustained_elapsed",
+        "label": "DRAM active cycles",
+        "value": 35.879075,
+        "unit": "%",
+        "status": "collected",
+        "reason": ""
+      },
+      {
+        "name": "l1tex__throughput.avg.pct_of_peak_sustained_active",
+        "label": "L1/TEX throughput (active denominator)",
+        "value": 56.019741,
+        "unit": "%",
+        "status": "collected",
+        "reason": ""
+      },
+      {
+        "name": "lts__throughput.avg.pct_of_peak_sustained_elapsed",
+        "label": "L2 throughput",
+        "value": 13.0493,
+        "unit": "%",
+        "status": "collected",
+        "reason": ""
+      },
+      {
+        "name": "lts__t_sector_hit_rate.pct",
+        "label": "L2 hit rate",
+        "value": 22.588991,
+        "unit": "%",
+        "status": "collected",
+        "reason": ""
+      },
+      {
+        "name": "smsp__pcsamp_warps_issue_stalled_mio_throttle_not_issued / sum(all not-issued reasons)",
+        "label": "Not-issued warp samples: mio_throttle",
+        "value": 36.206558370927766,
+        "unit": "% of not-issued samples",
+        "status": "derived",
+        "reason": "Normalized PC-sampling reason counts; not percentage of total kernel time"
+      },
+      {
+        "name": "smsp__pcsamp_warps_issue_stalled_barrier_not_issued / sum(all not-issued reasons)",
+        "label": "Not-issued warp samples: barrier",
+        "value": 27.09741267095808,
+        "unit": "% of not-issued samples",
+        "status": "derived",
+        "reason": "Normalized PC-sampling reason counts; not percentage of total kernel time"
+      },
+      {
+        "name": "smsp__pcsamp_warps_issue_stalled_long_scoreboard_not_issued / sum(all not-issued reasons)",
+        "label": "Not-issued warp samples: long_scoreboard",
+        "value": 19.396943706424636,
+        "unit": "% of not-issued samples",
+        "status": "derived",
+        "reason": "Normalized PC-sampling reason counts; not percentage of total kernel time"
+      }
+    ],
+    "notes": "Separate diagnostic execution, first matching launch in DiT step3; counter replay time and memory are excluded from benchmark aggregates. Nsight default clock/cache controls apply."
+  },
+  {
+    "id": "ncu_2",
+    "run_id": "measured",
+    "kernel_name": "void qk_int_sv_f8_attn_kernel<128, 64, 32, 64, 128, 1, 2, 2, float, 1, __nv_bfloat16, 1, 0, 0, 1, 0, 1>(signed char *, signed char *, signed char *, T11 *, float *, float *, float *, float *, float *, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, float)",
+    "source_id": "ncu",
+    "representative": true,
+    "launch": {
+      "diagnostic_id": "2",
+      "context": "1",
+      "stream": "7",
+      "grid": "(556, 56, 1)",
+      "block": "(32, 4, 1)",
+      "phase": "DiT_step_3"
+    },
+    "counters": [
+      {
+        "name": "sm__throughput.avg.pct_of_peak_sustained_elapsed",
+        "label": "Compute / SM throughput",
+        "value": 75.945725,
+        "unit": "%",
+        "status": "collected",
+        "reason": ""
+      },
+      {
+        "name": "sm__warps_active.avg.pct_of_peak_sustained_active",
+        "label": "Achieved occupancy",
+        "value": 16.637814,
+        "unit": "%",
+        "status": "collected",
+        "reason": ""
+      },
+      {
+        "name": "sm__pipe_tensor_cycles_active.avg.pct_of_peak_sustained_elapsed",
+        "label": "Tensor pipe active cycles (elapsed denominator)",
+        "value": 75.945725,
+        "unit": "%",
+        "status": "collected",
+        "reason": ""
+      },
+      {
+        "name": "gpu__compute_memory_throughput.avg.pct_of_peak_sustained_elapsed",
+        "label": "Memory throughput",
+        "value": 36.418549,
+        "unit": "%",
+        "status": "collected",
+        "reason": ""
+      },
+      {
+        "name": "dram__cycles_active.avg.pct_of_peak_sustained_elapsed",
+        "label": "DRAM active cycles",
+        "value": 0.608755,
+        "unit": "%",
+        "status": "collected",
+        "reason": ""
+      },
+      {
+        "name": "l1tex__throughput.avg.pct_of_peak_sustained_active",
+        "label": "L1/TEX throughput (active denominator)",
+        "value": 26.840452,
+        "unit": "%",
+        "status": "collected",
+        "reason": ""
+      },
+      {
+        "name": "lts__throughput.avg.pct_of_peak_sustained_elapsed",
+        "label": "L2 throughput",
+        "value": 36.418549,
+        "unit": "%",
+        "status": "collected",
+        "reason": ""
+      },
+      {
+        "name": "lts__t_sector_hit_rate.pct",
+        "label": "L2 hit rate",
+        "value": 99.547988,
+        "unit": "%",
+        "status": "collected",
+        "reason": ""
+      },
+      {
+        "name": "smsp__pcsamp_warps_issue_stalled_math_pipe_throttle_not_issued / sum(all not-issued reasons)",
+        "label": "Not-issued warp samples: math_pipe_throttle",
+        "value": 44.77235100718061,
+        "unit": "% of not-issued samples",
+        "status": "derived",
+        "reason": "Normalized PC-sampling reason counts; not percentage of total kernel time"
+      },
+      {
+        "name": "smsp__pcsamp_warps_issue_stalled_wait_not_issued / sum(all not-issued reasons)",
+        "label": "Not-issued warp samples: wait",
+        "value": 35.83465857564638,
+        "unit": "% of not-issued samples",
+        "status": "derived",
+        "reason": "Normalized PC-sampling reason counts; not percentage of total kernel time"
+      },
+      {
+        "name": "smsp__pcsamp_warps_issue_stalled_barrier_not_issued / sum(all not-issued reasons)",
+        "label": "Not-issued warp samples: barrier",
+        "value": 6.588421493965119,
+        "unit": "% of not-issued samples",
+        "status": "derived",
+        "reason": "Normalized PC-sampling reason counts; not percentage of total kernel time"
+      }
+    ],
+    "notes": "Separate diagnostic execution, first matching launch in DiT step3; counter replay time and memory are excluded from benchmark aggregates. Nsight default clock/cache controls apply."
+  }
+]

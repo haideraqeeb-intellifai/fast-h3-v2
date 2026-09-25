@@ -1,0 +1,184 @@
+{
+  "diffusion": {
+    "class_type": "UNETLoader",
+    "inputs": {
+      "unet_name": "minimax_h3_ref2va_pruned_int8_convrot.safetensors",
+      "weight_dtype": "default"
+    }
+  },
+  "text": {
+    "class_type": "CLIPLoader",
+    "inputs": {
+      "clip_name": "qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors",
+      "type": "minimax",
+      "device": "default"
+    }
+  },
+  "video_vae": {
+    "class_type": "VAELoader",
+    "inputs": {
+      "vae_name": "minimax_h3_video_vae_fp16.safetensors"
+    }
+  },
+  "audio_vae": {
+    "class_type": "VAELoader",
+    "inputs": {
+      "vae_name": "minimax_h3_audio_vae_fp32.safetensors"
+    }
+  },
+  "conditioning": {
+    "class_type": "BenchmarkReference",
+    "inputs": {
+      "clip": [
+        "text",
+        0
+      ],
+      "vae": [
+        "video_vae",
+        0
+      ],
+      "audio_vae": [
+        "audio_vae",
+        0
+      ],
+      "prompt": "One continuous 15-second vertical advertisement with three shots and clean hard cuts at 5 and 10 seconds. Keep the same woman and product throughout.\n\nSHOT 1 (0-5s):\nVertical UGC selfie video, shot on an iPhone, handheld with subtle natural\nshake, warm afternoon light on a front porch. A warm, upbeat American woman,\n68 years old, chin-length silver-gray hair, soft natural wrinkles, kind hazel\neyes, wearing a dusty-rose knit cardigan. She holds the phone at arm's length\nin one hand (visible); in her OTHER single hand she holds up one black barefoot\nwalking shoe from <Picture 1> close beside her smiling face. <Picture 1> controls\nONLY the shoe exact look \u2014 matte black upper, dark-gray zigzag side panels, wide\nrounded roomy toe box, thick treaded rubber sole \u2014 ignore <Picture 1> white studio\nbackground. She looks into the lens and says warmly, gentle and relatable:\n\"After sixty, every single step hurt, until my daughter got me these.\" Natural\nporch ambience, soft birdsong, clean crisp spoken dialogue, clear lip sync,\nauthentic and unpolished. Avoid: extra hands, third hand, selfie arm holding\nphone doing an action, deformed fingers, warped shoe, studio lighting, cinematic\ngrading, on-screen text, garbled logo.\n\nSHOT 2 (5-10s):\nVertical UGC video, phone propped on a small tripod at knee height, locked-off\nwith a slow gentle push-in, soft natural daylight in a cozy living room. The\nsame American woman, 68 years old, chin-length silver-gray hair, soft natural\nwrinkles, kind hazel eyes, dusty-rose knit cardigan, sits on the edge of a couch\nwith BOTH hands free and slips the black barefoot walking shoes from <Picture 1>\nonto her bare feet, then spreads her toes to show the wide roomy front. <Picture 1>\ncontrols ONLY the shoe exact appearance \u2014 matte black upper, dark-gray zigzag\nside panels, very wide rounded toe box, thick flexible treaded sole \u2014 ignore its\nwhite studio background. She glances down, then up into the lens and says with\ndelight: \"Look how wide the toes are, my feet finally have room to breathe.\" Soft\nfabric rustle and quiet footstep sounds, clean crisp spoken dialogue, clear lip\nsync, authentic homemade feel. Avoid: extra hands, third hand, selfie arm,\ndeformed fingers, warped shoe, studio lighting, cinematic grading, on-screen text.\n\nSHOT 3 (10-15s):\nVertical UGC video, phone on a tripod in a sunny green park, framed medium as\nshe walks toward the camera on a path, gentle natural feel. The same American\nwoman, 68 years old, chin-length silver-gray hair, soft natural wrinkles, kind\nhazel eyes, dusty-rose knit cardigan, strides confidently and pain-free wearing\nthe black barefoot walking shoes from <Picture 1> \u2014 matte black upper, dark-gray\nzigzag side panels, wide rounded roomy toe box, thick treaded rubber sole.\n<Picture 1> controls ONLY the shoe, ignore its white studio background. She beams\nat the lens and says brightly and grateful: \"Now I walk three miles a day and\nnothing aches, I am never going back.\" Birdsong, light breeze, soft footsteps on\nthe path, clean crisp spoken dialogue, clear lip sync, genuine and joyful.\nAvoid: extra hands, third hand, deformed fingers, warped shoe, cinematic color\ngrade, studio lighting, on-screen text, subtitles.",
+      "width": 736,
+      "height": 1280,
+      "length": 362
+    }
+  },
+  "adapter": {
+    "class_type": "MiniMaxH3TurboLoRA",
+    "inputs": {
+      "model": [
+        "diffusion",
+        0
+      ],
+      "lora_name": "minimax_h3_turbo_v4_step600_ema.safetensors",
+      "strength": 1.0,
+      "low_vram": false
+    }
+  },
+  "attention": {
+    "class_type": "BenchmarkSage",
+    "inputs": {
+      "model": [
+        "adapter",
+        0
+      ]
+    }
+  },
+  "noise": {
+    "class_type": "RandomNoise",
+    "inputs": {
+      "noise_seed": 42
+    }
+  },
+  "guider": {
+    "class_type": "BasicGuider",
+    "inputs": {
+      "model": [
+        "attention",
+        0
+      ],
+      "conditioning": [
+        "conditioning",
+        0
+      ]
+    }
+  },
+  "sampler": {
+    "class_type": "MiniMaxH3TurboSampler",
+    "inputs": {}
+  },
+  "schedule": {
+    "class_type": "BasicScheduler",
+    "inputs": {
+      "model": [
+        "attention",
+        0
+      ],
+      "scheduler": "simple",
+      "steps": 4,
+      "denoise": 1.0
+    }
+  },
+  "denoise": {
+    "class_type": "SamplerCustomAdvanced",
+    "inputs": {
+      "noise": [
+        "noise",
+        0
+      ],
+      "guider": [
+        "guider",
+        0
+      ],
+      "sampler": [
+        "sampler",
+        0
+      ],
+      "sigmas": [
+        "schedule",
+        0
+      ],
+      "latent_image": [
+        "conditioning",
+        1
+      ]
+    }
+  },
+  "video_decode": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": [
+        "denoise",
+        0
+      ],
+      "vae": [
+        "video_vae",
+        0
+      ]
+    }
+  },
+  "audio_decode": {
+    "class_type": "VAEDecodeAudio",
+    "inputs": {
+      "samples": [
+        "denoise",
+        0
+      ],
+      "vae": [
+        "audio_vae",
+        0
+      ]
+    }
+  },
+  "video": {
+    "class_type": "CreateVideo",
+    "inputs": {
+      "images": [
+        "video_decode",
+        0
+      ],
+      "audio": [
+        "audio_decode",
+        0
+      ],
+      "fps": 24.0,
+      "bit_depth": 8
+    }
+  },
+  "save": {
+    "class_type": "SaveVideo",
+    "inputs": {
+      "video": [
+        "video",
+        0
+      ],
+      "filename_prefix": "measured_1/video",
+      "format": "mp4",
+      "codec": "auto"
+    }
+  }
+}

@@ -1,0 +1,274 @@
+{
+  "status": "complete",
+  "started_unix": 1789568708.9595468,
+  "task_started_utc": "2026-09-16T13:57:01Z",
+  "model_id": "FastVideo/FastVideo-FastH3-8-Step-V2",
+  "model_revision": "3da2ddfe1954d9cda4c05b643dc0f26007a655c5",
+  "fastvideo_commit": "9b0e57fe4b3a8c112ff24cc22f752eb0608ccfab",
+  "runtime_patch_sha256": "e3bdb34ccc40149931b96403700d9133fc25efbf8df668c8435b203f57316708",
+  "prompt_sha256": "3a652ed6b7fdf389ac5f328d3414c6a797d4c50bfb98232f3e6a41a3535f56e8",
+  "runner_sha256": "6c3a5ba2fb90c2ea0ae833bfdb4e4fc79d7bc0caaf1210b10898cc07010711d0",
+  "config": {
+    "model_path": "/home/raqeeb/code/h3-optimization/fast-h3-v2/models/FastH3-8-Step-V2",
+    "revision": null,
+    "trust_remote_code": false,
+    "engine": {
+      "num_gpus": 1,
+      "execution_backend": "mp",
+      "parallelism": {
+        "tp_size": 1,
+        "sp_size": 1,
+        "hsdp_replicate_dim": 1,
+        "hsdp_shard_dim": -1,
+        "dist_timeout": null
+      },
+      "offload": {
+        "dit": false,
+        "dit_layerwise": true,
+        "text_encoder": true,
+        "image_encoder": true,
+        "vae": true,
+        "pin_cpu_memory": false,
+        "lazy_module_load": false
+      },
+      "compile": {
+        "enabled": false,
+        "backend": null,
+        "fullgraph": null,
+        "mode": null,
+        "dynamic": null,
+        "extras": {},
+        "text_encoder_enabled": null,
+        "vae_enabled": false,
+        "audio_vae_enabled": null,
+        "dit_kwargs": {},
+        "text_encoder_kwargs": {},
+        "vae_kwargs": {},
+        "audio_vae_kwargs": {}
+      },
+      "enable_stage_verification": true,
+      "use_fsdp_inference": false,
+      "disable_autocast": false,
+      "quantization": null
+    },
+    "pipeline": {
+      "workload_type": null,
+      "preset": null,
+      "preset_version": null,
+      "components": {
+        "config_root": null,
+        "pipeline_config_path": null,
+        "text_encoder_weights": null,
+        "transformer_weights": null,
+        "transformer_2_weights": null,
+        "vae_weights": null,
+        "upsampler_weights": null,
+        "lora_path": null,
+        "lora_nickname": "default",
+        "lora_strength": 1.0,
+        "override_pipeline_cls_name": null,
+        "override_transformer_cls_name": null
+      },
+      "vae_tiling": null,
+      "preset_overrides": {},
+      "experimental": {
+        "attention_backend": "VIDEO_SPARSE_ATTN_H3",
+        "inference_torch_compile": false,
+        "vae_parallel_decode": false,
+        "vae_parallel_decode_strategy": "gather",
+        "h3_sequential_load": true,
+        "VSA_sparsity": 0.8,
+        "VSA_tile_size": 64
+      }
+    }
+  },
+  "arguments": {
+    "model_path": "/home/raqeeb/code/h3-optimization/fast-h3-v2/models/FastH3-8-Step-V2",
+    "prompt": "integrated_multimodal_description: A polished vertical social-media podcast advertisement in a warm modern studio with wooden shelves, soft amber practical lights, two beige lounge chairs, and bright pink broadcast microphones. Keep both hosts' faces, clothing, hair, and the studio layout consistent across all shots.\n\nShot 1, 0.0-3.5 seconds: Medium close-up of a confident Black woman with long straight black hair, black rectangular glasses, a fitted white top, and blue jeans, seated naturally beside the pink microphone. She gestures casually and says <d>[English] Have you tried that late-night taco place everyone keeps posting?</d>\n\nShot 2, 3.5-6.5 seconds: Clean cinematic food B-roll, an overhead close-up of black-gloved hands plating two colorful street tacos on brown paper, warm tortillas, grilled filling, purple cabbage, cilantro, lime, and glossy red salsa. Visible steam and crisp, realistic food texture. The second host begins speaking off camera: <d>[English] Yes. Fresh tortillas, incredible flavor, and honestly much better than I expected.</d>\n\nShot 3, 6.5-10.0 seconds: Cut back to the same podcast studio, medium close-up of the second host, a light-skinned brunette woman with shoulder-length wavy hair wearing a charcoal ribbed top, seated in the opposite beige chair. She finishes the sentence with natural conversational timing while the first host listens just off camera.\n\nRealistic skin, restrained hand gestures, accurate anatomy, stable microphones, natural blinking and lip synchronization, native-looking UGC pacing. Do not render subtitles, logos, watermarks, signs, or on-screen text.\n\noverall_soundscape: Clean close-mic podcast dialogue with two distinct natural female voices, subtle quiet studio room tone, and a brief soft tortilla sizzle and plating sound during the taco B-roll. Dialogue stays continuous across the visual cut and remains easy to understand.\n\nnon_diegetic_music: None.",
+    "output": "/home/raqeeb/code/h3-optimization/fast-h3-v2/run",
+    "lazy_module_load": false,
+    "profile": "all",
+    "height": 1280,
+    "width": 736,
+    "num_frames": 243,
+    "steps": 9,
+    "seed": 42,
+    "warmup_seed": 42,
+    "repeats": 1,
+    "warmup": true,
+    "num_gpus": 1,
+    "execution_backend": null,
+    "vsa_sparsity": 0.8,
+    "vsa_tile_size": 64,
+    "vsa_kernel": "triton",
+    "fa4": false,
+    "h3_fusions": null,
+    "compile_vae": false,
+    "parallel_vae": false,
+    "h3_sequential_load": true,
+    "video_decode_backend": "h3-vae",
+    "taeh3_checkpoint": null,
+    "replicated_dit": false,
+    "pin_cpu_memory": false,
+    "torch_compile": false,
+    "inference_torch_compile": false,
+    "ulysses_a2a": "off",
+    "compile_mode": null
+  },
+  "environment": {
+    "FASTVIDEO_ATTENTION_BACKEND": "VIDEO_SPARSE_ATTN_H3",
+    "FASTVIDEO_VSA_SM100A": "0",
+    "FASTVIDEO_VSA_CUTEDSL": "0",
+    "FASTVIDEO_H3_VSA_PROBE": null,
+    "FASTVIDEO_DISABLE_ATTENTION_COMPILE": "0",
+    "FASTVIDEO_FA4": "0",
+    "FASTVIDEO_NVFP4_FA4": "0",
+    "FASTVIDEO_MINIMAX_H3_FA4_PACKED_VARLEN": "0",
+    "FASTVIDEO_MINIMAX_H3_FUSIONS": "all",
+    "FASTVIDEO_INFERENCE_TORCH_COMPILE": "0",
+    "FASTVIDEO_VAE_PARALLEL_DECODE": "0",
+    "FASTVIDEO_VAE_PARALLEL_ENCODE": "0",
+    "FASTVIDEO_VAE_PARALLEL_DECODE_STRATEGY": "gather",
+    "FASTVIDEO_ULYSSES_A2A": "off",
+    "FASTVIDEO_STAGE_LOGGING": "1",
+    "PYTORCH_ALLOC_CONF": "expandable_segments:True",
+    "OMP_NUM_THREADS": "8"
+  },
+  "torch": "2.12.0+cu130",
+  "runs": [
+    {
+      "phase": "warmup",
+      "generation_seconds": 321.66660566511564,
+      "pipeline_generation_seconds": 320.4697663108818,
+      "stages": {
+        "input_preparation_stage": {
+          "execution_time": 5.7107070460915565e-05,
+          "timestamp": 1789568738.1487424,
+          "stage_class": "MiniMaxH3InputPreparationStage"
+        },
+        "conditioning_stage": {
+          "execution_time": 3.4523892579600215,
+          "timestamp": 1789568741.6013055,
+          "stage_class": "MiniMaxH3ConditioningStage",
+          "component_metric": "text_encoder_time_s"
+        },
+        "latent_preparation_stage": {
+          "execution_time": 0.043697237968444824,
+          "timestamp": 1789568794.7199268,
+          "stage_class": "MiniMaxH3LatentPreparationStage",
+          "component_metric": "vae_encode_time_s"
+        },
+        "denoising_stage": {
+          "execution_time": 232.05926092993468,
+          "timestamp": 1789569026.7863898,
+          "stage_class": "MiniMaxH3DenoisingStage",
+          "component_metric": "dit_time_s"
+        },
+        "video_decoding_stage": {
+          "execution_time": 29.556033140048385,
+          "timestamp": 1789569056.3429308,
+          "stage_class": "MiniMaxH3VideoDecodingStage",
+          "component_metric": "vae_decode_time_s"
+        },
+        "audio_decoding_stage": {
+          "execution_time": 1.5688773619476706,
+          "timestamp": 1789569058.0400472,
+          "stage_class": "MiniMaxH3AudioDecodingStage",
+          "component_metric": "audio_decode_time_s"
+        },
+        "PostDecodeFrameProcessStage": {
+          "execution_time": 0.71189163508825,
+          "timestamp": 1789569059.343585
+        },
+        "VideoSaveStage": {
+          "execution_time": 0.42678694403730333,
+          "timestamp": 1789569059.7724876
+        },
+        "AudioMuxStage": {
+          "execution_time": 0.0,
+          "timestamp": 1789569059.7725015
+        }
+      },
+      "video_path": "/home/raqeeb/code/h3-optimization/fast-h3-v2/run/warmup.mp4",
+      "size": [
+        1280,
+        736,
+        243
+      ],
+      "peak_memory_mb": 24124.7958984375,
+      "sampled_device_peak_mib": 32100.0,
+      "extra": {
+        "ltx2_audio_latents": null,
+        "e2e_latency": 321.62538647884503
+      }
+    },
+    {
+      "phase": "measured",
+      "generation_seconds": 293.7151633289177,
+      "pipeline_generation_seconds": 292.4041126468219,
+      "stages": {
+        "input_preparation_stage": {
+          "execution_time": 0.001643381780013442,
+          "timestamp": 1789569099.5646892,
+          "stage_class": "MiniMaxH3InputPreparationStage"
+        },
+        "conditioning_stage": {
+          "execution_time": 3.5067381248809397,
+          "timestamp": 1789569103.0724876,
+          "stage_class": "MiniMaxH3ConditioningStage",
+          "component_metric": "text_encoder_time_s"
+        },
+        "latent_preparation_stage": {
+          "execution_time": 0.031372934114187956,
+          "timestamp": 1789569107.683846,
+          "stage_class": "MiniMaxH3LatentPreparationStage",
+          "component_metric": "vae_encode_time_s"
+        },
+        "denoising_stage": {
+          "execution_time": 213.76852306514047,
+          "timestamp": 1789569321.4531665,
+          "stage_class": "MiniMaxH3DenoisingStage",
+          "component_metric": "dit_time_s"
+        },
+        "video_decoding_stage": {
+          "execution_time": 31.721350973006338,
+          "timestamp": 1789569353.1751313,
+          "stage_class": "MiniMaxH3VideoDecodingStage",
+          "component_metric": "vae_decode_time_s"
+        },
+        "audio_decoding_stage": {
+          "execution_time": 0.49050673213787377,
+          "timestamp": 1789569353.8155775,
+          "stage_class": "MiniMaxH3AudioDecodingStage",
+          "component_metric": "audio_decode_time_s"
+        },
+        "PostDecodeFrameProcessStage": {
+          "execution_time": 0.8088877249974757,
+          "timestamp": 1789569355.3448577
+        },
+        "VideoSaveStage": {
+          "execution_time": 0.43980800500139594,
+          "timestamp": 1789569355.7859435
+        },
+        "AudioMuxStage": {
+          "execution_time": 0.0,
+          "timestamp": 1789569355.7859578
+        }
+      },
+      "video_path": "/home/raqeeb/code/h3-optimization/fast-h3-v2/run/measured.mp4",
+      "size": [
+        1280,
+        736,
+        243
+      ],
+      "peak_memory_mb": 24124.7958984375,
+      "sampled_device_peak_mib": 32046.0,
+      "extra": {
+        "ltx2_audio_latents": null,
+        "e2e_latency": 293.6634506438859
+      }
+    }
+  ],
+  "initialization_seconds": 29.183061928022653,
+  "finished_unix": 1789569366.1156855
+}

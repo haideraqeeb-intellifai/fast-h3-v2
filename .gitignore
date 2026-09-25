@@ -1,0 +1,17 @@
+# Model weights are downloaded locally and must never be published.
+*.safetensors
+*.ckpt
+*.pt
+*.pth
+*.bin
+*.gguf
+*.onnx
+.venv/
+__pycache__/
+*.pyc
+.cache/
+work/uv-cache/
+work/bootstrap/
+.env
+.env.*
+!.env.example

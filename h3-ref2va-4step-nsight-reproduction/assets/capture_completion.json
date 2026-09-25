@@ -1,0 +1,7 @@
+{
+  "nsys_exit_code": 0,
+  "ncu_exit_code": 0,
+  "ncu_kernel_sets": 3,
+  "benchmark_timing_source": "run.json only; NCU diagnostic time excluded",
+  "public_html_and_24_linked_artifacts_verified": true
+}

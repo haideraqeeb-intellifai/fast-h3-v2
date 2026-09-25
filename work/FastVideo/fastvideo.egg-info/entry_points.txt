@@ -1,0 +1,4 @@
+[console_scripts]
+dreamverse-mock-server = dreamverse.mock_server:cli
+dreamverse-server = dreamverse.server_entry:cli
+fastvideo = fastvideo.entrypoints.cli.main:main

@@ -1,0 +1,11 @@
+{
+  "desktop_overflow": false,
+  "mobile_width": 390,
+  "mobile_overflow": false,
+  "local_asset_links": "all exist",
+  "browser_h264_codec_support": false,
+  "browser_playback": "not validated: installed Chromium does not support the AVC/AAC codec combination",
+  "video_audio_full_decode": "passed with ffmpeg",
+  "native_video_codec": "H.264 Constrained Baseline, yuv420p",
+  "native_audio_codec": "AAC LC"
+}

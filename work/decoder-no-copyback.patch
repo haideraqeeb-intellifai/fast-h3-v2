@@ -1,0 +1,97 @@
+diff --git a/fastvideo/pipelines/basic/minimax_h3/stages/minimax_h3_decoding.py b/fastvideo/pipelines/basic/minimax_h3/stages/minimax_h3_decoding.py
+index 1eae700..86c95d0 100644
+--- a/fastvideo/pipelines/basic/minimax_h3/stages/minimax_h3_decoding.py
++++ b/fastvideo/pipelines/basic/minimax_h3/stages/minimax_h3_decoding.py
+@@ -3,6 +3,7 @@
+ 
+ from __future__ import annotations
+ 
++import time
+ from typing import Any
+ 
+ import torch
+@@ -30,6 +31,38 @@ from fastvideo.utils import is_pin_memory_available
+ logger = init_logger(__name__)
+ 
+ 
++def _retain_cpu_weights(module: torch.nn.Module) -> list[tuple[torch.nn.Module, str, str, torch.Tensor]]:
++    """Retain original CPU storage while immutable inference weights visit CUDA."""
++    if torch.is_grad_enabled():
++        raise RuntimeError("Decoder CPU retention is inference-only.")
++    saved = []
++    for child in module.modules():
++        for kind in ("_parameters", "_buffers"):
++            for name, tensor in getattr(child, kind).items():
++                if tensor is None:
++                    continue
++                if tensor.device.type != "cpu":
++                    raise RuntimeError("Decoder CPU retention requires initially CPU-resident weights.")
++                saved.append((child, kind, name, tensor.detach()))
++    return saved
++
++
++def _restore_cpu_weights(saved: list[tuple[torch.nn.Module, str, str, torch.Tensor]]) -> dict[str, Any]:
++    """Drop CUDA storage and restore retained CPU references; never copy D2H."""
++    started = time.perf_counter()
++    for child, kind, name, tensor in saved:
++        if kind == "_parameters":
++            child._parameters[name].data = tensor
++        else:
++            child._buffers[name] = tensor
++    return {
++        "policy": "retain_cpu_weights_discard_gpu_copies",
++        "weight_copy_back_bytes": 0,
++        "retained_cpu_bytes": sum(t.numel() * t.element_size() for _, _, _, t in saved),
++        "release_seconds": time.perf_counter() - started,
++    }
++
++
+ def _layout(batch: ForwardBatch) -> MiniMaxH3PackedLayout:
+     layout = batch.extra.get(MINIMAX_H3_LAYOUT_KEY)
+     if not isinstance(layout, MiniMaxH3PackedLayout):
+@@ -123,8 +156,9 @@ class MiniMaxH3VideoDecodingStage(PipelineStage):
+ 
+         if self.vae is None:
+             raise RuntimeError("MiniMax-H3 full VAE decode requires a loaded video VAE.")
+-        self.vae.to(device)
++        saved_cpu_weights = _retain_cpu_weights(self.vae) if fastvideo_args.vae_cpu_offload else None
+         try:
++            self.vae.to(device)
+             latents = self.vae.denormalize_latents(latents.to(device=device, dtype=torch.float32))
+             if fastvideo_args.output_type == "latent":
+                 # No collectives on this path, so uniform participation is
+@@ -156,8 +190,9 @@ class MiniMaxH3VideoDecodingStage(PipelineStage):
+             batch.output = output if is_output_rank else placeholder
+             return batch
+         finally:
+-            if fastvideo_args.vae_cpu_offload:
+-                self.vae.to("cpu")
++            if saved_cpu_weights is not None:
++                metrics = _restore_cpu_weights(saved_cpu_weights)
++                logger.info("Video VAE weight release (no D2H copy): %s", metrics)
+ 
+ 
+ class MiniMaxH3AudioDecodingStage(PipelineStage):
+@@ -200,8 +235,9 @@ class MiniMaxH3AudioDecodingStage(PipelineStage):
+             layout.num_audio_latents,
+         )
+         device = get_local_torch_device()
+-        self.audio_vae.to(device)
++        saved_cpu_weights = _retain_cpu_weights(self.audio_vae) if fastvideo_args.vae_cpu_offload else None
+         try:
++            self.audio_vae.to(device)
+             latents = self.audio_vae.denormalize_latents(latents.to(device=device, dtype=torch.float32))
+             if fastvideo_args.output_type == "latent":
+                 batch.extra["audio"] = latents.detach().float().cpu()
+@@ -221,8 +257,9 @@ class MiniMaxH3AudioDecodingStage(PipelineStage):
+             self._clear_runtime(batch)
+             return batch
+         finally:
+-            if fastvideo_args.vae_cpu_offload:
+-                self.audio_vae.to("cpu")
++            if saved_cpu_weights is not None:
++                metrics = _restore_cpu_weights(saved_cpu_weights)
++                logger.info("Audio VAE weight release (no D2H copy): %s", metrics)
+ 
+     @staticmethod
+     def _clear_runtime(batch: ForwardBatch) -> None:

@@ -1,0 +1,136 @@
+{
+  "ncu_dit_step_3_candidates": [
+    {
+      "name": "void qk_int_sv_f8_attn_kernel<(unsigned int)128, (unsigned int)64, (unsigned int)32, (unsigned int)64, (unsigned int)128, (DataType)1, (QuantGranularity)2, (QuantGranularity)2, float, (bool)1, __nv_bfloat16, (ComputeUnit)1, (MaskMode)0, (bool)0, (bool)1, (bool)0, (bool)1>(signed char *, signed char *, signed char *, T11 *, float *, float *, float *, float *, float *, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, float)",
+      "count": 50,
+      "duration_sum_s": 13.006277872000007,
+      "presence_union_s": 13.006277872,
+      "mean_s": 0.26012555744,
+      "p95_s": 0.262108479,
+      "full_name": "void qk_int_sv_f8_attn_kernel<(unsigned int)128, (unsigned int)64, (unsigned int)32, (unsigned int)64, (unsigned int)128, (DataType)1, (QuantGranularity)2, (QuantGranularity)2, float, (bool)1, __nv_bfloat16, (ComputeUnit)1, (MaskMode)0, (bool)0, (bool)1, (bool)0, (bool)1>(signed char *, signed char *, signed char *, T11 *, float *, float *, float *, float *, float *, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, float)",
+      "family": "attention",
+      "first_launch_start_s": 49.937082922,
+      "first_launch_duration_s": 0.262108479,
+      "regex": "^void\\ qk_int_sv_f8_attn_kernel<\\(unsigned\\ int\\)128,\\ \\(unsigned\\ int\\)64,\\ \\(unsigned\\ int\\)32,\\ \\(unsigned\\ int\\)64,\\ \\(unsigned\\ int\\)128,\\ \\(DataType\\)1,\\ \\(QuantGranularity\\)2,\\ \\(QuantGranularity\\)2,\\ float,\\ \\(bool\\)1,\\ __nv_bfloat16,\\ \\(ComputeUnit\\)1,\\ \\(MaskMode\\)0,\\ \\(bool\\)0,\\ \\(bool\\)1,\\ \\(bool\\)0,\\ \\(bool\\)1>\\(signed\\ char\\ \\*,\\ signed\\ char\\ \\*,\\ signed\\ char\\ \\*,\\ T11\\ \\*,\\ float\\ \\*,\\ float\\ \\*,\\ float\\ \\*,\\ float\\ \\*,\\ float\\ \\*,\\ unsigned\\ int,\\ unsigned\\ int,\\ unsigned\\ int,\\ unsigned\\ int,\\ unsigned\\ int,\\ unsigned\\ int,\\ unsigned\\ int,\\ unsigned\\ int,\\ unsigned\\ int,\\ unsigned\\ int,\\ unsigned\\ int,\\ unsigned\\ int,\\ unsigned\\ int,\\ unsigned\\ int,\\ unsigned\\ int,\\ float\\)$"
+    },
+    {
+      "name": "void cutlass::Kernel2<cutlass::gemm::kernel::DefaultGemmWithVisitor<signed char, cutlass::layout::RowMajor, (cutlass::ComplexTransform)0, (int)16, signed char, cutlass::layout::ColumnMajor, (cutlass::ComplexTransform)0, (int)16, cutlass::bfloat16_t, cutlass::layout::RowMajor, (int)8, int, float, cutlass::arch::OpClassTensorOp, cutlass::arch::Sm80, cutlass::gemm::GemmShape<(int)128, (int)256, (int)64>, cutlass::gemm::GemmShape<(int)64, (int)64, (int)64>, cutlass::gemm::GemmShape<(int)16, (int)8, (int)32>, cutlass::epilogue::threadblock::TreeVisitor2x<cutlass::epilogue::threadblock::VisitorAuxStore<cutlass::epilogue::threadblock::OutputTileThreadLayout<cutlass::gemm::GemmShape<(int)128, (int)256, (int)64>, cutlass::gemm::GemmShape<(int)64, (int)64, (int)64>, cutlass::bfloat16_t, (int)8, (int)1>, cutlass::bfloat16_t, (cutlass::FloatRoundStyle)2, cute::tuple<long, cute::C<(int)1>, long>>, cutlass::epilogue::threadblock::TreeVisitor2x<cutlass::epilogue::threadblock::VisitorCompute<cutlass::multiplies, cutlass::bfloat16_t, float, (cutlass::FloatRoundStyle)2, void>, cutlass::epilogue::threadblock::TreeVisitor2x<cutlass::epilogue::threadblock::VisitorCompute<cutlass::multiplies, float, float, (cutlass::FloatRoundStyle)2, void>, cutlass::epilogue::threadblock::VisitorAccFetch, cutlass::epilogue::threadblock::VisitorColBroadcast<cutlass::epilogue::threadblock::OutputTileThreadLayout<cutlass::gemm::GemmShape<(int)128, (int)256, (int)64>, cutlass::gemm::GemmShape<(int)64, (int)64, (int)64>, cutlass::bfloat16_t, (int)8, (int)1>, float, cute::tuple<cute::C<(int)1>, cute::C<(int)0>, int>, (bool)1>>, cutlass::epilogue::threadblock::VisitorRowBroadcast<cutlass::epilogue::threadblock::OutputTileThreadLayout<cutlass::gemm::GemmShape<(int)128, (int)256, (int)64>, cutlass::gemm::GemmShape<(int)64, (int)64, (int)64>, cutlass::bfloat16_t, (int)8, (int)1>, float, cute::tuple<cute::C<(int)0>, cute::C<(int)1>, int>, (bool)1>>>, <unnamed>::ThreadblockSwizzleLeanStreamK, (int)3, cutlass::arch::OpMultiplyAddSaturate, (int)1>::SelectBase<<unnamed>::ThreadblockSwizzleLeanStreamK, void>>(T1::Params)",
+      "count": 150,
+      "duration_sum_s": 2.8024549149999993,
+      "presence_union_s": 2.802454915,
+      "mean_s": 0.018683032766666666,
+      "p95_s": 0.030370232,
+      "full_name": "void cutlass::Kernel2<cutlass::gemm::kernel::DefaultGemmWithVisitor<signed char, cutlass::layout::RowMajor, (cutlass::ComplexTransform)0, (int)16, signed char, cutlass::layout::ColumnMajor, (cutlass::ComplexTransform)0, (int)16, cutlass::bfloat16_t, cutlass::layout::RowMajor, (int)8, int, float, cutlass::arch::OpClassTensorOp, cutlass::arch::Sm80, cutlass::gemm::GemmShape<(int)128, (int)256, (int)64>, cutlass::gemm::GemmShape<(int)64, (int)64, (int)64>, cutlass::gemm::GemmShape<(int)16, (int)8, (int)32>, cutlass::epilogue::threadblock::TreeVisitor2x<cutlass::epilogue::threadblock::VisitorAuxStore<cutlass::epilogue::threadblock::OutputTileThreadLayout<cutlass::gemm::GemmShape<(int)128, (int)256, (int)64>, cutlass::gemm::GemmShape<(int)64, (int)64, (int)64>, cutlass::bfloat16_t, (int)8, (int)1>, cutlass::bfloat16_t, (cutlass::FloatRoundStyle)2, cute::tuple<long, cute::C<(int)1>, long>>, cutlass::epilogue::threadblock::TreeVisitor2x<cutlass::epilogue::threadblock::VisitorCompute<cutlass::multiplies, cutlass::bfloat16_t, float, (cutlass::FloatRoundStyle)2, void>, cutlass::epilogue::threadblock::TreeVisitor2x<cutlass::epilogue::threadblock::VisitorCompute<cutlass::multiplies, float, float, (cutlass::FloatRoundStyle)2, void>, cutlass::epilogue::threadblock::VisitorAccFetch, cutlass::epilogue::threadblock::VisitorColBroadcast<cutlass::epilogue::threadblock::OutputTileThreadLayout<cutlass::gemm::GemmShape<(int)128, (int)256, (int)64>, cutlass::gemm::GemmShape<(int)64, (int)64, (int)64>, cutlass::bfloat16_t, (int)8, (int)1>, float, cute::tuple<cute::C<(int)1>, cute::C<(int)0>, int>, (bool)1>>, cutlass::epilogue::threadblock::VisitorRowBroadcast<cutlass::epilogue::threadblock::OutputTileThreadLayout<cutlass::gemm::GemmShape<(int)128, (int)256, (int)64>, cutlass::gemm::GemmShape<(int)64, (int)64, (int)64>, cutlass::bfloat16_t, (int)8, (int)1>, float, cute::tuple<cute::C<(int)0>, cute::C<(int)1>, int>, (bool)1>>>, <unnamed>::ThreadblockSwizzleLeanStreamK, (int)3, cutlass::arch::OpMultiplyAddSaturate, (int)1>::SelectBase<<unnamed>::ThreadblockSwizzleLeanStreamK, void>>(T1::Params)",
+      "family": "matrix_multiply",
+      "first_launch_start_s": 49.890841994,
+      "first_launch_duration_s": 0.02893778,
+      "regex": "^void\\ cutlass::Kernel2<cutlass::gemm::kernel::DefaultGemmWithVisitor<signed\\ char,\\ cutlass::layout::RowMajor,\\ \\(cutlass::ComplexTransform\\)0,\\ \\(int\\)16,\\ signed\\ char,\\ cutlass::layout::ColumnMajor,\\ \\(cutlass::ComplexTransform\\)0,\\ \\(int\\)16,\\ cutlass::bfloat16_t,\\ cutlass::layout::RowMajor,\\ \\(int\\)8,\\ int,\\ float,\\ cutlass::arch::OpClassTensorOp,\\ cutlass::arch::Sm80,\\ cutlass::gemm::GemmShape<\\(int\\)128,\\ \\(int\\)256,\\ \\(int\\)64>,\\ cutlass::gemm::GemmShape<\\(int\\)64,\\ \\(int\\)64,\\ \\(int\\)64>,\\ cutlass::gemm::GemmShape<\\(int\\)16,\\ \\(int\\)8,\\ \\(int\\)32>,\\ cutlass::epilogue::threadblock::TreeVisitor2x<cutlass::epilogue::threadblock::VisitorAuxStore<cutlass::epilogue::threadblock::OutputTileThreadLayout<cutlass::gemm::GemmShape<\\(int\\)128,\\ \\(int\\)256,\\ \\(int\\)64>,\\ cutlass::gemm::GemmShape<\\(int\\)64,\\ \\(int\\)64,\\ \\(int\\)64>,\\ cutlass::bfloat16_t,\\ \\(int\\)8,\\ \\(int\\)1>,\\ cutlass::bfloat16_t,\\ \\(cutlass::FloatRoundStyle\\)2,\\ cute::tuple<long,\\ cute::C<\\(int\\)1>,\\ long>>,\\ cutlass::epilogue::threadblock::TreeVisitor2x<cutlass::epilogue::threadblock::VisitorCompute<cutlass::multiplies,\\ cutlass::bfloat16_t,\\ float,\\ \\(cutlass::FloatRoundStyle\\)2,\\ void>,\\ cutlass::epilogue::threadblock::TreeVisitor2x<cutlass::epilogue::threadblock::VisitorCompute<cutlass::multiplies,\\ float,\\ float,\\ \\(cutlass::FloatRoundStyle\\)2,\\ void>,\\ cutlass::epilogue::threadblock::VisitorAccFetch,\\ cutlass::epilogue::threadblock::VisitorColBroadcast<cutlass::epilogue::threadblock::OutputTileThreadLayout<cutlass::gemm::GemmShape<\\(int\\)128,\\ \\(int\\)256,\\ \\(int\\)64>,\\ cutlass::gemm::GemmShape<\\(int\\)64,\\ \\(int\\)64,\\ \\(int\\)64>,\\ cutlass::bfloat16_t,\\ \\(int\\)8,\\ \\(int\\)1>,\\ float,\\ cute::tuple<cute::C<\\(int\\)1>,\\ cute::C<\\(int\\)0>,\\ int>,\\ \\(bool\\)1>>,\\ cutlass::epilogue::threadblock::VisitorRowBroadcast<cutlass::epilogue::threadblock::OutputTileThreadLayout<cutlass::gemm::GemmShape<\\(int\\)128,\\ \\(int\\)256,\\ \\(int\\)64>,\\ cutlass::gemm::GemmShape<\\(int\\)64,\\ \\(int\\)64,\\ \\(int\\)64>,\\ cutlass::bfloat16_t,\\ \\(int\\)8,\\ \\(int\\)1>,\\ float,\\ cute::tuple<cute::C<\\(int\\)0>,\\ cute::C<\\(int\\)1>,\\ int>,\\ \\(bool\\)1>>>,\\ <unnamed>::ThreadblockSwizzleLeanStreamK,\\ \\(int\\)3,\\ cutlass::arch::OpMultiplyAddSaturate,\\ \\(int\\)1>::SelectBase<<unnamed>::ThreadblockSwizzleLeanStreamK,\\ void>>\\(T1::Params\\)$"
+    },
+    {
+      "name": "void cutlass::Kernel2<cutlass::gemm::kernel::DefaultGemmWithVisitor<signed char, cutlass::layout::RowMajor, (cutlass::ComplexTransform)0, (int)16, signed char, cutlass::layout::ColumnMajor, (cutlass::ComplexTransform)0, (int)16, cutlass::bfloat16_t, cutlass::layout::RowMajor, (int)8, int, float, cutlass::arch::OpClassTensorOp, cutlass::arch::Sm80, cutlass::gemm::GemmShape<(int)128, (int)256, (int)64>, cutlass::gemm::GemmShape<(int)64, (int)64, (int)64>, cutlass::gemm::GemmShape<(int)16, (int)8, (int)32>, cutlass::epilogue::threadblock::TreeVisitor2x<cutlass::epilogue::threadblock::VisitorAuxStore<cutlass::epilogue::threadblock::OutputTileThreadLayout<cutlass::gemm::GemmShape<(int)128, (int)256, (int)64>, cutlass::gemm::GemmShape<(int)64, (int)64, (int)64>, cutlass::bfloat16_t, (int)8, (int)1>, cutlass::bfloat16_t, (cutlass::FloatRoundStyle)2, cute::tuple<long, cute::C<(int)1>, long>>, cutlass::epilogue::threadblock::TreeVisitor2x<cutlass::epilogue::threadblock::VisitorCompute<cutlass::multiplies, cutlass::bfloat16_t, float, (cutlass::FloatRoundStyle)2, void>, cutlass::epilogue::threadblock::TreeVisitor2x<cutlass::epilogue::threadblock::VisitorCompute<cutlass::multiplies, float, float, (cutlass::FloatRoundStyle)2, void>, cutlass::epilogue::threadblock::VisitorAccFetch, cutlass::epilogue::threadblock::VisitorColBroadcast<cutlass::epilogue::threadblock::OutputTileThreadLayout<cutlass::gemm::GemmShape<(int)128, (int)256, (int)64>, cutlass::gemm::GemmShape<(int)64, (int)64, (int)64>, cutlass::bfloat16_t, (int)8, (int)1>, float, cute::tuple<cute::C<(int)1>, cute::C<(int)0>, int>, (bool)1>>, cutlass::epilogue::threadblock::VisitorRowBroadcast<cutlass::epilogue::threadblock::OutputTileThreadLayout<cutlass::gemm::GemmShape<(int)128, (int)256, (int)64>, cutlass::gemm::GemmShape<(int)64, (int)64, (int)64>, cutlass::bfloat16_t, (int)8, (int)1>, float, cute::tuple<cute::C<(int)0>, cute::C<(int)1>, int>, (bool)1>>>, cutlass::gemm::threadblock::GemmIdentityThreadblockSwizzle<(int)1>, (int)3, cutlass::arch::OpMultiplyAddSaturate, (int)1>::SelectBase<cutlass::gemm::threadblock::GemmIdentityThreadblockSwizzle<(int)1>, void>>(T1::Params)",
+      "count": 50,
+      "duration_sum_s": 2.1044595189999997,
+      "presence_union_s": 2.104459519,
+      "mean_s": 0.04208919038,
+      "p95_s": 0.042267103,
+      "full_name": "void cutlass::Kernel2<cutlass::gemm::kernel::DefaultGemmWithVisitor<signed char, cutlass::layout::RowMajor, (cutlass::ComplexTransform)0, (int)16, signed char, cutlass::layout::ColumnMajor, (cutlass::ComplexTransform)0, (int)16, cutlass::bfloat16_t, cutlass::layout::RowMajor, (int)8, int, float, cutlass::arch::OpClassTensorOp, cutlass::arch::Sm80, cutlass::gemm::GemmShape<(int)128, (int)256, (int)64>, cutlass::gemm::GemmShape<(int)64, (int)64, (int)64>, cutlass::gemm::GemmShape<(int)16, (int)8, (int)32>, cutlass::epilogue::threadblock::TreeVisitor2x<cutlass::epilogue::threadblock::VisitorAuxStore<cutlass::epilogue::threadblock::OutputTileThreadLayout<cutlass::gemm::GemmShape<(int)128, (int)256, (int)64>, cutlass::gemm::GemmShape<(int)64, (int)64, (int)64>, cutlass::bfloat16_t, (int)8, (int)1>, cutlass::bfloat16_t, (cutlass::FloatRoundStyle)2, cute::tuple<long, cute::C<(int)1>, long>>, cutlass::epilogue::threadblock::TreeVisitor2x<cutlass::epilogue::threadblock::VisitorCompute<cutlass::multiplies, cutlass::bfloat16_t, float, (cutlass::FloatRoundStyle)2, void>, cutlass::epilogue::threadblock::TreeVisitor2x<cutlass::epilogue::threadblock::VisitorCompute<cutlass::multiplies, float, float, (cutlass::FloatRoundStyle)2, void>, cutlass::epilogue::threadblock::VisitorAccFetch, cutlass::epilogue::threadblock::VisitorColBroadcast<cutlass::epilogue::threadblock::OutputTileThreadLayout<cutlass::gemm::GemmShape<(int)128, (int)256, (int)64>, cutlass::gemm::GemmShape<(int)64, (int)64, (int)64>, cutlass::bfloat16_t, (int)8, (int)1>, float, cute::tuple<cute::C<(int)1>, cute::C<(int)0>, int>, (bool)1>>, cutlass::epilogue::threadblock::VisitorRowBroadcast<cutlass::epilogue::threadblock::OutputTileThreadLayout<cutlass::gemm::GemmShape<(int)128, (int)256, (int)64>, cutlass::gemm::GemmShape<(int)64, (int)64, (int)64>, cutlass::bfloat16_t, (int)8, (int)1>, float, cute::tuple<cute::C<(int)0>, cute::C<(int)1>, int>, (bool)1>>>, cutlass::gemm::threadblock::GemmIdentityThreadblockSwizzle<(int)1>, (int)3, cutlass::arch::OpMultiplyAddSaturate, (int)1>::SelectBase<cutlass::gemm::threadblock::GemmIdentityThreadblockSwizzle<(int)1>, void>>(T1::Params)",
+      "family": "matrix_multiply",
+      "first_launch_start_s": 50.220899601,
+      "first_launch_duration_s": 0.041739203,
+      "regex": "^void\\ cutlass::Kernel2<cutlass::gemm::kernel::DefaultGemmWithVisitor<signed\\ char,\\ cutlass::layout::RowMajor,\\ \\(cutlass::ComplexTransform\\)0,\\ \\(int\\)16,\\ signed\\ char,\\ cutlass::layout::ColumnMajor,\\ \\(cutlass::ComplexTransform\\)0,\\ \\(int\\)16,\\ cutlass::bfloat16_t,\\ cutlass::layout::RowMajor,\\ \\(int\\)8,\\ int,\\ float,\\ cutlass::arch::OpClassTensorOp,\\ cutlass::arch::Sm80,\\ cutlass::gemm::GemmShape<\\(int\\)128,\\ \\(int\\)256,\\ \\(int\\)64>,\\ cutlass::gemm::GemmShape<\\(int\\)64,\\ \\(int\\)64,\\ \\(int\\)64>,\\ cutlass::gemm::GemmShape<\\(int\\)16,\\ \\(int\\)8,\\ \\(int\\)32>,\\ cutlass::epilogue::threadblock::TreeVisitor2x<cutlass::epilogue::threadblock::VisitorAuxStore<cutlass::epilogue::threadblock::OutputTileThreadLayout<cutlass::gemm::GemmShape<\\(int\\)128,\\ \\(int\\)256,\\ \\(int\\)64>,\\ cutlass::gemm::GemmShape<\\(int\\)64,\\ \\(int\\)64,\\ \\(int\\)64>,\\ cutlass::bfloat16_t,\\ \\(int\\)8,\\ \\(int\\)1>,\\ cutlass::bfloat16_t,\\ \\(cutlass::FloatRoundStyle\\)2,\\ cute::tuple<long,\\ cute::C<\\(int\\)1>,\\ long>>,\\ cutlass::epilogue::threadblock::TreeVisitor2x<cutlass::epilogue::threadblock::VisitorCompute<cutlass::multiplies,\\ cutlass::bfloat16_t,\\ float,\\ \\(cutlass::FloatRoundStyle\\)2,\\ void>,\\ cutlass::epilogue::threadblock::TreeVisitor2x<cutlass::epilogue::threadblock::VisitorCompute<cutlass::multiplies,\\ float,\\ float,\\ \\(cutlass::FloatRoundStyle\\)2,\\ void>,\\ cutlass::epilogue::threadblock::VisitorAccFetch,\\ cutlass::epilogue::threadblock::VisitorColBroadcast<cutlass::epilogue::threadblock::OutputTileThreadLayout<cutlass::gemm::GemmShape<\\(int\\)128,\\ \\(int\\)256,\\ \\(int\\)64>,\\ cutlass::gemm::GemmShape<\\(int\\)64,\\ \\(int\\)64,\\ \\(int\\)64>,\\ cutlass::bfloat16_t,\\ \\(int\\)8,\\ \\(int\\)1>,\\ float,\\ cute::tuple<cute::C<\\(int\\)1>,\\ cute::C<\\(int\\)0>,\\ int>,\\ \\(bool\\)1>>,\\ cutlass::epilogue::threadblock::VisitorRowBroadcast<cutlass::epilogue::threadblock::OutputTileThreadLayout<cutlass::gemm::GemmShape<\\(int\\)128,\\ \\(int\\)256,\\ \\(int\\)64>,\\ cutlass::gemm::GemmShape<\\(int\\)64,\\ \\(int\\)64,\\ \\(int\\)64>,\\ cutlass::bfloat16_t,\\ \\(int\\)8,\\ \\(int\\)1>,\\ float,\\ cute::tuple<cute::C<\\(int\\)0>,\\ cute::C<\\(int\\)1>,\\ int>,\\ \\(bool\\)1>>>,\\ cutlass::gemm::threadblock::GemmIdentityThreadblockSwizzle<\\(int\\)1>,\\ \\(int\\)3,\\ cutlass::arch::OpMultiplyAddSaturate,\\ \\(int\\)1>::SelectBase<cutlass::gemm::threadblock::GemmIdentityThreadblockSwizzle<\\(int\\)1>,\\ void>>\\(T1::Params\\)$"
+    },
+    {
+      "name": "void at::native::vectorized_elementwise_kernel<(int)4, at::native::CUDAFunctor_add<c10::BFloat16>, std::array<char *, (unsigned long)3>>(int, T2, T3)",
+      "count": 250,
+      "duration_sum_s": 0.7585242809999999,
+      "presence_union_s": 0.758524281,
+      "mean_s": 0.003034097124,
+      "p95_s": 0.003937049,
+      "full_name": "void at::native::vectorized_elementwise_kernel<(int)4, at::native::CUDAFunctor_add<c10::BFloat16>, std::array<char *, (unsigned long)3>>(int, T2, T3)",
+      "family": "elementwise",
+      "first_launch_start_s": 49.922474479,
+      "first_launch_duration_s": 0.002911282,
+      "regex": "^void\\ at::native::vectorized_elementwise_kernel<\\(int\\)4,\\ at::native::CUDAFunctor_add<c10::BFloat16>,\\ std::array<char\\ \\*,\\ \\(unsigned\\ long\\)3>>\\(int,\\ T2,\\ T3\\)$"
+    },
+    {
+      "name": "void comfy::<unnamed>::quantize_int8_rowwise_convrot64_kernel<__nv_bfloat16, (int)1024, (bool)0, (int)0>(const T1 *, signed char *, float *, int, unsigned long)",
+      "count": 150,
+      "duration_sum_s": 0.2716342300000001,
+      "presence_union_s": 0.27163423,
+      "mean_s": 0.0018108948666666666,
+      "p95_s": 0.001987212,
+      "full_name": "void comfy::<unnamed>::quantize_int8_rowwise_convrot64_kernel<__nv_bfloat16, (int)1024, (bool)0, (int)0>(const T1 *, signed char *, float *, int, unsigned long)",
+      "family": "quantization",
+      "first_launch_start_s": 49.889277472,
+      "first_launch_duration_s": 0.001561578,
+      "regex": "^void\\ comfy::<unnamed>::quantize_int8_rowwise_convrot64_kernel<__nv_bfloat16,\\ \\(int\\)1024,\\ \\(bool\\)0,\\ \\(int\\)0>\\(const\\ T1\\ \\*,\\ signed\\ char\\ \\*,\\ float\\ \\*,\\ int,\\ unsigned\\ long\\)$"
+    },
+    {
+      "name": "void cutlass::Kernel2<cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_128x256_32x3_tn_align8>(T1::Params)",
+      "count": 100,
+      "duration_sum_s": 0.256529081,
+      "presence_union_s": 0.256529081,
+      "mean_s": 0.00256529081,
+      "p95_s": 0.002954802,
+      "full_name": "void cutlass::Kernel2<cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_128x256_32x3_tn_align8>(T1::Params)",
+      "family": "matrix_multiply",
+      "first_launch_start_s": 49.920294657,
+      "first_launch_duration_s": 0.002179566,
+      "regex": "^void\\ cutlass::Kernel2<cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_128x256_32x3_tn_align8>\\(T1::Params\\)$"
+    },
+    {
+      "name": "void comfy::<unnamed>::quantize_int8_rowwise_convrot64_kernel<__nv_bfloat16, (int)1024, (bool)0, (int)2>(const T1 *, signed char *, float *, int, unsigned long)",
+      "count": 50,
+      "duration_sum_s": 0.20395295899999996,
+      "presence_union_s": 0.203952959,
+      "mean_s": 0.00407905918,
+      "p95_s": 0.004214138,
+      "full_name": "void comfy::<unnamed>::quantize_int8_rowwise_convrot64_kernel<__nv_bfloat16, (int)1024, (bool)0, (int)2>(const T1 *, signed char *, float *, int, unsigned long)",
+      "family": "quantization",
+      "first_launch_start_s": 50.273973531,
+      "first_launch_duration_s": 0.004103066,
+      "regex": "^void\\ comfy::<unnamed>::quantize_int8_rowwise_convrot64_kernel<__nv_bfloat16,\\ \\(int\\)1024,\\ \\(bool\\)0,\\ \\(int\\)2>\\(const\\ T1\\ \\*,\\ signed\\ char\\ \\*,\\ float\\ \\*,\\ int,\\ unsigned\\ long\\)$"
+    },
+    {
+      "name": "void at::native::elementwise_kernel<(int)128, (int)4, void at::native::gpu_kernel_impl_nocast<at::native::addcmul_cuda_kernel(at::TensorIteratorBase &, const c10::Scalar &)::[lambda() (instance 2)]::operator ()() const::[lambda() (instance 9)]::operator ()() const::[lambda(c10::BFloat16, c10::BFloat16, c10::BFloat16) (instance 1)]>(at::TensorIteratorBase &, const T1 &)::[lambda(int) (instance 1)]>(int, T3)",
+      "count": 900,
+      "duration_sum_s": 0.14526072300000004,
+      "presence_union_s": 0.145260723,
+      "mean_s": 0.00016140080333333333,
+      "p95_s": 0.001345352,
+      "full_name": "void at::native::elementwise_kernel<(int)128, (int)4, void at::native::gpu_kernel_impl_nocast<at::native::addcmul_cuda_kernel(at::TensorIteratorBase &, const c10::Scalar &)::[lambda() (instance 2)]::operator ()() const::[lambda() (instance 9)]::operator ()() const::[lambda(c10::BFloat16, c10::BFloat16, c10::BFloat16) (instance 1)]>(at::TensorIteratorBase &, const T1 &)::[lambda(int) (instance 1)]>(int, T3)",
+      "family": "elementwise",
+      "first_launch_start_s": 50.21442084,
+      "first_launch_duration_s": 3.2e-06,
+      "regex": "^void\\ at::native::elementwise_kernel<\\(int\\)128,\\ \\(int\\)4,\\ void\\ at::native::gpu_kernel_impl_nocast<at::native::addcmul_cuda_kernel\\(at::TensorIteratorBase\\ \\&,\\ const\\ c10::Scalar\\ \\&\\)::\\[lambda\\(\\)\\ \\(instance\\ 2\\)\\]::operator\\ \\(\\)\\(\\)\\ const::\\[lambda\\(\\)\\ \\(instance\\ 9\\)\\]::operator\\ \\(\\)\\(\\)\\ const::\\[lambda\\(c10::BFloat16,\\ c10::BFloat16,\\ c10::BFloat16\\)\\ \\(instance\\ 1\\)\\]>\\(at::TensorIteratorBase\\ \\&,\\ const\\ T1\\ \\&\\)::\\[lambda\\(int\\)\\ \\(instance\\ 1\\)\\]>\\(int,\\ T3\\)$"
+    }
+  ]
+}
+Correlated 347857 kernels; processing GPU metrics
+Saved 8777398 required raw metric rows; computing exact statistics and 50ms bins
+Finished metric SMs Active [Throughput %]
+Finished metric Tensor Active [Throughput %]
+Finished metric DRAM Read Bandwidth [Throughput %]
+Finished metric DRAM Write Bandwidth [Throughput %]
+Finished metric GPC Clock Frequency [MHz]
+Finished metric PCIe RX Throughput [Throughput %]
+Finished metric PCIe TX Throughput [Throughput %]
+{
+  "output": "nsight-work/systems.json",
+  "metrics_csv": "nsight-work/gpu_metrics_raw.csv.gz",
+  "measured_duration_s": 125.35046659,
+  "kernels": {
+    "count": 347857,
+    "duration_sum_s": 108.92237161099936,
+    "presence_union_s": 108.922371611,
+    "mean_s": 0.00031312398948705935,
+    "p95_s": 0.000654884
+  },
+  "attribution": {
+    "kernel_count": 347857,
+    "runtime_correlated": 347857,
+    "unmatched_runtime": 0,
+    "aten_attributed": 331695
+  },
+  "warnings": []
+}

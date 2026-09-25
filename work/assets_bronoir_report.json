@@ -1,0 +1,841 @@
+{
+  "status": "complete",
+  "runs": [
+    {
+      "phase": "warmup",
+      "generation_seconds": 192.36021779291332,
+      "components_seconds": {
+        "node/VAELoader": 0.11899305996485054,
+        "node/CLIPLoader": 0.517572162905708,
+        "text_tokenization": 0.0017295831348747015,
+        "text_encoder": 4.3420968658756465,
+        "node/BenchmarkReference": 4.760509858839214,
+        "node/UNETLoader": 0.030474256025627255,
+        "node/MiniMaxH3TurboLoRA": 0.023891152115538716,
+        "node/BenchmarkSage": 9.703217074275017e-05,
+        "node/BasicScheduler": 0.00012639700435101986,
+        "node/MiniMaxH3TurboSampler": 7.573980838060379e-06,
+        "node/BasicGuider": 2.3854896426200867e-05,
+        "node/RandomNoise": 5.701091140508652e-06,
+        "denoising_loop": 142.88230377505533,
+        "node/SamplerCustomAdvanced": 143.50653088791296,
+        "node/VAEDecodeAudio": 0.22020696406252682,
+        "node/VAEDecode": 37.78990201186389,
+        "node/CreateVideo": 4.054605960845947e-05,
+        "node/SaveVideo": 4.824491145787761
+      },
+      "calls": [
+        {
+          "component": "node/VAELoader",
+          "seconds": 0.028649393003433943
+        },
+        {
+          "component": "node/VAELoader",
+          "seconds": 0.0903436669614166
+        },
+        {
+          "component": "node/CLIPLoader",
+          "seconds": 0.517572162905708
+        },
+        {
+          "component": "text_tokenization",
+          "seconds": 0.0017295831348747015
+        },
+        {
+          "component": "text_encoder",
+          "seconds": 4.3420968658756465
+        },
+        {
+          "component": "node/BenchmarkReference",
+          "seconds": 4.760509858839214
+        },
+        {
+          "component": "node/UNETLoader",
+          "seconds": 0.030474256025627255
+        },
+        {
+          "component": "node/MiniMaxH3TurboLoRA",
+          "seconds": 0.023891152115538716
+        },
+        {
+          "component": "node/BenchmarkSage",
+          "seconds": 9.703217074275017e-05
+        },
+        {
+          "component": "node/BasicScheduler",
+          "seconds": 0.00012639700435101986
+        },
+        {
+          "component": "node/MiniMaxH3TurboSampler",
+          "seconds": 7.573980838060379e-06
+        },
+        {
+          "component": "node/BasicGuider",
+          "seconds": 2.3854896426200867e-05
+        },
+        {
+          "component": "node/RandomNoise",
+          "seconds": 5.701091140508652e-06
+        },
+        {
+          "component": "denoising_loop",
+          "seconds": 142.88230377505533
+        },
+        {
+          "component": "node/SamplerCustomAdvanced",
+          "seconds": 143.50653088791296
+        },
+        {
+          "component": "node/VAEDecodeAudio",
+          "seconds": 0.22020696406252682
+        },
+        {
+          "component": "node/VAEDecode",
+          "seconds": 37.78990201186389
+        },
+        {
+          "component": "node/CreateVideo",
+          "seconds": 4.054605960845947e-05
+        },
+        {
+          "component": "node/SaveVideo",
+          "seconds": 4.824491145787761
+        }
+      ],
+      "forward_counts": {
+        "reference_conditioning_blocks": 1,
+        "pruned_transformer_forwards": 4,
+        "transformer_forwards": 4,
+        "reference_conditioned_forwards": 4,
+        "sage_dispatches": 200,
+        "sage_attempts": 200,
+        "sage_qk_int8_pv_fp8_cuda_completed": 200,
+        "sage_completed": 200
+      },
+      "sampled_peak_device_memory_mib": 31852,
+      "gpu_monitor_interval_seconds": 1,
+      "peak_allocated_gib": 15.10839557647705,
+      "peak_reserved_gib": 24.873046875,
+      "video": "/home/raqeeb/code/h3-optimization/larryvrh-h3-turbo-lora/runs/batch-ref2va-v4-600-4steps-15s-seed42/bronoir/runtime/output/warmup/video_00001_.mp4",
+      "ffprobe": {
+        "streams": [
+          {
+            "index": 0,
+            "codec_name": "h264",
+            "codec_long_name": "H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10",
+            "profile": "High",
+            "codec_type": "video",
+            "codec_tag_string": "avc1",
+            "codec_tag": "0x31637661",
+            "width": 736,
+            "height": 1280,
+            "coded_width": 736,
+            "coded_height": 1280,
+            "closed_captions": 0,
+            "film_grain": 0,
+            "has_b_frames": 2,
+            "pix_fmt": "yuv420p",
+            "level": 32,
+            "chroma_location": "left",
+            "field_order": "progressive",
+            "refs": 1,
+            "is_avc": "true",
+            "nal_length_size": "4",
+            "id": "0x1",
+            "r_frame_rate": "24/1",
+            "avg_frame_rate": "24/1",
+            "time_base": "1/12288",
+            "start_pts": 0,
+            "start_time": "0.000000",
+            "duration_ts": 185344,
+            "duration": "15.083333",
+            "bit_rate": "3892723",
+            "bits_per_raw_sample": "8",
+            "nb_frames": "362",
+            "extradata_size": 46,
+            "disposition": {
+              "default": 1,
+              "dub": 0,
+              "original": 0,
+              "comment": 0,
+              "lyrics": 0,
+              "karaoke": 0,
+              "forced": 0,
+              "hearing_impaired": 0,
+              "visual_impaired": 0,
+              "clean_effects": 0,
+              "attached_pic": 0,
+              "timed_thumbnails": 0,
+              "captions": 0,
+              "descriptions": 0,
+              "metadata": 0,
+              "dependent": 0,
+              "still_image": 0
+            },
+            "tags": {
+              "language": "und",
+              "handler_name": "VideoHandler",
+              "vendor_id": "[0][0][0][0]"
+            }
+          },
+          {
+            "index": 1,
+            "codec_name": "aac",
+            "codec_long_name": "AAC (Advanced Audio Coding)",
+            "profile": "LC",
+            "codec_type": "audio",
+            "codec_tag_string": "mp4a",
+            "codec_tag": "0x6134706d",
+            "sample_fmt": "fltp",
+            "sample_rate": "32000",
+            "channels": 2,
+            "channel_layout": "stereo",
+            "bits_per_sample": 0,
+            "initial_padding": 0,
+            "id": "0x2",
+            "r_frame_rate": "0/0",
+            "avg_frame_rate": "0/0",
+            "time_base": "1/32000",
+            "start_pts": 0,
+            "start_time": "0.000000",
+            "duration_ts": 482400,
+            "duration": "15.075000",
+            "bit_rate": "133798",
+            "nb_frames": "473",
+            "extradata_size": 5,
+            "disposition": {
+              "default": 1,
+              "dub": 0,
+              "original": 0,
+              "comment": 0,
+              "lyrics": 0,
+              "karaoke": 0,
+              "forced": 0,
+              "hearing_impaired": 0,
+              "visual_impaired": 0,
+              "clean_effects": 0,
+              "attached_pic": 0,
+              "timed_thumbnails": 0,
+              "captions": 0,
+              "descriptions": 0,
+              "metadata": 0,
+              "dependent": 0,
+              "still_image": 0
+            },
+            "tags": {
+              "language": "und",
+              "handler_name": "SoundHandler",
+              "vendor_id": "[0][0][0][0]"
+            }
+          }
+        ],
+        "format": {
+          "filename": "/home/raqeeb/code/h3-optimization/larryvrh-h3-turbo-lora/runs/batch-ref2va-v4-600-4steps-15s-seed42/bronoir/runtime/output/warmup/video_00001_.mp4",
+          "nb_streams": 2,
+          "nb_programs": 0,
+          "format_name": "mov,mp4,m4a,3gp,3g2,mj2",
+          "format_long_name": "QuickTime / MOV",
+          "start_time": "0.000000",
+          "duration": "15.083333",
+          "size": "7608899",
+          "bit_rate": "4035659",
+          "probe_score": 100,
+          "tags": {
+            "major_brand": "isom",
+            "minor_version": "512",
+            "compatible_brands": "isomiso2avc1mp41",
+            "prompt": "{\"diffusion\": {\"class_type\": \"UNETLoader\", \"inputs\": {\"unet_name\": \"minimax_h3_ref2va_pruned_int8_convrot.safetensors\", \"weight_dtype\": \"default\"}}, \"text\": {\"class_type\": \"CLIPLoader\", \"inputs\": {\"clip_name\": \"qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors\", \"type\": \"minimax\", \"device\": \"default\"}}, \"video_vae\": {\"class_type\": \"VAELoader\", \"inputs\": {\"vae_name\": \"minimax_h3_video_vae_fp16.safetensors\"}}, \"audio_vae\": {\"class_type\": \"VAELoader\", \"inputs\": {\"vae_name\": \"minimax_h3_audio_vae_fp32.safetensors\"}}, \"conditioning\": {\"class_type\": \"BenchmarkReference\", \"inputs\": {\"clip\": [\"text\", 0], \"vae\": [\"video_vae\", 0], \"audio_vae\": [\"audio_vae\", 0], \"prompt\": \"One continuous 15-second vertical advertisement with three shots and clean hard cuts at 5 and 10 seconds. Keep the same woman and product throughout.\\n\\nSHOT 1 (0-5s):\\nVertical UGC selfie video, shot on an iPhone, handheld with subtle natural\\nshake, warm afternoon light on a front porch. A warm, upbeat American woman,\\n68 years old, chin-length silver-gray hair, soft natural wrinkles, kind hazel\\neyes, wearing a dusty-rose knit cardigan. She holds the phone at arm's length\\nin one hand (visible); in her OTHER single hand she holds up one black barefoot\\nwalking shoe from <Picture 1> close beside her smiling face. <Picture 1> controls\\nONLY the shoe exact look \\u2014 matte black upper, dark-gray zigzag side panels, wide\\nrounded roomy toe box, thick treaded rubber sole \\u2014 ignore <Picture 1> white studio\\nbackground. She looks into the lens and says warmly, gentle and relatable:\\n\\\"After sixty, every single step hurt, until my daughter got me these.\\\" Natural\\nporch ambience, soft birdsong, clean crisp spoken dialogue, clear lip sync,\\nauthentic and unpolished. Avoid: extra hands, third hand, selfie arm holding\\nphone doing an action, deformed fingers, warped shoe, studio lighting, cinematic\\ngrading, on-screen text, garbled logo.\\n\\nSHOT 2 (5-10s):\\nVertical UGC video, phone propped on a small tripod at knee height, locked-off\\nwith a slow gentle push-in, soft natural daylight in a cozy living room. The\\nsame American woman, 68 years old, chin-length silver-gray hair, soft natural\\nwrinkles, kind hazel eyes, dusty-rose knit cardigan, sits on the edge of a couch\\nwith BOTH hands free and slips the black barefoot walking shoes from <Picture 1>\\nonto her bare feet, then spreads her toes to show the wide roomy front. <Picture 1>\\ncontrols ONLY the shoe exact appearance \\u2014 matte black upper, dark-gray zigzag\\nside panels, very wide rounded toe box, thick flexible treaded sole \\u2014 ignore its\\nwhite studio background. She glances down, then up into the lens and says with\\ndelight: \\\"Look how wide the toes are, my feet finally have room to breathe.\\\" Soft\\nfabric rustle and quiet footstep sounds, clean crisp spoken dialogue, clear lip\\nsync, authentic homemade feel. Avoid: extra hands, third hand, selfie arm,\\ndeformed fingers, warped shoe, studio lighting, cinematic grading, on-screen text.\\n\\nSHOT 3 (10-15s):\\nVertical UGC video, phone on a tripod in a sunny green park, framed medium as\\nshe walks toward the camera on a path, gentle natural feel. The same American\\nwoman, 68 years old, chin-length silver-gray hair, soft natural wrinkles, kind\\nhazel eyes, dusty-rose knit cardigan, strides confidently and pain-free wearing\\nthe black barefoot walking shoes from <Picture 1> \\u2014 matte black upper, dark-gray\\nzigzag side panels, wide rounded roomy toe box, thick treaded rubber sole.\\n<Picture 1> controls ONLY the shoe, ignore its white studio background. She beams\\nat the lens and says brightly and grateful: \\\"Now I walk three miles a day and\\nnothing aches, I am never going back.\\\" Birdsong, light breeze, soft footsteps on\\nthe path, clean crisp spoken dialogue, clear lip sync, genuine and joyful.\\nAvoid: extra hands, third hand, deformed fingers, warped shoe, cinematic color\\ngrade, studio lighting, on-screen text, subtitles.\", \"width\": 736, \"height\": 1280, \"length\": 362}}, \"adapter\": {\"class_type\": \"MiniMaxH3TurboLoRA\", \"inputs\": {\"model\": [\"diffusion\", 0], \"lora_name\": \"minimax_h3_turbo_v4_step600_ema.safetensors\", \"strength\": 1.0, \"low_vram\": false}}, \"attention\": {\"class_type\": \"BenchmarkSage\", \"inputs\": {\"model\": [\"adapter\", 0]}}, \"noise\": {\"class_type\": \"RandomNoise\", \"inputs\": {\"noise_seed\": 42}}, \"guider\": {\"class_type\": \"BasicGuider\", \"inputs\": {\"model\": [\"attention\", 0], \"conditioning\": [\"conditioning\", 0]}}, \"sampler\": {\"class_type\": \"MiniMaxH3TurboSampler\", \"inputs\": {}}, \"schedule\": {\"class_type\": \"BasicScheduler\", \"inputs\": {\"model\": [\"attention\", 0], \"scheduler\": \"simple\", \"steps\": 4, \"denoise\": 1.0}}, \"denoise\": {\"class_type\": \"SamplerCustomAdvanced\", \"inputs\": {\"noise\": [\"noise\", 0], \"guider\": [\"guider\", 0], \"sampler\": [\"sampler\", 0], \"sigmas\": [\"schedule\", 0], \"latent_image\": [\"conditioning\", 1]}}, \"video_decode\": {\"class_type\": \"VAEDecode\", \"inputs\": {\"samples\": [\"denoise\", 0], \"vae\": [\"video_vae\", 0]}}, \"audio_decode\": {\"class_type\": \"VAEDecodeAudio\", \"inputs\": {\"samples\": [\"denoise\", 0], \"vae\": [\"audio_vae\", 0]}}, \"video\": {\"class_type\": \"CreateVideo\", \"inputs\": {\"images\": [\"video_decode\", 0], \"audio\": [\"audio_decode\", 0], \"fps\": 24.0, \"bit_depth\": 8}}, \"save\": {\"class_type\": \"SaveVideo\", \"inputs\": {\"video\": [\"video\", 0], \"filename_prefix\": \"warmup/video\", \"format\": \"mp4\", \"codec\": \"auto\"}}}",
+            "encoder": "Lavf62.12.102"
+          }
+        }
+      }
+    },
+    {
+      "phase": "measured_1",
+      "generation_seconds": 196.4722318148706,
+      "components_seconds": {
+        "node/VAELoader": 0.8188898281659931,
+        "node/CLIPLoader": 0.2888365648686886,
+        "text_tokenization": 0.0023731649853289127,
+        "text_encoder": 4.405272870091721,
+        "node/BenchmarkReference": 4.678309109061956,
+        "node/UNETLoader": 0.03302258485928178,
+        "node/MiniMaxH3TurboLoRA": 0.0238343789242208,
+        "node/BenchmarkSage": 9.518908336758614e-05,
+        "node/BasicScheduler": 0.00010516704060137272,
+        "node/MiniMaxH3TurboSampler": 7.765134796500206e-06,
+        "node/BasicGuider": 2.444605343043804e-05,
+        "node/RandomNoise": 6.421934813261032e-06,
+        "denoising_loop": 146.64716595620848,
+        "node/SamplerCustomAdvanced": 147.2025082660839,
+        "node/VAEDecodeAudio": 0.19557226705364883,
+        "node/VAEDecode": 37.84354468015954,
+        "node/CreateVideo": 2.607889473438263e-05,
+        "node/SaveVideo": 4.803942036116496
+      },
+      "calls": [
+        {
+          "component": "node/VAELoader",
+          "seconds": 0.7691943761892617
+        },
+        {
+          "component": "node/VAELoader",
+          "seconds": 0.04969545197673142
+        },
+        {
+          "component": "node/CLIPLoader",
+          "seconds": 0.2888365648686886
+        },
+        {
+          "component": "text_tokenization",
+          "seconds": 0.0023731649853289127
+        },
+        {
+          "component": "text_encoder",
+          "seconds": 4.405272870091721
+        },
+        {
+          "component": "node/BenchmarkReference",
+          "seconds": 4.678309109061956
+        },
+        {
+          "component": "node/UNETLoader",
+          "seconds": 0.03302258485928178
+        },
+        {
+          "component": "node/MiniMaxH3TurboLoRA",
+          "seconds": 0.0238343789242208
+        },
+        {
+          "component": "node/BenchmarkSage",
+          "seconds": 9.518908336758614e-05
+        },
+        {
+          "component": "node/BasicScheduler",
+          "seconds": 0.00010516704060137272
+        },
+        {
+          "component": "node/MiniMaxH3TurboSampler",
+          "seconds": 7.765134796500206e-06
+        },
+        {
+          "component": "node/BasicGuider",
+          "seconds": 2.444605343043804e-05
+        },
+        {
+          "component": "node/RandomNoise",
+          "seconds": 6.421934813261032e-06
+        },
+        {
+          "component": "denoising_loop",
+          "seconds": 146.64716595620848
+        },
+        {
+          "component": "node/SamplerCustomAdvanced",
+          "seconds": 147.2025082660839
+        },
+        {
+          "component": "node/VAEDecodeAudio",
+          "seconds": 0.19557226705364883
+        },
+        {
+          "component": "node/VAEDecode",
+          "seconds": 37.84354468015954
+        },
+        {
+          "component": "node/CreateVideo",
+          "seconds": 2.607889473438263e-05
+        },
+        {
+          "component": "node/SaveVideo",
+          "seconds": 4.803942036116496
+        }
+      ],
+      "forward_counts": {
+        "reference_conditioning_blocks": 1,
+        "pruned_transformer_forwards": 4,
+        "transformer_forwards": 4,
+        "reference_conditioned_forwards": 4,
+        "sage_dispatches": 200,
+        "sage_attempts": 200,
+        "sage_qk_int8_pv_fp8_cuda_completed": 200,
+        "sage_completed": 200
+      },
+      "sampled_peak_device_memory_mib": 31852,
+      "gpu_monitor_interval_seconds": 1,
+      "peak_allocated_gib": 15.10839557647705,
+      "peak_reserved_gib": 24.873046875,
+      "video": "/home/raqeeb/code/h3-optimization/larryvrh-h3-turbo-lora/runs/batch-ref2va-v4-600-4steps-15s-seed42/bronoir/runtime/output/measured_1/video_00001_.mp4",
+      "ffprobe": {
+        "streams": [
+          {
+            "index": 0,
+            "codec_name": "h264",
+            "codec_long_name": "H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10",
+            "profile": "High",
+            "codec_type": "video",
+            "codec_tag_string": "avc1",
+            "codec_tag": "0x31637661",
+            "width": 736,
+            "height": 1280,
+            "coded_width": 736,
+            "coded_height": 1280,
+            "closed_captions": 0,
+            "film_grain": 0,
+            "has_b_frames": 2,
+            "pix_fmt": "yuv420p",
+            "level": 32,
+            "chroma_location": "left",
+            "field_order": "progressive",
+            "refs": 1,
+            "is_avc": "true",
+            "nal_length_size": "4",
+            "id": "0x1",
+            "r_frame_rate": "24/1",
+            "avg_frame_rate": "24/1",
+            "time_base": "1/12288",
+            "start_pts": 0,
+            "start_time": "0.000000",
+            "duration_ts": 185344,
+            "duration": "15.083333",
+            "bit_rate": "3893285",
+            "bits_per_raw_sample": "8",
+            "nb_frames": "362",
+            "extradata_size": 46,
+            "disposition": {
+              "default": 1,
+              "dub": 0,
+              "original": 0,
+              "comment": 0,
+              "lyrics": 0,
+              "karaoke": 0,
+              "forced": 0,
+              "hearing_impaired": 0,
+              "visual_impaired": 0,
+              "clean_effects": 0,
+              "attached_pic": 0,
+              "timed_thumbnails": 0,
+              "captions": 0,
+              "descriptions": 0,
+              "metadata": 0,
+              "dependent": 0,
+              "still_image": 0
+            },
+            "tags": {
+              "language": "und",
+              "handler_name": "VideoHandler",
+              "vendor_id": "[0][0][0][0]"
+            }
+          },
+          {
+            "index": 1,
+            "codec_name": "aac",
+            "codec_long_name": "AAC (Advanced Audio Coding)",
+            "profile": "LC",
+            "codec_type": "audio",
+            "codec_tag_string": "mp4a",
+            "codec_tag": "0x6134706d",
+            "sample_fmt": "fltp",
+            "sample_rate": "32000",
+            "channels": 2,
+            "channel_layout": "stereo",
+            "bits_per_sample": 0,
+            "initial_padding": 0,
+            "id": "0x2",
+            "r_frame_rate": "0/0",
+            "avg_frame_rate": "0/0",
+            "time_base": "1/32000",
+            "start_pts": 0,
+            "start_time": "0.000000",
+            "duration_ts": 482400,
+            "duration": "15.075000",
+            "bit_rate": "133798",
+            "nb_frames": "473",
+            "extradata_size": 5,
+            "disposition": {
+              "default": 1,
+              "dub": 0,
+              "original": 0,
+              "comment": 0,
+              "lyrics": 0,
+              "karaoke": 0,
+              "forced": 0,
+              "hearing_impaired": 0,
+              "visual_impaired": 0,
+              "clean_effects": 0,
+              "attached_pic": 0,
+              "timed_thumbnails": 0,
+              "captions": 0,
+              "descriptions": 0,
+              "metadata": 0,
+              "dependent": 0,
+              "still_image": 0
+            },
+            "tags": {
+              "language": "und",
+              "handler_name": "SoundHandler",
+              "vendor_id": "[0][0][0][0]"
+            }
+          }
+        ],
+        "format": {
+          "filename": "/home/raqeeb/code/h3-optimization/larryvrh-h3-turbo-lora/runs/batch-ref2va-v4-600-4steps-15s-seed42/bronoir/runtime/output/measured_1/video_00001_.mp4",
+          "nb_streams": 2,
+          "nb_programs": 0,
+          "format_name": "mov,mp4,m4a,3gp,3g2,mj2",
+          "format_long_name": "QuickTime / MOV",
+          "start_time": "0.000000",
+          "duration": "15.083333",
+          "size": "7609964",
+          "bit_rate": "4036224",
+          "probe_score": 100,
+          "tags": {
+            "major_brand": "isom",
+            "minor_version": "512",
+            "compatible_brands": "isomiso2avc1mp41",
+            "prompt": "{\"diffusion\": {\"class_type\": \"UNETLoader\", \"inputs\": {\"unet_name\": \"minimax_h3_ref2va_pruned_int8_convrot.safetensors\", \"weight_dtype\": \"default\"}}, \"text\": {\"class_type\": \"CLIPLoader\", \"inputs\": {\"clip_name\": \"qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors\", \"type\": \"minimax\", \"device\": \"default\"}}, \"video_vae\": {\"class_type\": \"VAELoader\", \"inputs\": {\"vae_name\": \"minimax_h3_video_vae_fp16.safetensors\"}}, \"audio_vae\": {\"class_type\": \"VAELoader\", \"inputs\": {\"vae_name\": \"minimax_h3_audio_vae_fp32.safetensors\"}}, \"conditioning\": {\"class_type\": \"BenchmarkReference\", \"inputs\": {\"clip\": [\"text\", 0], \"vae\": [\"video_vae\", 0], \"audio_vae\": [\"audio_vae\", 0], \"prompt\": \"One continuous 15-second vertical advertisement with three shots and clean hard cuts at 5 and 10 seconds. Keep the same woman and product throughout.\\n\\nSHOT 1 (0-5s):\\nVertical UGC selfie video, shot on an iPhone, handheld with subtle natural\\nshake, warm afternoon light on a front porch. A warm, upbeat American woman,\\n68 years old, chin-length silver-gray hair, soft natural wrinkles, kind hazel\\neyes, wearing a dusty-rose knit cardigan. She holds the phone at arm's length\\nin one hand (visible); in her OTHER single hand she holds up one black barefoot\\nwalking shoe from <Picture 1> close beside her smiling face. <Picture 1> controls\\nONLY the shoe exact look \\u2014 matte black upper, dark-gray zigzag side panels, wide\\nrounded roomy toe box, thick treaded rubber sole \\u2014 ignore <Picture 1> white studio\\nbackground. She looks into the lens and says warmly, gentle and relatable:\\n\\\"After sixty, every single step hurt, until my daughter got me these.\\\" Natural\\nporch ambience, soft birdsong, clean crisp spoken dialogue, clear lip sync,\\nauthentic and unpolished. Avoid: extra hands, third hand, selfie arm holding\\nphone doing an action, deformed fingers, warped shoe, studio lighting, cinematic\\ngrading, on-screen text, garbled logo.\\n\\nSHOT 2 (5-10s):\\nVertical UGC video, phone propped on a small tripod at knee height, locked-off\\nwith a slow gentle push-in, soft natural daylight in a cozy living room. The\\nsame American woman, 68 years old, chin-length silver-gray hair, soft natural\\nwrinkles, kind hazel eyes, dusty-rose knit cardigan, sits on the edge of a couch\\nwith BOTH hands free and slips the black barefoot walking shoes from <Picture 1>\\nonto her bare feet, then spreads her toes to show the wide roomy front. <Picture 1>\\ncontrols ONLY the shoe exact appearance \\u2014 matte black upper, dark-gray zigzag\\nside panels, very wide rounded toe box, thick flexible treaded sole \\u2014 ignore its\\nwhite studio background. She glances down, then up into the lens and says with\\ndelight: \\\"Look how wide the toes are, my feet finally have room to breathe.\\\" Soft\\nfabric rustle and quiet footstep sounds, clean crisp spoken dialogue, clear lip\\nsync, authentic homemade feel. Avoid: extra hands, third hand, selfie arm,\\ndeformed fingers, warped shoe, studio lighting, cinematic grading, on-screen text.\\n\\nSHOT 3 (10-15s):\\nVertical UGC video, phone on a tripod in a sunny green park, framed medium as\\nshe walks toward the camera on a path, gentle natural feel. The same American\\nwoman, 68 years old, chin-length silver-gray hair, soft natural wrinkles, kind\\nhazel eyes, dusty-rose knit cardigan, strides confidently and pain-free wearing\\nthe black barefoot walking shoes from <Picture 1> \\u2014 matte black upper, dark-gray\\nzigzag side panels, wide rounded roomy toe box, thick treaded rubber sole.\\n<Picture 1> controls ONLY the shoe, ignore its white studio background. She beams\\nat the lens and says brightly and grateful: \\\"Now I walk three miles a day and\\nnothing aches, I am never going back.\\\" Birdsong, light breeze, soft footsteps on\\nthe path, clean crisp spoken dialogue, clear lip sync, genuine and joyful.\\nAvoid: extra hands, third hand, deformed fingers, warped shoe, cinematic color\\ngrade, studio lighting, on-screen text, subtitles.\", \"width\": 736, \"height\": 1280, \"length\": 362}}, \"adapter\": {\"class_type\": \"MiniMaxH3TurboLoRA\", \"inputs\": {\"model\": [\"diffusion\", 0], \"lora_name\": \"minimax_h3_turbo_v4_step600_ema.safetensors\", \"strength\": 1.0, \"low_vram\": false}}, \"attention\": {\"class_type\": \"BenchmarkSage\", \"inputs\": {\"model\": [\"adapter\", 0]}}, \"noise\": {\"class_type\": \"RandomNoise\", \"inputs\": {\"noise_seed\": 42}}, \"guider\": {\"class_type\": \"BasicGuider\", \"inputs\": {\"model\": [\"attention\", 0], \"conditioning\": [\"conditioning\", 0]}}, \"sampler\": {\"class_type\": \"MiniMaxH3TurboSampler\", \"inputs\": {}}, \"schedule\": {\"class_type\": \"BasicScheduler\", \"inputs\": {\"model\": [\"attention\", 0], \"scheduler\": \"simple\", \"steps\": 4, \"denoise\": 1.0}}, \"denoise\": {\"class_type\": \"SamplerCustomAdvanced\", \"inputs\": {\"noise\": [\"noise\", 0], \"guider\": [\"guider\", 0], \"sampler\": [\"sampler\", 0], \"sigmas\": [\"schedule\", 0], \"latent_image\": [\"conditioning\", 1]}}, \"video_decode\": {\"class_type\": \"VAEDecode\", \"inputs\": {\"samples\": [\"denoise\", 0], \"vae\": [\"video_vae\", 0]}}, \"audio_decode\": {\"class_type\": \"VAEDecodeAudio\", \"inputs\": {\"samples\": [\"denoise\", 0], \"vae\": [\"audio_vae\", 0]}}, \"video\": {\"class_type\": \"CreateVideo\", \"inputs\": {\"images\": [\"video_decode\", 0], \"audio\": [\"audio_decode\", 0], \"fps\": 24.0, \"bit_depth\": 8}}, \"save\": {\"class_type\": \"SaveVideo\", \"inputs\": {\"video\": [\"video\", 0], \"filename_prefix\": \"measured_1/video\", \"format\": \"mp4\", \"codec\": \"auto\"}}}",
+            "encoder": "Lavf62.12.102"
+          }
+        }
+      }
+    }
+  ],
+  "seed": 42,
+  "width": 736,
+  "height": 1280,
+  "frames": 362,
+  "fps": 24,
+  "duration_seconds": 15.083333333333334,
+  "base_model": {
+    "file": "minimax_h3_ref2va_pruned_int8_convrot.safetensors",
+    "pruned": true
+  },
+  "comfy_commit": "e377e263049f9338b4d12a3dd417b36ae62948ff",
+  "model_revision": "a98869194787969724c7425d95d0ed73ce9202af",
+  "runner_sha256": "f714adbadb99c2e3712d3f9f13ea21e0a9af72a193749a5ba41b052d05fe6677",
+  "prompt_sha256": "d0f55f331f4764faf99af8e90ae1b65059a51f91139b40c2f7da832b5c1292df",
+  "timing_method": "Inclusive CUDA-synchronized wall times. Nested components are not additive. One full first-process warmup then measured runs; OS and kernel caches are not cleared. Synchronization adds profiling overhead.",
+  "graph_cache": "NONE",
+  "explicit_compile": false,
+  "upload_seconds": 0,
+  "gpu_preflight_processes": "",
+  "gpu_preflight": "name, memory.used [MiB], utilization.gpu [%]\nNVIDIA GeForce RTX 5090, 2 MiB, 0 %\n",
+  "models": [
+    {
+      "path": "/home/raqeeb/code/h3-optimization/larryvrh-h3-turbo-lora/models/diffusion_models/minimax_h3_ref2va_pruned_int8_convrot.safetensors",
+      "bytes": 20970379616,
+      "verification": "Existing local file; content hash not verified"
+    },
+    {
+      "path": "/home/raqeeb/code/script2video/cache/minimax_h3/text_encoders/qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors",
+      "bytes": 15687142551,
+      "verification": "Existing local file; content hash not verified"
+    },
+    {
+      "path": "/home/raqeeb/code/h3-optimization/larryvrh-h3-turbo-lora/models/loras/minimax_h3_turbo_v4_step600_ema.safetensors",
+      "bytes": 779849816,
+      "verification": "Existing local file; content hash not verified"
+    },
+    {
+      "path": "/home/raqeeb/code/script2video/cache/minimax_h3/vae/minimax_h3_video_vae_fp16.safetensors",
+      "bytes": 5207808496,
+      "verification": "Existing local file; content hash not verified"
+    },
+    {
+      "path": "/home/raqeeb/code/script2video/cache/minimax_h3/vae/minimax_h3_audio_vae_fp32.safetensors",
+      "bytes": 605254808,
+      "verification": "Existing local file; content hash not verified"
+    }
+  ],
+  "packages": {
+    "ImageIO": "2.37.4",
+    "Jinja2": "3.1.6",
+    "Mako": "1.4.1",
+    "MarkupSafe": "2.1.5",
+    "PyOpenGL": "3.1.10",
+    "PySocks": "1.7.1",
+    "PyYAML": "6.0.3",
+    "Pygments": "2.21.0",
+    "SQLAlchemy": "2.0.7",
+    "aiofiles": "23.2.1",
+    "aiohappyeyeballs": "2.7.1",
+    "aiohttp": "3.14.3",
+    "aiosignal": "1.4.0",
+    "alembic": "1.19.2",
+    "altair": "5.5.0",
+    "annotated-doc": "0.0.5",
+    "annotated-types": "0.8.0",
+    "anyio": "4.15.1",
+    "asn1crypto": "1.5.1",
+    "attrs": "26.1.0",
+    "av": "18.1.0",
+    "beautifulsoup4": "4.15.0",
+    "blake3": "1.0.9",
+    "blessed": "1.49.0",
+    "boto3": "1.35.87",
+    "botocore": "1.35.99",
+    "certifi": "2026.7.22",
+    "cffi": "2.1.1",
+    "charset-normalizer": "3.5.1",
+    "click": "8.5.0",
+    "cloud-sql-python-connector": "1.22.0",
+    "comfy-aimdo": "0.4.11",
+    "comfy-angle": "0.1.1",
+    "comfy-kitchen": "0.2.26",
+    "comfyui-embedded-docs": "0.5.9",
+    "comfyui-workflow-templates-core": "0.3.292",
+    "comfyui-workflow-templates-json": "0.1.27",
+    "comfyui-workflow-templates-media-api": "0.3.84",
+    "comfyui-workflow-templates-media-assets-01": "0.1.17",
+    "comfyui-workflow-templates-media-image": "0.3.160",
+    "comfyui-workflow-templates-media-other": "0.3.229",
+    "comfyui-workflow-templates-media-video": "0.3.101",
+    "comfyui_frontend_package": "1.47.12",
+    "comfyui_workflow_templates": "0.11.27",
+    "contourpy": "1.3.3",
+    "cryptography": "50.0.1",
+    "cuda-bindings": "13.3.1",
+    "cuda-pathfinder": "1.6.0",
+    "cuda-toolkit": "13.0.2",
+    "cycler": "0.12.1",
+    "decorator": "4.4.2",
+    "dnspython": "2.8.0",
+    "einops": "0.8.2",
+    "fastapi": "0.141.1",
+    "ffmpeg-python": "0.2.0",
+    "ffmpy": "1.0.0",
+    "filelock": "3.32.3",
+    "fonttools": "4.64.0",
+    "frozenlist": "1.8.0",
+    "fsspec": "2026.7.0",
+    "future": "1.0.0",
+    "gdown": "5.1.0",
+    "google-api-core": "2.30.3",
+    "google-auth": "2.57.1",
+    "google-cloud-compute": "1.18.0",
+    "google-cloud-core": "2.7.0",
+    "google-cloud-pubsub": "2.21.0",
+    "google-cloud-storage": "2.16.0",
+    "google-crc32c": "1.8.0",
+    "google-resumable-media": "2.10.2",
+    "googleapis-common-protos": "1.75.0",
+    "gpustat": "1.1.1",
+    "gradio": "4.29.0",
+    "gradio_client": "0.16.1",
+    "greenlet": "3.5.5",
+    "grpc-google-iam-v1": "0.14.4",
+    "grpcio": "1.83.1",
+    "grpcio-status": "1.62.3",
+    "h11": "0.16.0",
+    "hf-xet": "1.6.0",
+    "httpcore": "1.0.9",
+    "httpx": "0.28.1",
+    "huggingface_hub": "1.26.0",
+    "idna": "3.19",
+    "imageio-ffmpeg": "0.6.0",
+    "importlib_resources": "6.5.2",
+    "jinxed": "2.1.0",
+    "jmespath": "1.1.0",
+    "jsonschema": "4.26.0",
+    "jsonschema-specifications": "2025.9.1",
+    "kiwisolver": "1.5.1",
+    "kornia": "0.8.3",
+    "kornia_rs": "0.1.14",
+    "markdown-it-py": "4.2.0",
+    "matplotlib": "3.11.1",
+    "mdurl": "0.1.2",
+    "moviepy": "1.0.3",
+    "mpmath": "1.3.0",
+    "multidict": "6.7.1",
+    "narwhals": "2.26.0",
+    "networkx": "3.6.1",
+    "ninja": "1.13.2",
+    "nsfw_image_detector": "0.1.2",
+    "numpy": "1.26.4",
+    "nvidia-cublas": "13.1.0.3",
+    "nvidia-cuda-cupti": "13.0.85",
+    "nvidia-cuda-nvrtc": "13.0.88",
+    "nvidia-cuda-runtime": "13.0.96",
+    "nvidia-cudnn-cu13": "9.19.0.56",
+    "nvidia-cufft": "12.0.0.61",
+    "nvidia-cufile": "1.15.1.6",
+    "nvidia-curand": "10.4.0.35",
+    "nvidia-cusolver": "12.0.4.66",
+    "nvidia-cusparse": "12.6.3.3",
+    "nvidia-cusparselt-cu13": "0.8.0",
+    "nvidia-ml-py": "13.610.43",
+    "nvidia-nccl-cu13": "2.28.9",
+    "nvidia-nvjitlink": "13.0.88",
+    "nvidia-nvshmem-cu13": "3.4.5",
+    "nvidia-nvtx": "13.0.85",
+    "opencv-python-headless": "4.9.0.80",
+    "orjson": "3.12.0",
+    "packaging": "26.3",
+    "pandas": "2.3.3",
+    "pg8000": "1.31.5",
+    "pillow": "10.4.0",
+    "pip": "23.3.1",
+    "proglog": "0.1.12",
+    "propcache": "0.5.2",
+    "proto-plus": "1.28.2",
+    "protobuf": "4.25.9",
+    "psutil": "7.2.2",
+    "pyasn1": "0.6.4",
+    "pyasn1_modules": "0.4.2",
+    "pycparser": "3.0",
+    "pydantic": "2.13.5",
+    "pydantic-settings": "2.15.0",
+    "pydantic_core": "2.46.5",
+    "pydub": "0.25.1",
+    "pyparsing": "3.3.2",
+    "python-dateutil": "2.9.0.post0",
+    "python-dotenv": "1.2.3",
+    "python-multipart": "0.0.32",
+    "pytz": "2026.3.post1",
+    "redis": "5.2.1",
+    "referencing": "0.37.0",
+    "regex": "2026.9.3",
+    "requests": "2.34.2",
+    "rich": "15.0.0",
+    "rpds-py": "2026.6.3",
+    "ruff": "0.16.6",
+    "s3transfer": "0.10.4",
+    "safetensors": "0.8.0",
+    "sageattention": "2.2.0",
+    "scipy": "1.17.1",
+    "scramp": "1.4.17",
+    "semantic-version": "2.10.0",
+    "sentencepiece": "0.2.2",
+    "setuptools": "78.1.0",
+    "shellingham": "1.5.4",
+    "simpleeval": "1.0.7",
+    "six": "1.17.0",
+    "slack_sdk": "3.35.0",
+    "soupsieve": "2.9.2",
+    "spandrel": "0.4.2",
+    "starlette": "1.6.0",
+    "sympy": "1.14.0",
+    "timm": "1.0.12",
+    "tokenizers": "0.23.2",
+    "tomlkit": "0.12.0",
+    "torch": "2.11.0+cu130",
+    "torchaudio": "2.11.0+cu130",
+    "torchsde": "0.2.6",
+    "torchvision": "0.26.0+cu130",
+    "tqdm": "4.70.0",
+    "trampoline": "0.1.2",
+    "transformers": "5.16.1",
+    "triton": "3.6.0",
+    "typer": "0.27.2",
+    "typing-inspection": "0.4.4",
+    "typing_extensions": "4.16.0",
+    "tzdata": "2026.3",
+    "urllib3": "2.7.0",
+    "uvicorn": "0.52.4",
+    "vtracer": "0.6.11",
+    "wcwidth": "0.8.3",
+    "websockets": "11.0.3",
+    "yarl": "1.24.5"
+  },
+  "hardware": "name, uuid, driver_version, memory.total [MiB]\nNVIDIA GeForce RTX 5090, GPU-c2beb57c-2ee3-c3f4-eef3-fd2e0ca955c8, 595.84, 32607 MiB\n",
+  "python": "3.12.13 (main, Jun 23 2026, 15:18:55) [Clang 22.1.3 ]",
+  "platform": "Linux-6.8.0-90-generic-x86_64-with-glibc2.35",
+  "torch_cuda": "13.0",
+  "attention": "sageattention_2.2.0_dit_override",
+  "dynamic_vram": true,
+  "attention_backend": "sage",
+  "attention_scope": "diffusion model only; text encoder and VAEs retain PyTorch attention",
+  "sageattention_version": "2.2.0",
+  "gpu_compute_capability": [
+    12,
+    0
+  ],
+  "adapter": {
+    "repo": "larryvrh/MiniMax-H3-Turbo-Lora",
+    "revision": "43a74557ac3f6539db8e0f2a959d03feb7a81480",
+    "file": "minimax_h3_turbo_v4_step600_ema.safetensors",
+    "strength": 1.0,
+    "low_vram": false,
+    "sha256": "5f3a626cd72c93a8b9318d6760c510bc5092d2ab13aaba1f932c5bab07a416d3"
+  },
+  "turbo_commit": "4274783a23afcfdbea3b4876cb79effd6c510785",
+  "steps": 4,
+  "scheduler": "simple",
+  "sampler": "MiniMaxH3TurboSampler",
+  "prompt": "One continuous 15-second vertical advertisement with three shots and clean hard cuts at 5 and 10 seconds. Keep the same woman and product throughout.\n\nSHOT 1 (0-5s):\nVertical UGC selfie video, shot on an iPhone, handheld with subtle natural\nshake, warm afternoon light on a front porch. A warm, upbeat American woman,\n68 years old, chin-length silver-gray hair, soft natural wrinkles, kind hazel\neyes, wearing a dusty-rose knit cardigan. She holds the phone at arm's length\nin one hand (visible); in her OTHER single hand she holds up one black barefoot\nwalking shoe from <Picture 1> close beside her smiling face. <Picture 1> controls\nONLY the shoe exact look \u2014 matte black upper, dark-gray zigzag side panels, wide\nrounded roomy toe box, thick treaded rubber sole \u2014 ignore <Picture 1> white studio\nbackground. She looks into the lens and says warmly, gentle and relatable:\n\"After sixty, every single step hurt, until my daughter got me these.\" Natural\nporch ambience, soft birdsong, clean crisp spoken dialogue, clear lip sync,\nauthentic and unpolished. Avoid: extra hands, third hand, selfie arm holding\nphone doing an action, deformed fingers, warped shoe, studio lighting, cinematic\ngrading, on-screen text, garbled logo.\n\nSHOT 2 (5-10s):\nVertical UGC video, phone propped on a small tripod at knee height, locked-off\nwith a slow gentle push-in, soft natural daylight in a cozy living room. The\nsame American woman, 68 years old, chin-length silver-gray hair, soft natural\nwrinkles, kind hazel eyes, dusty-rose knit cardigan, sits on the edge of a couch\nwith BOTH hands free and slips the black barefoot walking shoes from <Picture 1>\nonto her bare feet, then spreads her toes to show the wide roomy front. <Picture 1>\ncontrols ONLY the shoe exact appearance \u2014 matte black upper, dark-gray zigzag\nside panels, very wide rounded toe box, thick flexible treaded sole \u2014 ignore its\nwhite studio background. She glances down, then up into the lens and says with\ndelight: \"Look how wide the toes are, my feet finally have room to breathe.\" Soft\nfabric rustle and quiet footstep sounds, clean crisp spoken dialogue, clear lip\nsync, authentic homemade feel. Avoid: extra hands, third hand, selfie arm,\ndeformed fingers, warped shoe, studio lighting, cinematic grading, on-screen text.\n\nSHOT 3 (10-15s):\nVertical UGC video, phone on a tripod in a sunny green park, framed medium as\nshe walks toward the camera on a path, gentle natural feel. The same American\nwoman, 68 years old, chin-length silver-gray hair, soft natural wrinkles, kind\nhazel eyes, dusty-rose knit cardigan, strides confidently and pain-free wearing\nthe black barefoot walking shoes from <Picture 1> \u2014 matte black upper, dark-gray\nzigzag side panels, wide rounded roomy toe box, thick treaded rubber sole.\n<Picture 1> controls ONLY the shoe, ignore its white studio background. She beams\nat the lens and says brightly and grateful: \"Now I walk three miles a day and\nnothing aches, I am never going back.\" Birdsong, light breeze, soft footsteps on\nthe path, clean crisp spoken dialogue, clear lip sync, genuine and joyful.\nAvoid: extra hands, third hand, deformed fingers, warped shoe, cinematic color\ngrade, studio lighting, on-screen text, subtitles.",
+  "case": {
+    "name": "Bronoir",
+    "slug": "bronoir",
+    "image_drive_id": "1xR3_s-NOf3q1ZibRgaV0Xl0_UlEncYiq",
+    "image_drive_url": "https://drive.google.com/file/d/1xR3_s-NOf3q1ZibRgaV0Xl0_UlEncYiq/view?usp=drivesdk",
+    "source_files": [
+      {
+        "id": "1TwPb5A5nfiIAqaA-2RcWfuxjlm3KRXJs",
+        "title": "Bronoir - Details.txt",
+        "mime_type": "text/plain",
+        "size": "6251",
+        "url": "https://drive.google.com/file/d/1TwPb5A5nfiIAqaA-2RcWfuxjlm3KRXJs/view?usp=drivesdk",
+        "file_or_folder": "file",
+        "created_time": "2026-08-08T19:15:41.778Z",
+        "modified_time": "2026-08-08T19:13:58.779Z",
+        "parent_ids": null,
+        "drive_id": null,
+        "current_user_can_share": null,
+        "has_augmented_permissions": null,
+        "shared": true,
+        "permissions": null,
+        "source_visibility_status": "access_not_verified",
+        "can_download": true,
+        "can_list_children": false
+      },
+      {
+        "id": "1xR3_s-NOf3q1ZibRgaV0Xl0_UlEncYiq",
+        "title": "input_product_image.png",
+        "mime_type": "image/png",
+        "size": "951982",
+        "url": "https://drive.google.com/file/d/1xR3_s-NOf3q1ZibRgaV0Xl0_UlEncYiq/view?usp=drivesdk",
+        "file_or_folder": "file",
+        "created_time": "2026-08-08T19:15:29.313Z",
+        "modified_time": "2026-08-08T19:13:28.914Z",
+        "parent_ids": null,
+        "drive_id": null,
+        "current_user_can_share": null,
+        "has_augmented_permissions": null,
+        "shared": true,
+        "permissions": null,
+        "source_visibility_status": "access_not_verified",
+        "can_download": true,
+        "can_list_children": false
+      }
+    ],
+    "adaptation": "Combined the three supplied five-second shot prompts into one 15-second generation; added timeline and consistency instruction.",
+    "references": [
+      "input_product_image.png"
+    ],
+    "reference_metadata": [
+      {
+        "file": "input_product_image.png",
+        "sha256": "a4cb366b8f9e1815ef0290f6b584d95e78b62f7faa73d49ed42ad1d8a9af9b4c"
+      }
+    ]
+  },
+  "references": [
+    {
+      "file": "input_product_image.png",
+      "picture_index": 1,
+      "sha256": "a4cb366b8f9e1815ef0290f6b584d95e78b62f7faa73d49ed42ad1d8a9af9b4c"
+    }
+  ],
+  "requested": {
+    "seed": 42,
+    "width": 720,
+    "height": 1280,
+    "duration_seconds": 15,
+    "frames": 360,
+    "fps": 24
+  },
+  "reference_sizing": "match",
+  "export_plan": "Center crop 736 to 720; retain first 360 of 362 native frames and corresponding audio. Export time excluded from generation.",
+  "compatibility_status": "Experimental Larryvrh v4-600 on ref2va; runtime success is not a quality guarantee",
+  "initialization_seconds": 2.6166774430312216
+}

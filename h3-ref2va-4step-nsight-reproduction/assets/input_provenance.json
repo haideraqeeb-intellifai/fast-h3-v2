@@ -1,0 +1,37 @@
+{
+  "prompt_sha256": "dbfd7858e75976ff00a0a782d8e044803c2b9f7c8f2e5adc92bc69f6b48e1cae",
+  "references": [
+    {
+      "file": "/home/raqeeb/code/h3-optimization/fast-h3-v2/nsight_reference/inputs/trainer.png",
+      "sha256": "a188a189709b7582b7e19c96da1a65498bcd6b6f8d4f85f7162820ce9b37e1af",
+      "reference_record": {
+        "file": "trainer.png",
+        "picture_index": 1,
+        "role": "trainer",
+        "sha256": "a188a189709b7582b7e19c96da1a65498bcd6b6f8d4f85f7162820ce9b37e1af",
+        "url": "https://s3.renderplatform.com/agent-assets/trainer.png"
+      }
+    },
+    {
+      "file": "/home/raqeeb/code/h3-optimization/fast-h3-v2/nsight_reference/inputs/trainee.png",
+      "sha256": "59453a952f02e301cccaac6084955b567ed6c8077ce2033c8bb91151dc190b69",
+      "reference_record": {
+        "file": "trainee.png",
+        "picture_index": 2,
+        "role": "trainee",
+        "sha256": "59453a952f02e301cccaac6084955b567ed6c8077ce2033c8bb91151dc190b69",
+        "url": "https://s3.renderplatform.com/agent-assets/trainee.png"
+      }
+    }
+  ],
+  "seed": 287987790,
+  "native_geometry": [
+    736,
+    1280,
+    243
+  ],
+  "fps": 24,
+  "status": "used in completed Nsight Systems reproduction",
+  "checkpoint": "minimax_h3_ref2va_pruned_int8_convrot.safetensors",
+  "reference_report": "https://s3.renderplatform.com/agent-assets/Raqeeb/h3-ref2va-4step-nsight-ram-report/index.html"
+}

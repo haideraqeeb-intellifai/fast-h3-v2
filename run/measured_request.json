@@ -1,0 +1,61 @@
+{
+  "prompt": "integrated_multimodal_description: A polished vertical social-media podcast advertisement in a warm modern studio with wooden shelves, soft amber practical lights, two beige lounge chairs, and bright pink broadcast microphones. Keep both hosts' faces, clothing, hair, and the studio layout consistent across all shots.\n\nShot 1, 0.0-3.5 seconds: Medium close-up of a confident Black woman with long straight black hair, black rectangular glasses, a fitted white top, and blue jeans, seated naturally beside the pink microphone. She gestures casually and says <d>[English] Have you tried that late-night taco place everyone keeps posting?</d>\n\nShot 2, 3.5-6.5 seconds: Clean cinematic food B-roll, an overhead close-up of black-gloved hands plating two colorful street tacos on brown paper, warm tortillas, grilled filling, purple cabbage, cilantro, lime, and glossy red salsa. Visible steam and crisp, realistic food texture. The second host begins speaking off camera: <d>[English] Yes. Fresh tortillas, incredible flavor, and honestly much better than I expected.</d>\n\nShot 3, 6.5-10.0 seconds: Cut back to the same podcast studio, medium close-up of the second host, a light-skinned brunette woman with shoulder-length wavy hair wearing a charcoal ribbed top, seated in the opposite beige chair. She finishes the sentence with natural conversational timing while the first host listens just off camera.\n\nRealistic skin, restrained hand gestures, accurate anatomy, stable microphones, natural blinking and lip synchronization, native-looking UGC pacing. Do not render subtitles, logos, watermarks, signs, or on-screen text.\n\noverall_soundscape: Clean close-mic podcast dialogue with two distinct natural female voices, subtle quiet studio room tone, and a brief soft tortilla sizzle and plating sound during the taco B-roll. Dialogue stays continuous across the visual cut and remains easy to understand.\n\nnon_diegetic_music: None.",
+  "negative_prompt": "",
+  "inputs": {
+    "prompt_path": null,
+    "image_path": null,
+    "video_path": null,
+    "pil_image": null,
+    "last_image": null,
+    "references": null,
+    "latents": null,
+    "audio_latents": null,
+    "pose": null,
+    "mouse_cond": null,
+    "keyboard_cond": null,
+    "grid_sizes": null,
+    "c2ws_plucker_emb": null,
+    "action_path": null,
+    "refine_from": null,
+    "stage1_video": null
+  },
+  "sampling": {
+    "num_videos_per_prompt": 1,
+    "seed": 42,
+    "max_sequence_length": null,
+    "num_frames": 243,
+    "height": 1280,
+    "width": 736,
+    "height_sr": 1072,
+    "width_sr": 1920,
+    "fps": 24,
+    "num_inference_steps": 9,
+    "num_inference_steps_sr": 50,
+    "guidance_scale": 1.0,
+    "batch_cfg": false,
+    "guidance_scale_2": null,
+    "cfg_normalization": false,
+    "cfg_truncation": 1.0,
+    "guidance_rescale": 0.0,
+    "true_cfg_scale": null,
+    "use_embedded_guidance": null,
+    "boundary_ratio": null,
+    "sigmas": null
+  },
+  "runtime": {
+    "enable_teacache": false,
+    "return_trajectory_latents": false,
+    "return_trajectory_decoded": false
+  },
+  "output": {
+    "output_path": "/home/raqeeb/code/h3-optimization/fast-h3-v2/run/measured.mp4",
+    "output_video_name": null,
+    "save_video": true,
+    "return_frames": false,
+    "return_state": false
+  },
+  "stage_overrides": {},
+  "state": null,
+  "plan": null,
+  "extensions": {}
+}

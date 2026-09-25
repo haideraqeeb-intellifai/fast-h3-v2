@@ -1,0 +1,21 @@
+{
+  "decoded_streams": [
+    {
+      "stream": "v",
+      "reference_frames": 241,
+      "reproduction_frames": 241,
+      "matching_decoded_frames": 57,
+      "all_decoded_frames_identical": false
+    },
+    {
+      "stream": "a",
+      "reference_frames": 314,
+      "reproduction_frames": 314,
+      "matching_decoded_frames": 314,
+      "all_decoded_frames_identical": true
+    }
+  ],
+  "video_ssim_all": 0.984699,
+  "method": "FFmpeg ssim filter on decoded YUV420p final exports; same geometry and frame rate. Audio/video frame matching uses FFmpeg framemd5.",
+  "reference_url": "https://s3.renderplatform.com/agent-assets/Raqeeb/h3-ref2va-4step-nsight-ram-report/measured.mp4"
+}

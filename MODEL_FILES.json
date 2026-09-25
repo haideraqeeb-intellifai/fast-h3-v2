@@ -1,0 +1,194 @@
+[
+  {
+    "path": "audio_vae/diffusion_pytorch_model.safetensors",
+    "bytes": 605429340,
+    "sha256": "52c59e67ba8de5477c81bfbced0327aabf500f1bfdeefd5ee754529241cb26cb",
+    "checksum_source": "Hugging Face download metadata (checkpoint verification log retained)"
+  },
+  {
+    "path": "text_encoder/model-00001-of-00014.safetensors",
+    "bytes": 4932328944,
+    "sha256": "6b9dfbc930e505402ae9d7e5091a9d7d656cda5f34614f01cfe70bfb0cca27cb",
+    "checksum_source": "Hugging Face download metadata (checkpoint verification log retained)"
+  },
+  {
+    "path": "text_encoder/model-00002-of-00014.safetensors",
+    "bytes": 4875990528,
+    "sha256": "d8bb44b4ff303fe76fe9e894022fb3dc71b15a2e716592790fe0e3c3e60478fa",
+    "checksum_source": "Hugging Face download metadata (checkpoint verification log retained)"
+  },
+  {
+    "path": "text_encoder/model-00003-of-00014.safetensors",
+    "bytes": 4875990552,
+    "sha256": "54f22e8b3168f8dc962fac0d313607ebf52a12b433d4cf3098a0d82d9f042940",
+    "checksum_source": "Hugging Face download metadata (checkpoint verification log retained)"
+  },
+  {
+    "path": "text_encoder/model-00004-of-00014.safetensors",
+    "bytes": 4875990584,
+    "sha256": "ad09c74d3c13ee29b5d0d84548fd8a3424a651564eaccd519946c296e59c557f",
+    "checksum_source": "Hugging Face download metadata (checkpoint verification log retained)"
+  },
+  {
+    "path": "text_encoder/model-00005-of-00014.safetensors",
+    "bytes": 4875990584,
+    "sha256": "fc993c8a0e2a5b0570f383e1a95dc3a1281d1b224b6f3ee908f4827941e1dfc2",
+    "checksum_source": "Hugging Face download metadata (checkpoint verification log retained)"
+  },
+  {
+    "path": "text_encoder/model-00006-of-00014.safetensors",
+    "bytes": 4875990584,
+    "sha256": "82f05620d1f718a90c362b221d6a184ff1a0f53301d706882d3df49695fa1974",
+    "checksum_source": "Hugging Face download metadata (checkpoint verification log retained)"
+  },
+  {
+    "path": "text_encoder/model-00007-of-00014.safetensors",
+    "bytes": 4875990584,
+    "sha256": "fb91da8cb01ff4de3eef0eab1c3e769a734b3a1aafc61734068638a0d6c86934",
+    "checksum_source": "Hugging Face download metadata (checkpoint verification log retained)"
+  },
+  {
+    "path": "text_encoder/model-00008-of-00014.safetensors",
+    "bytes": 4875990584,
+    "sha256": "431ca56535c8781944ce3801f5eb61c45531e853ecc5846d936ebaf4761b764f",
+    "checksum_source": "Hugging Face download metadata (checkpoint verification log retained)"
+  },
+  {
+    "path": "text_encoder/model-00009-of-00014.safetensors",
+    "bytes": 4875990584,
+    "sha256": "3825e3f4302f4d2f7d76aa7430d2ce0864fde6b9e540a5806bf0d8e38e4d9f47",
+    "checksum_source": "Hugging Face download metadata (checkpoint verification log retained)"
+  },
+  {
+    "path": "text_encoder/model-00010-of-00014.safetensors",
+    "bytes": 4875990584,
+    "sha256": "aded5a4d1d5e22dbd8b6f79266b6eb88c840411b09527c53917a1419ace22e2f",
+    "checksum_source": "Hugging Face download metadata (checkpoint verification log retained)"
+  },
+  {
+    "path": "text_encoder/model-00011-of-00014.safetensors",
+    "bytes": 4875990584,
+    "sha256": "3820ffe8d8d6477f6fe8d614ef3c87abb264ee39accebf43a1507b970d80946f",
+    "checksum_source": "Hugging Face download metadata (checkpoint verification log retained)"
+  },
+  {
+    "path": "text_encoder/model-00012-of-00014.safetensors",
+    "bytes": 4875990584,
+    "sha256": "05ad2d08ce71963121c9b03f1d9ec5d7641052f4b23c6c12b80d71065eb8e98e",
+    "checksum_source": "Hugging Face download metadata (checkpoint verification log retained)"
+  },
+  {
+    "path": "text_encoder/model-00013-of-00014.safetensors",
+    "bytes": 4875990584,
+    "sha256": "b64f2289871261fdd1abbd3b78bcd66011b341de3dc8eeb2ed1a473ee7c8d95c",
+    "checksum_source": "Hugging Face download metadata (checkpoint verification log retained)"
+  },
+  {
+    "path": "text_encoder/model-00014-of-00014.safetensors",
+    "bytes": 3270697008,
+    "sha256": "e45b6c9998c77ee5a6577f9f47bc76416c1d4d387169e50c4c9d3134ea51b13b",
+    "checksum_source": "Hugging Face download metadata (checkpoint verification log retained)"
+  },
+  {
+    "path": "transformer/diffusion_pytorch_model-00001-of-00014.safetensors",
+    "bytes": 5331008552,
+    "sha256": "b82974a058b58c586279df78d146b3e20915765d87f404dc82a0efda3a955c8f",
+    "checksum_source": "Hugging Face download metadata (checkpoint verification log retained)"
+  },
+  {
+    "path": "transformer/diffusion_pytorch_model-00002-of-00014.safetensors",
+    "bytes": 5318721256,
+    "sha256": "05568fca94d81e382546e9a6ae8633a97fb10981fdc5e4aac34c28ef7f14d3b2",
+    "checksum_source": "Hugging Face download metadata (checkpoint verification log retained)"
+  },
+  {
+    "path": "transformer/diffusion_pytorch_model-00003-of-00014.safetensors",
+    "bytes": 5318721248,
+    "sha256": "ec8885fa237d7475e343b40de460d70adb8b5d0eeb3e2df176eb6af9c49610fb",
+    "checksum_source": "Hugging Face download metadata (checkpoint verification log retained)"
+  },
+  {
+    "path": "transformer/diffusion_pytorch_model-00004-of-00014.safetensors",
+    "bytes": 4875566048,
+    "sha256": "70dcbf6d3efb8d26f2dd4b20cd4f5c7564d6b9c6c1685c53cde24421cb151d56",
+    "checksum_source": "Hugging Face download metadata (checkpoint verification log retained)"
+  },
+  {
+    "path": "transformer/diffusion_pytorch_model-00005-of-00014.safetensors",
+    "bytes": 5318505992,
+    "sha256": "cabab8f1b8d57dc6de42de220dcf5ccbb754222741c5bc70d294ebd6e02d82eb",
+    "checksum_source": "Hugging Face download metadata (checkpoint verification log retained)"
+  },
+  {
+    "path": "transformer/diffusion_pytorch_model-00006-of-00014.safetensors",
+    "bytes": 5164580688,
+    "sha256": "9bb11d605a7c42372e8f206c2d47967d3b70db736aca68910a19aacebeeadfc6",
+    "checksum_source": "Hugging Face download metadata (checkpoint verification log retained)"
+  },
+  {
+    "path": "transformer/diffusion_pytorch_model-00007-of-00014.safetensors",
+    "bytes": 5318721240,
+    "sha256": "bcb3ac18457582de135b576eedad84626d54e29220a540016d2b2b385e9ac5f9",
+    "checksum_source": "Hugging Face download metadata (checkpoint verification log retained)"
+  },
+  {
+    "path": "transformer/diffusion_pytorch_model-00008-of-00014.safetensors",
+    "bytes": 5318721248,
+    "sha256": "845041576ed28ff8c419751a89ae87fe26ffac3df15f9890bc4241f671e7e5e2",
+    "checksum_source": "Hugging Face download metadata (checkpoint verification log retained)"
+  },
+  {
+    "path": "transformer/diffusion_pytorch_model-00009-of-00014.safetensors",
+    "bytes": 4875566056,
+    "sha256": "ad34ff06d42a9d90938d888a58ac0315087c3cbfde9676cf83e5f11199571430",
+    "checksum_source": "Hugging Face download metadata (checkpoint verification log retained)"
+  },
+  {
+    "path": "transformer/diffusion_pytorch_model-00010-of-00014.safetensors",
+    "bytes": 5318505984,
+    "sha256": "0efb2a0fd04d955dfa475508d28562fa596edb1ec4f8e4c62bae4ba9fb112d80",
+    "checksum_source": "Hugging Face download metadata (checkpoint verification log retained)"
+  },
+  {
+    "path": "transformer/diffusion_pytorch_model-00011-of-00014.safetensors",
+    "bytes": 5164580688,
+    "sha256": "32f04fe4184564b146f6214af8e80fb4b783a9dc1a9743282d61ef21745d3d3d",
+    "checksum_source": "Hugging Face download metadata (checkpoint verification log retained)"
+  },
+  {
+    "path": "transformer/diffusion_pytorch_model-00012-of-00014.safetensors",
+    "bytes": 5318721256,
+    "sha256": "903eccb1a1098e32f16a6979c27cbe87bf1dc304832173fc22e101b8ae3f8490",
+    "checksum_source": "Hugging Face download metadata (checkpoint verification log retained)"
+  },
+  {
+    "path": "transformer/diffusion_pytorch_model-00013-of-00014.safetensors",
+    "bytes": 5318721208,
+    "sha256": "018db4d6d8fe97c0e560d850ba5c275792ce0bfd33c8918caf6d198d758225ff",
+    "checksum_source": "Hugging Face download metadata (checkpoint verification log retained)"
+  },
+  {
+    "path": "transformer/diffusion_pytorch_model-00014-of-00014.safetensors",
+    "bytes": 2138941296,
+    "sha256": "160b0f5a830b332fb61be18c45e4d4ebab7829db7d8cb18302714c145819b8da",
+    "checksum_source": "Hugging Face download metadata (checkpoint verification log retained)"
+  },
+  {
+    "path": "vae/diffusion_pytorch_model-00001-of-00003.safetensors",
+    "bytes": 5061033024,
+    "sha256": "72f4c6be84ac0674f27398cde991dd9d719762f3952c4921aa66b2ce542f6374",
+    "checksum_source": "Hugging Face download metadata (checkpoint verification log retained)"
+  },
+  {
+    "path": "vae/diffusion_pytorch_model-00002-of-00003.safetensors",
+    "bytes": 4955986528,
+    "sha256": "2e05e8bc23fa4071043e17fd242be8acd0685e781a43987432b2eae925be4198",
+    "checksum_source": "Hugging Face download metadata (checkpoint verification log retained)"
+  },
+  {
+    "path": "vae/diffusion_pytorch_model-00003-of-00003.safetensors",
+    "bytes": 398539336,
+    "sha256": "c05d6ac4b1a33de372799d708531da6320f6a3ce6d1ce6d895e770988e004a39",
+    "checksum_source": "Hugging Face download metadata (checkpoint verification log retained)"
+  }
+]

@@ -1,0 +1,1447 @@
+[
+  {
+    "unix_time": 1789567703.5112066,
+    "gpu": "5234, 0, 59.06, 39",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 4908"
+  },
+  {
+    "unix_time": 1789567704.5915132,
+    "gpu": "6730, 22, 61.53, 39",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 6404"
+  },
+  {
+    "unix_time": 1789567705.6205862,
+    "gpu": "6734, 100, 132.66, 43",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 6408"
+  },
+  {
+    "unix_time": 1789567706.6542487,
+    "gpu": "6742, 0, 114.55, 41",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 6416"
+  },
+  {
+    "unix_time": 1789567707.6813056,
+    "gpu": "22982, 0, 163.77, 41",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 22656"
+  },
+  {
+    "unix_time": 1789567708.7097056,
+    "gpu": "23946, 100, 422.34, 58",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 23620"
+  },
+  {
+    "unix_time": 1789567709.7386122,
+    "gpu": "23946, 100, 493.61, 60",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 23620"
+  },
+  {
+    "unix_time": 1789567710.768852,
+    "gpu": "23946, 100, 534.40, 60",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 23620"
+  },
+  {
+    "unix_time": 1789567711.7977667,
+    "gpu": "23946, 100, 519.44, 60",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 23620"
+  },
+  {
+    "unix_time": 1789567712.8269825,
+    "gpu": "23946, 100, 494.05, 60",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 23620"
+  },
+  {
+    "unix_time": 1789567713.8551958,
+    "gpu": "23946, 100, 529.84, 62",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 23620"
+  },
+  {
+    "unix_time": 1789567714.884131,
+    "gpu": "23946, 100, 545.79, 62",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 23620"
+  },
+  {
+    "unix_time": 1789567715.9122703,
+    "gpu": "23946, 100, 505.41, 61",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 23620"
+  },
+  {
+    "unix_time": 1789567716.9409862,
+    "gpu": "23946, 100, 500.82, 63",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 23620"
+  },
+  {
+    "unix_time": 1789567717.9696164,
+    "gpu": "23946, 100, 547.73, 63",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 23620"
+  },
+  {
+    "unix_time": 1789567718.9982233,
+    "gpu": "23946, 96, 553.30, 64",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 23620"
+  },
+  {
+    "unix_time": 1789567720.0269012,
+    "gpu": "23946, 100, 567.64, 65",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 23620"
+  },
+  {
+    "unix_time": 1789567721.055681,
+    "gpu": "23946, 100, 583.95, 65",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 23620"
+  },
+  {
+    "unix_time": 1789567722.0840857,
+    "gpu": "23946, 100, 570.71, 65",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 23620"
+  },
+  {
+    "unix_time": 1789567723.1124837,
+    "gpu": "23946, 100, 569.29, 65",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 23620"
+  },
+  {
+    "unix_time": 1789567724.142658,
+    "gpu": "23946, 100, 584.66, 66",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 23620"
+  },
+  {
+    "unix_time": 1789567725.172462,
+    "gpu": "31840, 100, 569.75, 66",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31514"
+  },
+  {
+    "unix_time": 1789567726.205723,
+    "gpu": "31666, 100, 564.41, 65",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31340"
+  },
+  {
+    "unix_time": 1789567727.2351036,
+    "gpu": "31666, 100, 579.66, 66",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31340"
+  },
+  {
+    "unix_time": 1789567728.2642262,
+    "gpu": "31666, 100, 575.28, 66",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31340"
+  },
+  {
+    "unix_time": 1789567729.292792,
+    "gpu": "31666, 100, 575.20, 63",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31340"
+  },
+  {
+    "unix_time": 1789567730.322138,
+    "gpu": "31666, 100, 574.63, 66",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31340"
+  },
+  {
+    "unix_time": 1789567731.3540623,
+    "gpu": "31666, 100, 574.06, 63",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31340"
+  },
+  {
+    "unix_time": 1789567732.3841963,
+    "gpu": "31666, 100, 575.88, 65",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31340"
+  },
+  {
+    "unix_time": 1789567733.419907,
+    "gpu": "31666, 100, 574.03, 64",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31340"
+  },
+  {
+    "unix_time": 1789567734.4571211,
+    "gpu": "31666, 100, 575.53, 65",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31340"
+  },
+  {
+    "unix_time": 1789567735.487051,
+    "gpu": "31666, 100, 575.25, 66",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31340"
+  },
+  {
+    "unix_time": 1789567736.5171406,
+    "gpu": "31666, 100, 574.94, 66",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31340"
+  },
+  {
+    "unix_time": 1789567737.549077,
+    "gpu": "31666, 100, 573.63, 67",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31340"
+  },
+  {
+    "unix_time": 1789567738.5780072,
+    "gpu": "31666, 100, 573.97, 67",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31340"
+  },
+  {
+    "unix_time": 1789567739.6077864,
+    "gpu": "31666, 100, 574.39, 69",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31340"
+  },
+  {
+    "unix_time": 1789567740.6366224,
+    "gpu": "31666, 100, 575.06, 68",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31340"
+  },
+  {
+    "unix_time": 1789567741.6678307,
+    "gpu": "31666, 100, 575.49, 70",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31340"
+  },
+  {
+    "unix_time": 1789567742.698124,
+    "gpu": "31666, 100, 574.09, 69",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31340"
+  },
+  {
+    "unix_time": 1789567743.7271075,
+    "gpu": "31666, 100, 574.78, 70",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31340"
+  },
+  {
+    "unix_time": 1789567744.757583,
+    "gpu": "31666, 100, 574.21, 66",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31340"
+  },
+  {
+    "unix_time": 1789567745.78567,
+    "gpu": "31666, 100, 575.74, 68",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31340"
+  },
+  {
+    "unix_time": 1789567746.818346,
+    "gpu": "31666, 100, 575.18, 68",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31340"
+  },
+  {
+    "unix_time": 1789567747.8531597,
+    "gpu": "31666, 100, 575.17, 67",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31340"
+  },
+  {
+    "unix_time": 1789567748.882386,
+    "gpu": "31666, 100, 575.74, 69",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31340"
+  },
+  {
+    "unix_time": 1789567749.9142125,
+    "gpu": "31666, 100, 574.02, 69",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31340"
+  },
+  {
+    "unix_time": 1789567750.944985,
+    "gpu": "31666, 100, 575.01, 69",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31340"
+  },
+  {
+    "unix_time": 1789567751.9745693,
+    "gpu": "32036, 98, 574.59, 72",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31710"
+  },
+  {
+    "unix_time": 1789567753.0090132,
+    "gpu": "32036, 100, 566.28, 71",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31710"
+  },
+  {
+    "unix_time": 1789567754.0376456,
+    "gpu": "32036, 100, 568.71, 71",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31710"
+  },
+  {
+    "unix_time": 1789567755.066815,
+    "gpu": "32036, 100, 568.55, 69",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31710"
+  },
+  {
+    "unix_time": 1789567756.0992248,
+    "gpu": "32036, 100, 569.20, 62",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31710"
+  },
+  {
+    "unix_time": 1789567757.1316493,
+    "gpu": "17792, 100, 570.18, 64",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 13480"
+  },
+  {
+    "unix_time": 1789567758.165307,
+    "gpu": "32036, 100, 571.03, 70",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31710"
+  },
+  {
+    "unix_time": 1789567759.1968205,
+    "gpu": "32036, 100, 568.94, 73",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31710"
+  },
+  {
+    "unix_time": 1789567760.226695,
+    "gpu": "32036, 100, 570.93, 73",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31710"
+  },
+  {
+    "unix_time": 1789567761.257539,
+    "gpu": "32036, 100, 570.41, 73",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31710"
+  },
+  {
+    "unix_time": 1789567762.2859285,
+    "gpu": "32036, 100, 570.03, 69",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31710"
+  },
+  {
+    "unix_time": 1789567763.3162875,
+    "gpu": "32036, 100, 569.77, 71",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31710"
+  },
+  {
+    "unix_time": 1789567764.3472197,
+    "gpu": "32036, 100, 570.14, 71",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31710"
+  },
+  {
+    "unix_time": 1789567765.380564,
+    "gpu": "32036, 100, 568.35, 70",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31710"
+  },
+  {
+    "unix_time": 1789567766.410721,
+    "gpu": "32036, 99, 569.35, 74",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31710"
+  },
+  {
+    "unix_time": 1789567767.4418094,
+    "gpu": "32036, 96, 568.00, 74",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31710"
+  },
+  {
+    "unix_time": 1789567768.4700263,
+    "gpu": "32036, 100, 568.14, 72",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31710"
+  },
+  {
+    "unix_time": 1789567769.4992952,
+    "gpu": "32036, 100, 568.31, 64",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31710"
+  },
+  {
+    "unix_time": 1789567770.5319557,
+    "gpu": "19638, 100, 570.66, 66",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 11654"
+  },
+  {
+    "unix_time": 1789567771.563906,
+    "gpu": "32036, 100, 570.64, 72",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31710"
+  },
+  {
+    "unix_time": 1789567772.59471,
+    "gpu": "32036, 100, 570.12, 74",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31710"
+  },
+  {
+    "unix_time": 1789567773.6276822,
+    "gpu": "32036, 100, 569.90, 74",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31710"
+  },
+  {
+    "unix_time": 1789567774.6574748,
+    "gpu": "32036, 100, 569.24, 72",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31710"
+  },
+  {
+    "unix_time": 1789567775.6881878,
+    "gpu": "32036, 100, 570.56, 72",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31710"
+  },
+  {
+    "unix_time": 1789567776.723986,
+    "gpu": "32036, 95, 570.53, 70",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31710"
+  },
+  {
+    "unix_time": 1789567777.7567232,
+    "gpu": "32036, 100, 568.91, 73",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31710"
+  },
+  {
+    "unix_time": 1789567778.791723,
+    "gpu": "32036, 100, 570.41, 75",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31710"
+  },
+  {
+    "unix_time": 1789567779.8318334,
+    "gpu": "32036, 97, 563.44, 75",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31710"
+  },
+  {
+    "unix_time": 1789567780.8615644,
+    "gpu": "32036, 100, 566.76, 74",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31710"
+  },
+  {
+    "unix_time": 1789567781.8913872,
+    "gpu": "32036, 100, 568.56, 65",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31710"
+  },
+  {
+    "unix_time": 1789567782.9258268,
+    "gpu": "22448, 100, 570.47, 67",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 13110"
+  },
+  {
+    "unix_time": 1789567783.957638,
+    "gpu": "32036, 100, 569.37, 73",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31710"
+  },
+  {
+    "unix_time": 1789567784.9898622,
+    "gpu": "32036, 100, 571.13, 76",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31710"
+  },
+  {
+    "unix_time": 1789567786.0230038,
+    "gpu": "32036, 100, 569.48, 76",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31710"
+  },
+  {
+    "unix_time": 1789567787.0528953,
+    "gpu": "32036, 100, 570.09, 74",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31710"
+  },
+  {
+    "unix_time": 1789567788.0834868,
+    "gpu": "32036, 100, 569.99, 73",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31710"
+  },
+  {
+    "unix_time": 1789567789.1174612,
+    "gpu": "32036, 99, 570.51, 74",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31710"
+  },
+  {
+    "unix_time": 1789567790.1490169,
+    "gpu": "32036, 99, 569.02, 74",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31710"
+  },
+  {
+    "unix_time": 1789567791.1824584,
+    "gpu": "32036, 100, 570.90, 77",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31710"
+  },
+  {
+    "unix_time": 1789567792.2153456,
+    "gpu": "32036, 100, 566.69, 76",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31710"
+  },
+  {
+    "unix_time": 1789567793.2464147,
+    "gpu": "32036, 99, 566.26, 73",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31710"
+  },
+  {
+    "unix_time": 1789567794.2783194,
+    "gpu": "32036, 100, 566.32, 66",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31710"
+  },
+  {
+    "unix_time": 1789567795.3129826,
+    "gpu": "26264, 100, 586.86, 74",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 13702"
+  },
+  {
+    "unix_time": 1789567796.3457901,
+    "gpu": "32036, 100, 571.53, 75",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31710"
+  },
+  {
+    "unix_time": 1789567797.3763053,
+    "gpu": "32036, 100, 569.99, 77",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31710"
+  },
+  {
+    "unix_time": 1789567798.4085855,
+    "gpu": "32036, 100, 569.86, 75",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31710"
+  },
+  {
+    "unix_time": 1789567799.439654,
+    "gpu": "32036, 100, 570.70, 72",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31710"
+  },
+  {
+    "unix_time": 1789567800.4729795,
+    "gpu": "32036, 100, 571.34, 72",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31710"
+  },
+  {
+    "unix_time": 1789567801.5049791,
+    "gpu": "32036, 100, 569.92, 75",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31710"
+  },
+  {
+    "unix_time": 1789567802.536079,
+    "gpu": "32036, 93, 571.04, 74",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31710"
+  },
+  {
+    "unix_time": 1789567803.5682788,
+    "gpu": "32036, 100, 568.92, 78",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31710"
+  },
+  {
+    "unix_time": 1789567804.5966113,
+    "gpu": "32036, 100, 566.29, 74",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31710"
+  },
+  {
+    "unix_time": 1789567805.6255045,
+    "gpu": "32036, 100, 565.09, 75",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31710"
+  },
+  {
+    "unix_time": 1789567806.6579301,
+    "gpu": "29960, 100, 583.54, 75",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 21158"
+  },
+  {
+    "unix_time": 1789567807.6926365,
+    "gpu": "32036, 100, 569.88, 74",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31710"
+  },
+  {
+    "unix_time": 1789567808.7243404,
+    "gpu": "32036, 100, 567.76, 78",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31710"
+  },
+  {
+    "unix_time": 1789567809.7577968,
+    "gpu": "32036, 100, 570.70, 77",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31710"
+  },
+  {
+    "unix_time": 1789567810.7878258,
+    "gpu": "32036, 100, 569.50, 75",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31710"
+  },
+  {
+    "unix_time": 1789567811.8205678,
+    "gpu": "32036, 100, 571.65, 75",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31710"
+  },
+  {
+    "unix_time": 1789567812.8522613,
+    "gpu": "32036, 100, 569.78, 76",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31710"
+  },
+  {
+    "unix_time": 1789567813.8858223,
+    "gpu": "32036, 100, 569.49, 78",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31710"
+  },
+  {
+    "unix_time": 1789567814.9178557,
+    "gpu": "32036, 93, 570.06, 78",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31710"
+  },
+  {
+    "unix_time": 1789567815.946348,
+    "gpu": "32036, 100, 569.98, 77",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31710"
+  },
+  {
+    "unix_time": 1789567816.9734297,
+    "gpu": "32036, 100, 564.43, 74",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31710"
+  },
+  {
+    "unix_time": 1789567818.004832,
+    "gpu": "17792, 100, 584.02, 75",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 12788"
+  },
+  {
+    "unix_time": 1789567819.0408459,
+    "gpu": "32036, 100, 570.41, 76",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31710"
+  },
+  {
+    "unix_time": 1789567820.071372,
+    "gpu": "32036, 100, 570.23, 78",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31710"
+  },
+  {
+    "unix_time": 1789567821.1034312,
+    "gpu": "32036, 100, 571.04, 78",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31710"
+  },
+  {
+    "unix_time": 1789567822.1333272,
+    "gpu": "32036, 100, 570.10, 77",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31710"
+  },
+  {
+    "unix_time": 1789567823.1627865,
+    "gpu": "32036, 100, 571.25, 76",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31710"
+  },
+  {
+    "unix_time": 1789567824.1927762,
+    "gpu": "32036, 97, 571.09, 76",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31710"
+  },
+  {
+    "unix_time": 1789567825.2246106,
+    "gpu": "32036, 100, 571.81, 76",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31710"
+  },
+  {
+    "unix_time": 1789567826.256708,
+    "gpu": "32036, 100, 570.27, 79",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31710"
+  },
+  {
+    "unix_time": 1789567827.2861316,
+    "gpu": "32036, 93, 567.12, 77",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31710"
+  },
+  {
+    "unix_time": 1789567828.3168502,
+    "gpu": "32036, 100, 566.77, 70",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31710"
+  },
+  {
+    "unix_time": 1789567829.3489203,
+    "gpu": "28112, 100, 570.74, 76",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 19312"
+  },
+  {
+    "unix_time": 1789567830.381616,
+    "gpu": "32036, 100, 570.27, 76",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31710"
+  },
+  {
+    "unix_time": 1789567831.4128678,
+    "gpu": "32036, 100, 571.09, 79",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31710"
+  },
+  {
+    "unix_time": 1789567832.4436698,
+    "gpu": "32036, 100, 569.77, 79",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31710"
+  },
+  {
+    "unix_time": 1789567833.4725893,
+    "gpu": "32036, 100, 570.10, 76",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31710"
+  },
+  {
+    "unix_time": 1789567834.5058413,
+    "gpu": "32036, 100, 572.34, 77",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31710"
+  },
+  {
+    "unix_time": 1789567835.5380788,
+    "gpu": "32036, 98, 569.72, 77",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31710"
+  },
+  {
+    "unix_time": 1789567836.5661428,
+    "gpu": "32036, 100, 570.41, 79",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31710"
+  },
+  {
+    "unix_time": 1789567837.5973506,
+    "gpu": "32036, 100, 567.78, 78",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31710"
+  },
+  {
+    "unix_time": 1789567838.6270726,
+    "gpu": "32036, 100, 565.27, 75",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31710"
+  },
+  {
+    "unix_time": 1789567839.6609306,
+    "gpu": "31666, 100, 562.13, 69",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31710"
+  },
+  {
+    "unix_time": 1789567840.7002509,
+    "gpu": "32036, 100, 571.16, 77",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31710"
+  },
+  {
+    "unix_time": 1789567841.7323086,
+    "gpu": "32036, 100, 569.81, 77",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31710"
+  },
+  {
+    "unix_time": 1789567842.7620475,
+    "gpu": "32036, 100, 571.36, 79",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31710"
+  },
+  {
+    "unix_time": 1789567843.790983,
+    "gpu": "32036, 100, 570.26, 77",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31710"
+  },
+  {
+    "unix_time": 1789567844.8194215,
+    "gpu": "32036, 100, 570.52, 77",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31710"
+  },
+  {
+    "unix_time": 1789567845.8497324,
+    "gpu": "32036, 100, 571.02, 77",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31710"
+  },
+  {
+    "unix_time": 1789567846.8813412,
+    "gpu": "32036, 100, 570.10, 77",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31710"
+  },
+  {
+    "unix_time": 1789567847.9113846,
+    "gpu": "32036, 99, 570.57, 80",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31710"
+  },
+  {
+    "unix_time": 1789567848.9469175,
+    "gpu": "32036, 100, 565.71, 80",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31710"
+  },
+  {
+    "unix_time": 1789567849.9772184,
+    "gpu": "32036, 100, 565.76, 78",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31710"
+  },
+  {
+    "unix_time": 1789567851.0109072,
+    "gpu": "30652, 100, 583.04, 77",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31710"
+  },
+  {
+    "unix_time": 1789567852.0497885,
+    "gpu": "32036, 100, 569.89, 76",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31710"
+  },
+  {
+    "unix_time": 1789567853.0817556,
+    "gpu": "32036, 100, 570.58, 76",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31710"
+  },
+  {
+    "unix_time": 1789567854.1147547,
+    "gpu": "32036, 100, 570.17, 79",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31710"
+  },
+  {
+    "unix_time": 1789567855.146101,
+    "gpu": "32036, 100, 571.74, 78",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31710"
+  },
+  {
+    "unix_time": 1789567856.1765218,
+    "gpu": "32036, 100, 571.00, 77",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31710"
+  },
+  {
+    "unix_time": 1789567857.2089083,
+    "gpu": "32036, 98, 571.39, 78",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31710"
+  },
+  {
+    "unix_time": 1789567858.2418988,
+    "gpu": "32036, 100, 569.57, 77",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31710"
+  },
+  {
+    "unix_time": 1789567859.2746258,
+    "gpu": "32036, 100, 570.95, 80",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31710"
+  },
+  {
+    "unix_time": 1789567860.3071597,
+    "gpu": "32036, 93, 565.80, 77",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31710"
+  },
+  {
+    "unix_time": 1789567861.3378603,
+    "gpu": "32036, 100, 568.45, 78",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31710"
+  },
+  {
+    "unix_time": 1789567862.372643,
+    "gpu": "29036, 100, 582.33, 78",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 19312"
+  },
+  {
+    "unix_time": 1789567863.4076538,
+    "gpu": "32036, 100, 569.23, 78",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31710"
+  },
+  {
+    "unix_time": 1789567864.4375398,
+    "gpu": "32036, 100, 571.17, 80",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31710"
+  },
+  {
+    "unix_time": 1789567865.4673634,
+    "gpu": "32036, 100, 570.14, 79",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31710"
+  },
+  {
+    "unix_time": 1789567866.4971163,
+    "gpu": "32036, 100, 571.69, 77",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31710"
+  },
+  {
+    "unix_time": 1789567867.5276654,
+    "gpu": "32036, 100, 570.73, 75",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31710"
+  },
+  {
+    "unix_time": 1789567868.5602622,
+    "gpu": "32036, 93, 571.15, 78",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31710"
+  },
+  {
+    "unix_time": 1789567869.5917811,
+    "gpu": "32036, 100, 571.16, 80",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31710"
+  },
+  {
+    "unix_time": 1789567870.625556,
+    "gpu": "32036, 100, 568.09, 81",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31710"
+  },
+  {
+    "unix_time": 1789567871.6536348,
+    "gpu": "32036, 100, 569.82, 79",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31710"
+  },
+  {
+    "unix_time": 1789567872.686837,
+    "gpu": "31020, 100, 564.64, 74",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31710"
+  },
+  {
+    "unix_time": 1789567873.7264745,
+    "gpu": "32036, 100, 571.31, 78",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31710"
+  },
+  {
+    "unix_time": 1789567874.759462,
+    "gpu": "32036, 100, 571.45, 76",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31710"
+  },
+  {
+    "unix_time": 1789567875.7904186,
+    "gpu": "32036, 100, 571.84, 80",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31710"
+  },
+  {
+    "unix_time": 1789567876.81974,
+    "gpu": "32036, 100, 570.03, 78",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31710"
+  },
+  {
+    "unix_time": 1789567877.8499796,
+    "gpu": "32036, 100, 572.17, 78",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31710"
+  },
+  {
+    "unix_time": 1789567878.8842728,
+    "gpu": "32036, 100, 571.79, 78",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31710"
+  },
+  {
+    "unix_time": 1789567879.9156966,
+    "gpu": "32036, 100, 570.46, 81",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31710"
+  },
+  {
+    "unix_time": 1789567880.9457407,
+    "gpu": "32036, 93, 570.28, 81",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31710"
+  },
+  {
+    "unix_time": 1789567881.975759,
+    "gpu": "32036, 100, 567.68, 79",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31710"
+  },
+  {
+    "unix_time": 1789567883.0063732,
+    "gpu": "32036, 100, 562.53, 70",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31710"
+  },
+  {
+    "unix_time": 1789567884.0431411,
+    "gpu": "21484, 100, 571.30, 75",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 12152"
+  },
+  {
+    "unix_time": 1789567885.0758793,
+    "gpu": "32036, 100, 570.87, 78",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31710"
+  },
+  {
+    "unix_time": 1789567886.1063495,
+    "gpu": "32036, 100, 571.27, 80",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31710"
+  },
+  {
+    "unix_time": 1789567887.1409495,
+    "gpu": "32036, 100, 569.78, 80",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31710"
+  },
+  {
+    "unix_time": 1789567888.1727388,
+    "gpu": "32036, 100, 572.49, 78",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31710"
+  },
+  {
+    "unix_time": 1789567889.2061222,
+    "gpu": "32036, 93, 572.60, 78",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31710"
+  },
+  {
+    "unix_time": 1789567890.2371511,
+    "gpu": "32036, 100, 570.62, 78",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31710"
+  },
+  {
+    "unix_time": 1789567891.268083,
+    "gpu": "32036, 100, 571.58, 81",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31710"
+  },
+  {
+    "unix_time": 1789567892.300821,
+    "gpu": "32036, 99, 567.87, 77",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31710"
+  },
+  {
+    "unix_time": 1789567893.331806,
+    "gpu": "32036, 100, 564.99, 78",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31710"
+  },
+  {
+    "unix_time": 1789567894.36442,
+    "gpu": "13584, 100, 577.28, 77",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 14172"
+  },
+  {
+    "unix_time": 1789567895.402353,
+    "gpu": "32036, 100, 567.16, 78",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31710"
+  },
+  {
+    "unix_time": 1789567896.432214,
+    "gpu": "32036, 100, 571.91, 79",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31710"
+  },
+  {
+    "unix_time": 1789567897.4647017,
+    "gpu": "32036, 100, 571.70, 80",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31710"
+  },
+  {
+    "unix_time": 1789567898.4930549,
+    "gpu": "32036, 100, 570.73, 77",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31710"
+  },
+  {
+    "unix_time": 1789567899.5231342,
+    "gpu": "32036, 100, 572.36, 78",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31710"
+  },
+  {
+    "unix_time": 1789567900.5535626,
+    "gpu": "32036, 100, 571.40, 79",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31710"
+  },
+  {
+    "unix_time": 1789567901.586016,
+    "gpu": "32036, 99, 570.05, 81",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31710"
+  },
+  {
+    "unix_time": 1789567902.6192238,
+    "gpu": "32036, 100, 570.86, 81",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31710"
+  },
+  {
+    "unix_time": 1789567903.647916,
+    "gpu": "32036, 100, 564.81, 77",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31710"
+  },
+  {
+    "unix_time": 1789567904.6797705,
+    "gpu": "32036, 100, 562.70, 71",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31710"
+  },
+  {
+    "unix_time": 1789567905.7133934,
+    "gpu": "32036, 100, 571.73, 78",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 25014"
+  },
+  {
+    "unix_time": 1789567906.7467206,
+    "gpu": "32036, 100, 570.34, 78",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31710"
+  },
+  {
+    "unix_time": 1789567907.7780268,
+    "gpu": "32036, 100, 571.66, 80",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31710"
+  },
+  {
+    "unix_time": 1789567908.8070145,
+    "gpu": "32036, 100, 569.31, 77",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31710"
+  },
+  {
+    "unix_time": 1789567909.8370588,
+    "gpu": "32036, 100, 571.91, 78",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31710"
+  },
+  {
+    "unix_time": 1789567910.8695667,
+    "gpu": "32036, 100, 571.25, 77",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31710"
+  },
+  {
+    "unix_time": 1789567911.901589,
+    "gpu": "32036, 100, 570.55, 79",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31710"
+  },
+  {
+    "unix_time": 1789567912.9325497,
+    "gpu": "32036, 94, 570.21, 81",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31710"
+  },
+  {
+    "unix_time": 1789567913.9607847,
+    "gpu": "32036, 100, 568.42, 79",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31710"
+  },
+  {
+    "unix_time": 1789567914.9911401,
+    "gpu": "32036, 100, 562.33, 71",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31710"
+  },
+  {
+    "unix_time": 1789567916.021828,
+    "gpu": "32036, 100, 571.29, 76",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 24050"
+  },
+  {
+    "unix_time": 1789567917.0541031,
+    "gpu": "32036, 100, 571.84, 78",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31710"
+  },
+  {
+    "unix_time": 1789567918.0836012,
+    "gpu": "32036, 100, 571.37, 81",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31710"
+  },
+  {
+    "unix_time": 1789567919.1136832,
+    "gpu": "32036, 100, 569.55, 78",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31710"
+  },
+  {
+    "unix_time": 1789567920.1438901,
+    "gpu": "32036, 100, 570.99, 78",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31710"
+  },
+  {
+    "unix_time": 1789567921.1787467,
+    "gpu": "32036, 93, 572.30, 79",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31710"
+  },
+  {
+    "unix_time": 1789567922.209377,
+    "gpu": "32036, 100, 568.90, 81",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31710"
+  },
+  {
+    "unix_time": 1789567923.2382994,
+    "gpu": "32036, 100, 569.98, 81",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31710"
+  },
+  {
+    "unix_time": 1789567924.2668695,
+    "gpu": "32036, 99, 567.92, 77",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31710"
+  },
+  {
+    "unix_time": 1789567925.2973607,
+    "gpu": "32036, 100, 562.97, 70",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31710"
+  },
+  {
+    "unix_time": 1789567926.3309762,
+    "gpu": "23412, 100, 571.69, 73",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 13184"
+  },
+  {
+    "unix_time": 1789567927.365819,
+    "gpu": "32036, 100, 586.10, 78",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31710"
+  },
+  {
+    "unix_time": 1789567928.396201,
+    "gpu": "32036, 100, 571.56, 80",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31710"
+  },
+  {
+    "unix_time": 1789567929.427014,
+    "gpu": "32036, 100, 569.99, 81",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31710"
+  },
+  {
+    "unix_time": 1789567930.4548554,
+    "gpu": "32036, 100, 570.04, 78",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31710"
+  },
+  {
+    "unix_time": 1789567931.4877658,
+    "gpu": "32036, 100, 571.49, 78",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31710"
+  },
+  {
+    "unix_time": 1789567932.518312,
+    "gpu": "32036, 100, 569.96, 79",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31710"
+  },
+  {
+    "unix_time": 1789567933.548353,
+    "gpu": "32036, 98, 571.10, 81",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31710"
+  },
+  {
+    "unix_time": 1789567934.5803866,
+    "gpu": "32036, 100, 570.62, 81",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31710"
+  },
+  {
+    "unix_time": 1789567935.611444,
+    "gpu": "32036, 100, 564.79, 78",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31710"
+  },
+  {
+    "unix_time": 1789567936.6449137,
+    "gpu": "30652, 100, 578.45, 71",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31710"
+  },
+  {
+    "unix_time": 1789567937.6876695,
+    "gpu": "32036, 100, 571.60, 79",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31710"
+  },
+  {
+    "unix_time": 1789567938.7187204,
+    "gpu": "32036, 100, 572.34, 81",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31710"
+  },
+  {
+    "unix_time": 1789567939.7488394,
+    "gpu": "32036, 100, 570.70, 81",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31710"
+  },
+  {
+    "unix_time": 1789567940.777939,
+    "gpu": "32036, 100, 569.17, 78",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31710"
+  },
+  {
+    "unix_time": 1789567941.8079417,
+    "gpu": "32036, 100, 571.27, 78",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31710"
+  },
+  {
+    "unix_time": 1789567942.837571,
+    "gpu": "32036, 100, 570.53, 79",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31710"
+  },
+  {
+    "unix_time": 1789567943.869841,
+    "gpu": "32036, 100, 570.40, 81",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31710"
+  },
+  {
+    "unix_time": 1789567944.9053888,
+    "gpu": "32036, 93, 569.92, 81",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31710"
+  },
+  {
+    "unix_time": 1789567945.934575,
+    "gpu": "32036, 100, 565.10, 77",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31710"
+  },
+  {
+    "unix_time": 1789567946.9638178,
+    "gpu": "31666, 100, 561.13, 71",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31710"
+  },
+  {
+    "unix_time": 1789567948.0007546,
+    "gpu": "32036, 100, 588.75, 79",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31710"
+  },
+  {
+    "unix_time": 1789567949.0312366,
+    "gpu": "32036, 100, 572.09, 78",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31710"
+  },
+  {
+    "unix_time": 1789567950.0604086,
+    "gpu": "31666, 100, 571.49, 81",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31340"
+  },
+  {
+    "unix_time": 1789567951.088228,
+    "gpu": "31666, 59, 247.96, 64",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31340"
+  },
+  {
+    "unix_time": 1789567952.1250205,
+    "gpu": "31682, 0, 112.94, 63",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31348"
+  },
+  {
+    "unix_time": 1789567953.1532912,
+    "gpu": "31684, 100, 440.30, 77",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31350"
+  },
+  {
+    "unix_time": 1789567954.1863554,
+    "gpu": "31684, 100, 575.03, 78",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31350"
+  },
+  {
+    "unix_time": 1789567955.2187796,
+    "gpu": "31684, 100, 571.34, 78",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31350"
+  },
+  {
+    "unix_time": 1789567956.2523842,
+    "gpu": "31684, 100, 574.86, 78",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31350"
+  },
+  {
+    "unix_time": 1789567957.2851512,
+    "gpu": "31684, 100, 575.09, 79",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31350"
+  },
+  {
+    "unix_time": 1789567958.3215814,
+    "gpu": "31684, 100, 574.98, 79",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31350"
+  },
+  {
+    "unix_time": 1789567959.3533344,
+    "gpu": "31684, 100, 575.03, 79",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31350"
+  },
+  {
+    "unix_time": 1789567960.3851316,
+    "gpu": "31684, 100, 574.98, 79",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31350"
+  },
+  {
+    "unix_time": 1789567961.4140272,
+    "gpu": "31684, 100, 574.99, 79",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31350"
+  },
+  {
+    "unix_time": 1789567962.4443848,
+    "gpu": "31684, 100, 574.97, 79",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31350"
+  },
+  {
+    "unix_time": 1789567963.474523,
+    "gpu": "31684, 100, 574.77, 79",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31350"
+  },
+  {
+    "unix_time": 1789567964.5065906,
+    "gpu": "31684, 100, 575.95, 79",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31350"
+  },
+  {
+    "unix_time": 1789567965.5367322,
+    "gpu": "31684, 100, 574.98, 79",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31350"
+  },
+  {
+    "unix_time": 1789567966.5678012,
+    "gpu": "31684, 100, 574.99, 79",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31350"
+  },
+  {
+    "unix_time": 1789567967.6002533,
+    "gpu": "31684, 100, 574.97, 79",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31350"
+  },
+  {
+    "unix_time": 1789567968.6309507,
+    "gpu": "31684, 100, 575.00, 79",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31350"
+  },
+  {
+    "unix_time": 1789567969.6625783,
+    "gpu": "31684, 100, 574.98, 79",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31350"
+  },
+  {
+    "unix_time": 1789567970.6929069,
+    "gpu": "31684, 100, 574.92, 79",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31350"
+  },
+  {
+    "unix_time": 1789567971.7244818,
+    "gpu": "31684, 100, 575.05, 79",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31350"
+  },
+  {
+    "unix_time": 1789567972.7569911,
+    "gpu": "31684, 100, 574.94, 79",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31350"
+  },
+  {
+    "unix_time": 1789567973.788526,
+    "gpu": "31684, 100, 575.03, 79",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31350"
+  },
+  {
+    "unix_time": 1789567974.8211954,
+    "gpu": "31684, 100, 574.98, 79",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31350"
+  },
+  {
+    "unix_time": 1789567975.8528762,
+    "gpu": "31684, 100, 574.98, 79",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31350"
+  },
+  {
+    "unix_time": 1789567976.8831363,
+    "gpu": "31684, 100, 574.98, 79",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31350"
+  },
+  {
+    "unix_time": 1789567977.914525,
+    "gpu": "31684, 100, 540.26, 70",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31350"
+  },
+  {
+    "unix_time": 1789567978.9423892,
+    "gpu": "31684, 9, 124.56, 63",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31350"
+  },
+  {
+    "unix_time": 1789567979.971183,
+    "gpu": "31684, 9, 101.52, 62",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31350"
+  },
+  {
+    "unix_time": 1789567981.0038445,
+    "gpu": "31684, 0, 83.27, 60",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31350"
+  },
+  {
+    "unix_time": 1789567983.194216,
+    "gpu": "31684, 1, 84.12, 60",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31350"
+  },
+  {
+    "unix_time": 1789567984.2249126,
+    "gpu": "31714, 36, 119.22, 60",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31380"
+  },
+  {
+    "unix_time": 1789567985.253917,
+    "gpu": "31714, 0, 81.23, 59",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31380"
+  },
+  {
+    "unix_time": 1789567986.3107185,
+    "gpu": "31714, 0, 80.93, 59",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31380"
+  },
+  {
+    "unix_time": 1789567987.3519711,
+    "gpu": "31714, 0, 80.47, 58",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31380"
+  },
+  {
+    "unix_time": 1789567988.380777,
+    "gpu": "31714, 0, 79.73, 58",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31380"
+  },
+  {
+    "unix_time": 1789567989.4097013,
+    "gpu": "31714, 0, 79.38, 58",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31380"
+  },
+  {
+    "unix_time": 1789567990.4362621,
+    "gpu": "31714, 0, 78.79, 57",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31380"
+  },
+  {
+    "unix_time": 1789567991.4631677,
+    "gpu": "31714, 0, 78.44, 57",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31380"
+  },
+  {
+    "unix_time": 1789567992.4893844,
+    "gpu": "31714, 0, 78.23, 57",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31380"
+  },
+  {
+    "unix_time": 1789567993.5172896,
+    "gpu": "31714, 0, 78.34, 57",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31380"
+  },
+  {
+    "unix_time": 1789567994.5451605,
+    "gpu": "31714, 0, 78.08, 56",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31380"
+  },
+  {
+    "unix_time": 1789567995.5715175,
+    "gpu": "31714, 0, 77.96, 56",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31380"
+  },
+  {
+    "unix_time": 1789567996.598737,
+    "gpu": "31714, 0, 77.65, 56",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31380"
+  },
+  {
+    "unix_time": 1789567997.6264486,
+    "gpu": "31714, 0, 77.42, 56",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31380"
+  },
+  {
+    "unix_time": 1789567998.656467,
+    "gpu": "31714, 0, 77.04, 55",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31380"
+  },
+  {
+    "unix_time": 1789567999.6850874,
+    "gpu": "31714, 0, 77.28, 55",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31380"
+  },
+  {
+    "unix_time": 1789568000.7127736,
+    "gpu": "31714, 0, 77.40, 55",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31380"
+  },
+  {
+    "unix_time": 1789568001.7411957,
+    "gpu": "31714, 0, 61.65, 54",
+    "processes": "2252140, /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/bin/python, 31380"
+  }
+]

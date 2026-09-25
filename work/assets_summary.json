@@ -1,0 +1,75 @@
+{
+  "excluded": [
+    "Vayose"
+  ],
+  "cases": [
+    {
+      "name": "Bronoir",
+      "slug": "bronoir",
+      "warmup_seconds": 192.36021779291332,
+      "measured_seconds": 196.4722318148706,
+      "denoising_seconds": 146.64716595620848,
+      "export_seconds": 0.9714801029767841,
+      "generation_plus_export_seconds": 197.4437119178474,
+      "peak_mib": 31852,
+      "verified": true
+    },
+    {
+      "name": "Lyra London",
+      "slug": "lyra-london",
+      "warmup_seconds": 193.15480140014552,
+      "measured_seconds": 193.9832246999722,
+      "denoising_seconds": 143.76350837596692,
+      "export_seconds": 0.9243008620105684,
+      "generation_plus_export_seconds": 194.90752556198277,
+      "peak_mib": 31840,
+      "verified": true
+    },
+    {
+      "name": "Hugease",
+      "slug": "hugease",
+      "warmup_seconds": 200.3478560578078,
+      "measured_seconds": 200.59943890408613,
+      "denoising_seconds": 150.44519294495694,
+      "export_seconds": 0.8962412669789046,
+      "generation_plus_export_seconds": 201.49568017106503,
+      "peak_mib": 31854,
+      "verified": true
+    },
+    {
+      "name": "NurseBabes",
+      "slug": "nursebabes",
+      "warmup_seconds": 195.56971817393787,
+      "measured_seconds": 196.25929928617552,
+      "denoising_seconds": 145.9626970330719,
+      "export_seconds": 0.9605055928695947,
+      "generation_plus_export_seconds": 197.2198048790451,
+      "peak_mib": 31834,
+      "verified": true
+    },
+    {
+      "name": "Nivaro",
+      "slug": "nivaro",
+      "warmup_seconds": 196.80412106821314,
+      "measured_seconds": 197.30242850794457,
+      "denoising_seconds": 147.56673534191214,
+      "export_seconds": 0.8424814441241324,
+      "generation_plus_export_seconds": 198.1449099520687,
+      "peak_mib": 31848,
+      "verified": true
+    },
+    {
+      "name": "Lunara Comfort",
+      "slug": "lunara-comfort",
+      "warmup_seconds": 195.25836257706396,
+      "measured_seconds": 196.0995657958556,
+      "denoising_seconds": 146.00268029491417,
+      "export_seconds": 0.8860128908418119,
+      "generation_plus_export_seconds": 196.9855786866974,
+      "peak_mib": 31854,
+      "verified": true
+    }
+  ],
+  "gpu_after": "name, memory.used [MiB], utilization.gpu [%]\nNVIDIA GeForce RTX 5090, 2 MiB, 0 %\n",
+  "gpu_processes_after": ""
+}

@@ -1,0 +1,83 @@
+{
+  "method": "Actual checkpoint-loaded FP32 VAE modules; synchronous module.to(device), CUDA synchronized before/after; one excluded round trip then five measurements. No decoding or denoising. Not an in-pipeline attribution.",
+  "torch": "2.12.0+cu130",
+  "gpu": "NVIDIA GeForce RTX 5090",
+  "components": {
+    "vae": {
+      "bytes": 10415476184,
+      "gib": 9.70016809552908,
+      "samples": [
+        {
+          "cpu_to_gpu_s": 0.9329870950896293,
+          "gpu_to_cpu_s": 1.8202500611077994
+        },
+        {
+          "cpu_to_gpu_s": 0.8754614919889718,
+          "gpu_to_cpu_s": 1.5592231231275946
+        },
+        {
+          "cpu_to_gpu_s": 0.8534810249693692,
+          "gpu_to_cpu_s": 1.4883727701380849
+        },
+        {
+          "cpu_to_gpu_s": 0.8328775099944323,
+          "gpu_to_cpu_s": 1.4221804200205952
+        },
+        {
+          "cpu_to_gpu_s": 0.8170118101406842,
+          "gpu_to_cpu_s": 1.3548892829567194
+        }
+      ],
+      "median": {
+        "cpu_to_gpu_s": 0.8534810249693692,
+        "gpu_to_cpu_s": 1.4883727701380849
+      },
+      "min": {
+        "cpu_to_gpu_s": 0.8170118101406842,
+        "gpu_to_cpu_s": 1.3548892829567194
+      },
+      "max": {
+        "cpu_to_gpu_s": 0.9329870950896293,
+        "gpu_to_cpu_s": 1.8202500611077994
+      }
+    },
+    "audio_vae": {
+      "bytes": 605306596,
+      "gib": 0.5637356974184513,
+      "samples": [
+        {
+          "cpu_to_gpu_s": 0.048754018964245915,
+          "gpu_to_cpu_s": 0.050453927135095
+        },
+        {
+          "cpu_to_gpu_s": 0.04881878104060888,
+          "gpu_to_cpu_s": 0.05041519505903125
+        },
+        {
+          "cpu_to_gpu_s": 0.048748189117759466,
+          "gpu_to_cpu_s": 0.05028084199875593
+        },
+        {
+          "cpu_to_gpu_s": 0.048699225997552276,
+          "gpu_to_cpu_s": 0.050379248103126884
+        },
+        {
+          "cpu_to_gpu_s": 0.048719865968450904,
+          "gpu_to_cpu_s": 0.050297443056479096
+        }
+      ],
+      "median": {
+        "cpu_to_gpu_s": 0.048748189117759466,
+        "gpu_to_cpu_s": 0.050379248103126884
+      },
+      "min": {
+        "cpu_to_gpu_s": 0.048699225997552276,
+        "gpu_to_cpu_s": 0.05028084199875593
+      },
+      "max": {
+        "cpu_to_gpu_s": 0.04881878104060888,
+        "gpu_to_cpu_s": 0.050453927135095
+      }
+    }
+  }
+}

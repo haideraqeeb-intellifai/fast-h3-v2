@@ -1,0 +1,18 @@
+MiniMax H3 is licensed under the MiniMax H3 Community License Agreement, Copyright © 2026 MiniMax. All Rights Reserved.
+
+FastVideo-FastH3-8-Step-V2 is a modified MiniMax H3 model from the FastVideo team.
+The transformer/*.safetensors files contain the DMD2-distilled, VSA-H3 student
+at training step 1300, not the original MiniMax H3 transformer weights.
+The accompanying transformer configuration and index describe that student.
+The scheduler configurations and fastvideo_inference.json describe its trained
+eight-forward schedule, video/audio shifts 10/3, and 80% tile-64 VSA policy.
+The modular model index, model card, and release/provenance documentation were
+prepared by FastVideo for this derivative.
+
+The bundled text encoder, tokenizer, processor, video VAE and audio VAE weights
+are unmodified MiniMax H3 components. The Qwen3-VL encoder is licensed under
+Apache License 2.0; a copy is included as LICENSE-Qwen3-VL.
+Source: https://github.com/QwenLM/Qwen3-VL
+
+The model license is provided in LICENSE. These notices do not replace or
+modify its terms.

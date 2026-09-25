@@ -1,0 +1,232 @@
+[
+  {
+    "path": "assets/METHODOLOGY.md",
+    "bytes": 6451,
+    "sha256": "a2716a5d257447571035a6c619cebd2039ead3a199aa107c363f7238e23eb8d1"
+  },
+  {
+    "path": "assets/analysis.json",
+    "bytes": 991942,
+    "sha256": "229029d01c186b92e72d25e2c7317a7e3d9c01876798097e0c0b5c7972061efb"
+  },
+  {
+    "path": "assets/analyze_sqlite.py",
+    "bytes": 26561,
+    "sha256": "1f916144fd65f80f2d76ad102e95785f69cf0573a1d3f91915f24aa40c3a3c83"
+  },
+  {
+    "path": "assets/assemble_report.py",
+    "bytes": 20401,
+    "sha256": "a87e40dbfa8a314f3a11168da7d3da7da23a318d2807056d2cb515f85fb18c10"
+  },
+  {
+    "path": "assets/benchmark.py",
+    "bytes": 25840,
+    "sha256": "9f1e40174746cc461d2c8d1e3a816fe0c0f998566a44ac763be46c8853230890"
+  },
+  {
+    "path": "assets/benchmark_ncu.py",
+    "bytes": 25688,
+    "sha256": "921e86f90529e607864e337b206510486f580e77fc2410d90032f5315bad210a"
+  },
+  {
+    "path": "assets/browser_check.js",
+    "bytes": 1745,
+    "sha256": "6e43cf22b7fbc03684240e449aa9dde0943b55f3906fe26842fa571b089b4ee9"
+  },
+  {
+    "path": "assets/browser_checks.json",
+    "bytes": 1272,
+    "sha256": "80d4d48edbe08fef29a94ccd689dd22c87420324ea214e2ffffd09716f664ac4"
+  },
+  {
+    "path": "assets/build_report.py",
+    "bytes": 42177,
+    "sha256": "78342036d1f7382cc4859de32c17076bd3708fe2ae789156cdb9e98e9bffeb3b"
+  },
+  {
+    "path": "assets/capture.log",
+    "bytes": 17446,
+    "sha256": "7a34de848554670120e54675ec1ad7d5084ba53f5cf0d25854c4c3f454755a9d"
+  },
+  {
+    "path": "assets/capture_completion.json",
+    "bytes": 203,
+    "sha256": "ee5596f8880e04676476c3fc6d5103eccb766c78502b4b4f926f66ba3feaf352"
+  },
+  {
+    "path": "assets/gpu_metrics_raw.csv.gz",
+    "bytes": 72638763,
+    "sha256": "fd8a26cf704683ed841d99ade2320e7b06c6c1ab4284e80faf7f879f8ef56d8f"
+  },
+  {
+    "path": "assets/gpu_samples.json",
+    "bytes": 10528,
+    "sha256": "2e3d57ab4c83c331b35fd2d46005069e09b821e2d4eafcdf323208da29dadccc"
+  },
+  {
+    "path": "assets/input_provenance.json",
+    "bytes": 1400,
+    "sha256": "b5c7f7403d3df030ba7ae028eba5863e0ed604b038375dbf6f8d3ad02c25f7fa"
+  },
+  {
+    "path": "assets/kernels.ncu-rep",
+    "bytes": 12892470,
+    "sha256": "6a1ddcc33cd3f65b620f6ef6d8ccec425901d2b4a4bfd6f08384904d3fa0cc84"
+  },
+  {
+    "path": "assets/measured.nsys-rep",
+    "bytes": 211196091,
+    "sha256": "f0d37d33ac29ab3eda2b10e412191f1648c1913f21cccf8c0c6f663ee6fd3a3a"
+  },
+  {
+    "path": "assets/measured.sqlite.gz",
+    "bytes": 469217311,
+    "sha256": "b8f9c18097c8869fdb2bed5e55c29e6232bb48ef2fd7f1ab36c2a91fa69eca1c"
+  },
+  {
+    "path": "assets/measured_native.mp4",
+    "bytes": 10375907,
+    "sha256": "eb3597073a9884351795e9b849b2667eaf3fec2d9b9cd41af2691dd694b4f01d"
+  },
+  {
+    "path": "assets/memory_samples.csv",
+    "bytes": 430860,
+    "sha256": "534e04eeeb43d27e3869efc335ca42ae2c17be8fa240a120817903c2d3bf9032"
+  },
+  {
+    "path": "assets/memory_samples.json",
+    "bytes": 1137882,
+    "sha256": "4ae0a53f199cc3e9b4e42765ef49f436b66c9ebc605c79d70b2e440f9e4321a9"
+  },
+  {
+    "path": "assets/model_checksums.json",
+    "bytes": 867,
+    "sha256": "1ba81fbf082d799b860ab2ef5b440c8d6c361759d24330bd41262ff09139fd5b"
+  },
+  {
+    "path": "assets/ncu.log",
+    "bytes": 17763,
+    "sha256": "4120cfaf878a6d18ec1d2a836eb23c225d0c01221ddda1803a49abe78844fe25"
+  },
+  {
+    "path": "assets/ncu_command.json",
+    "bytes": 1299,
+    "sha256": "366dbac05010826651c320e794722c30321cf63d76222e3ec497dd38889af93e"
+  },
+  {
+    "path": "assets/ncu_raw.csv",
+    "bytes": 109901,
+    "sha256": "756a6f941b967d49d49e2263929589ec64aebea07917a37585d78213b1c12255"
+  },
+  {
+    "path": "assets/nsys_command.json",
+    "bytes": 1156,
+    "sha256": "fd47e2d97b7af952ac02fef599f4b09ce8f4aeb39d7f1c8043228a773635eeec"
+  },
+  {
+    "path": "assets/nsys_stats_cuda_api_sum.csv",
+    "bytes": 2192,
+    "sha256": "98d991c126006c681250b7e5347b05080c7540758fd86ad8e1ee90567fb73bb3"
+  },
+  {
+    "path": "assets/nsys_stats_cuda_gpu_kern_sum.csv",
+    "bytes": 61512,
+    "sha256": "1985d81b74a9238746d5a6b72e8bfe161e0045e2271a234ed92baa29704208ca"
+  },
+  {
+    "path": "assets/nsys_stats_cuda_gpu_mem_size_sum.csv",
+    "bytes": 366,
+    "sha256": "c2dbc4b6b26821d66e6a8e7b3549f5cbd858ffd6a88673e8b33130e0f6cd6949"
+  },
+  {
+    "path": "assets/nsys_stats_cuda_gpu_mem_time_sum.csv",
+    "bytes": 408,
+    "sha256": "077df2fd876b3f0fc581f7a2ad7c4223216719273384d1e05a2fbc1487776870"
+  },
+  {
+    "path": "assets/original_runner_report.json",
+    "bytes": 25987,
+    "sha256": "c473f70c6cd72aa05da68f16c1e747e27b5f1cbc6941a1e7ee0b8bf01852bc85"
+  },
+  {
+    "path": "assets/parse_ncu.py",
+    "bytes": 2890,
+    "sha256": "9d4c47aa8295bdaeaddb5c53dfdbfc67fcd2a0522b69357cbfae55e64fa5ffce"
+  },
+  {
+    "path": "assets/phase_metrics.csv",
+    "bytes": 26084,
+    "sha256": "eee7ded259a150bd5de3047c8f0d7598229982ab2c35f307235143c0053fea72"
+  },
+  {
+    "path": "assets/poster.jpg",
+    "bytes": 120646,
+    "sha256": "ebc5cca177281b678573eb16196cf427d9aca189311f056ff1d6421eb2c7829f"
+  },
+  {
+    "path": "assets/prepare_artifacts.py",
+    "bytes": 4062,
+    "sha256": "fa1cbe2674df3ff49b7a25ae6a02a797a53e73a6b0611fda5ed689d8c24d96b8"
+  },
+  {
+    "path": "assets/preview.webm",
+    "bytes": 9301935,
+    "sha256": "47e39ca69a153855836bf718eb7fa52cca94e26d58d5cd95251e99c87ac0457c"
+  },
+  {
+    "path": "assets/prompt.txt",
+    "bytes": 1585,
+    "sha256": "49f4578b988b3717679a5a9b203b54a5de0c7a73c90db09fb63af6460099cbaa"
+  },
+  {
+    "path": "assets/reference_output_comparison.json",
+    "bytes": 685,
+    "sha256": "f15adf6f7371e5788a7162375f3cf5aeabe1037e067f4d41a7026c246fff1a9f"
+  },
+  {
+    "path": "assets/run.json",
+    "bytes": 26224,
+    "sha256": "e7e861a653f12dbff35221795abcc95e920b7e2160f1b2ac602db45e1ad924ac"
+  },
+  {
+    "path": "assets/telemetry.py",
+    "bytes": 2798,
+    "sha256": "7fcb21902982f94fbe93a2eafa8995a310043e656dfd812e41042873e8df87f3"
+  },
+  {
+    "path": "assets/trainee.png",
+    "bytes": 3621236,
+    "sha256": "59453a952f02e301cccaac6084955b567ed6c8077ce2033c8bb91151dc190b69"
+  },
+  {
+    "path": "assets/trainer.png",
+    "bytes": 2613882,
+    "sha256": "a188a189709b7582b7e19c96da1a65498bcd6b6f8d4f85f7162820ce9b37e1af"
+  },
+  {
+    "path": "assets/verification.json",
+    "bytes": 6930,
+    "sha256": "dab6b7ac798d87b176cf2455394ba9f68da9e7b063a529920379f0489fe0315f"
+  },
+  {
+    "path": "assets/video-comparison.log",
+    "bytes": 2453,
+    "sha256": "a248270412763d55f5f4cd316e49f281906e91071eeeb7a27e4761fe510baa63"
+  },
+  {
+    "path": "assets/workflow.json",
+    "bytes": 4752,
+    "sha256": "8fd154b7a21a3e3153ebdd4b6fc89a046d8f7f94caa2719f2a0148d57f650b02"
+  },
+  {
+    "path": "index.html",
+    "bytes": 1205790,
+    "sha256": "f362d7a6c9a55cbeff0700fa1ddb0cbd24296e891cd60c66ac2e094dbb003a32"
+  },
+  {
+    "path": "measured.mp4",
+    "bytes": 13764960,
+    "sha256": "f3fa5ad5427574e56fe4b6b50805e770d3bcbf7451a8302fcbf7a8a740297696"
+  }
+]

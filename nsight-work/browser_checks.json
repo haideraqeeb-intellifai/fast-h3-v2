@@ -1,0 +1,49 @@
+{
+  "charts": 12,
+  "controls": true,
+  "ncu": 3,
+  "noPageOverflow": true,
+  "series": 19,
+  "steps": 4,
+  "timing": [
+    {
+      "basis": "CUDA-synchronized generation wall time; profiler overhead included",
+      "id": "generation",
+      "label": "Native generation",
+      "source_id": "run",
+      "value_s": 124.42071116995066
+    },
+    {
+      "basis": "CPU crop/trim/export wall time",
+      "id": "export",
+      "label": "Final export",
+      "source_id": "run",
+      "value_s": 0.928893831
+    },
+    {
+      "basis": "Measured end-to-end wall time",
+      "id": "total",
+      "label": "Generation + export",
+      "source_id": "run",
+      "value_s": 125.34960500095066
+    },
+    {
+      "basis": "Time with \u22651 kernel; not SM utilization",
+      "id": "gpu_busy",
+      "label": "Kernel presence (union)",
+      "source_id": "nsys",
+      "value_s": 108.922371611
+    }
+  ],
+  "title": "H3 ref2va \u00b7 Four-step Nsight reproduction",
+  "video": {
+    "duration": 10.056,
+    "height": 1280,
+    "source": "file:///home/raqeeb/code/h3-optimization/fast-h3-v2/h3-ref2va-4step-nsight-reproduction/assets/preview.webm",
+    "time": 0.819183,
+    "width": 720
+  },
+  "same_reference_css": true,
+  "mobile_no_overflow": true,
+  "javascript_errors": []
+}

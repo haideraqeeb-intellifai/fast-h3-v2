@@ -1,0 +1,264 @@
+INFO 09-16 15:01:30.182 [__init__.py:47] CUDA is available
+INFO 09-16 15:01:31.039 [utils.py:691] Diffusers version: 0.36.0.dev0
+INFO 09-16 15:01:31.039 [multiproc_executor.py:97] Use master port: 17653
+INFO 09-16 15:01:33.816 [__init__.py:47] CUDA is available
+INFO 09-16 15:01:34.610 [parallel_state.py:909] Initializing distributed environment with world_size=1, device=cuda:0
+INFO 09-16 15:01:34.610 [parallel_state.py:737] Using nccl backend for CUDA platform
+[W916 15:01:34.643009138 ProcessGroupNCCL.cpp:1001] Warning: TORCH_NCCL_AVOID_RECORD_STREAMS is the default now, this environment variable is thus deprecated. (function operator())
+INFO 09-16 15:01:34.659 [__init__.py:39] Building pipeline of type: basic
+INFO 09-16 15:01:34.660 [utils.py:691] Diffusers version: 0.36.0.dev0
+INFO 09-16 15:01:34.660 [utils.py:691] Diffusers version: 0.36.0.dev0
+INFO 09-16 15:01:34.660 [registry.py:1097] Pinning pipeline class name from MiniMaxH3ModularPipeline to MiniMaxH3ModularPipeline
+INFO 09-16 15:01:34.660 [pipeline_registry.py:134] Loading pipelines for types: ['basic']
+INFO 09-16 15:01:34.715 [pipeline_registry.py:176] Loaded 54 pipeline classes across 1 types
+INFO 09-16 15:01:34.715 [utils.py:544] Model already exists locally at /home/raqeeb/code/h3-optimization/fast-h3-v2/models/FastH3-V2-experimental-4-step
+INFO 09-16 15:01:34.715 [__init__.py:56] Model path: /home/raqeeb/code/h3-optimization/fast-h3-v2/models/FastH3-V2-experimental-4-step
+INFO 09-16 15:01:34.715 [profiler.py:198] Torch profiler disabled; returning no-op controller
+INFO 09-16 15:01:34.715 [composed_pipeline_base.py:171] Loading pipeline modules...
+INFO 09-16 15:01:34.715 [minimax_h3_pipeline.py:258] Loading MiniMax-H3 condition modules first: ['text_encoder', 'tokenizer', 'processor', 'scheduler', 'audio_scheduler']
+INFO 09-16 15:01:34.715 [utils.py:544] Model already exists locally at /home/raqeeb/code/h3-optimization/fast-h3-v2/models/FastH3-V2-experimental-4-step
+INFO 09-16 15:01:34.715 [composed_pipeline_base.py:471] Model path: /home/raqeeb/code/h3-optimization/fast-h3-v2/models/FastH3-V2-experimental-4-step
+INFO 09-16 15:01:34.715 [utils.py:691] Diffusers version: 0.36.0.dev0
+INFO 09-16 15:01:34.715 [composed_pipeline_base.py:532] Loading pipeline modules from config: {'_blocks_class_name': 'MiniMaxH3Blocks', '_class_name': 'MiniMaxH3ModularPipeline', '_diffusers_version': '0.36.0.dev0', 'audio_scheduler': ['diffusers', 'MiniMaxH3Scheduler', {'pretrained_model_name_or_path': 'FastVideo/FastVideo-FastH3-8-Step-V2', 'revision': None, 'subfolder': 'audio_scheduler', 'type_hint': ['diffusers', 'MiniMaxH3Scheduler'], 'variant': None}], 'audio_vae': ['diffusers', 'AutoencoderKLMiniMaxH3Audio', {'pretrained_model_name_or_path': 'FastVideo/FastVideo-FastH3-8-Step-V2', 'revision': None, 'subfolder': 'audio_vae', 'type_hint': ['diffusers', 'AutoencoderKLMiniMaxH3Audio'], 'variant': None}], 'processor': ['transformers', 'Qwen3VLProcessor', {'pretrained_model_name_or_path': 'FastVideo/FastVideo-FastH3-8-Step-V2', 'revision': None, 'subfolder': 'processor', 'type_hint': ['transformers', 'Qwen3VLProcessor'], 'variant': None}], 'scheduler': ['diffusers', 'MiniMaxH3Scheduler', {'pretrained_model_name_or_path': 'FastVideo/FastVideo-FastH3-8-Step-V2', 'revision': None, 'subfolder': 'scheduler', 'type_hint': ['diffusers', 'MiniMaxH3Scheduler'], 'variant': None}], 'text_encoder': ['transformers', 'Qwen3VLForConditionalGeneration', {'pretrained_model_name_or_path': 'FastVideo/FastVideo-FastH3-8-Step-V2', 'revision': None, 'subfolder': 'text_encoder', 'type_hint': ['transformers', 'Qwen3VLForConditionalGeneration'], 'variant': None}], 'tokenizer': ['transformers', 'Qwen2TokenizerFast', {'pretrained_model_name_or_path': 'FastVideo/FastVideo-FastH3-8-Step-V2', 'revision': None, 'subfolder': 'tokenizer', 'type_hint': ['transformers', 'Qwen2TokenizerFast'], 'variant': None}], 'transformer': ['diffusers', 'MiniMaxH3Transformer3DModel', {'pretrained_model_name_or_path': 'FastVideo/FastVideo-FastH3-8-Step-V2', 'revision': None, 'subfolder': 'transformer', 'type_hint': ['diffusers', 'MiniMaxH3Transformer3DModel'], 'variant': None}], 'transformer_ref': ['diffusers', 'MiniMaxH3Transformer3DModel', {'pretrained_model_name_or_path': 'MiniMaxAI/MiniMax-H3', 'revision': None, 'subfolder': 'transformer_ref', 'type_hint': ['diffusers', 'MiniMaxH3Transformer3DModel'], 'variant': None}], 'vae': ['diffusers', 'AutoencoderKLMiniMaxH3', {'pretrained_model_name_or_path': 'FastVideo/FastVideo-FastH3-8-Step-V2', 'revision': None, 'subfolder': 'vae', 'type_hint': ['diffusers', 'AutoencoderKLMiniMaxH3'], 'variant': None}]}
+INFO 09-16 15:01:34.715 [composed_pipeline_base.py:571] Loading required modules: ['text_encoder', 'tokenizer', 'processor', 'scheduler', 'audio_scheduler']
+INFO 09-16 15:01:34.715 [composed_pipeline_base.py:576] Skipping non-module config entry _blocks_class_name=MiniMaxH3Blocks
+INFO 09-16 15:01:34.715 [component_loader.py:1383] Loading audio_scheduler using diffusers from /home/raqeeb/code/h3-optimization/fast-h3-v2/models/FastH3-V2-experimental-4-step/audio_scheduler
+INFO 09-16 15:01:34.716 [composed_pipeline_base.py:626] Loaded module audio_scheduler from /home/raqeeb/code/h3-optimization/fast-h3-v2/models/FastH3-V2-experimental-4-step/audio_scheduler
+INFO 09-16 15:01:34.716 [composed_pipeline_base.py:596] Skipping module audio_vae
+INFO 09-16 15:01:34.716 [component_loader.py:1383] Loading processor using transformers from /home/raqeeb/code/h3-optimization/fast-h3-v2/models/FastH3-V2-experimental-4-step/processor
+INFO 09-16 15:01:34.716 [component_loader.py:600] Loading processor from /home/raqeeb/code/h3-optimization/fast-h3-v2/models/FastH3-V2-experimental-4-step/processor
+[ERROR] `min_frames` is part of Qwen3VLVideoProcessorInitKwargs, but not documented. Make sure to add it to the docstring of the function in /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/lib/python3.12/site-packages/transformers/models/qwen3_vl/video_processing_qwen3_vl.py.
+[ERROR] `max_frames` is part of Qwen3VLVideoProcessorInitKwargs, but not documented. Make sure to add it to the docstring of the function in /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/lib/python3.12/site-packages/transformers/models/qwen3_vl/video_processing_qwen3_vl.py.
+INFO 09-16 15:01:34.875 [component_loader.py:605] Loaded processor: Qwen3VLProcessor
+INFO 09-16 15:01:34.876 [composed_pipeline_base.py:626] Loaded module processor from /home/raqeeb/code/h3-optimization/fast-h3-v2/models/FastH3-V2-experimental-4-step/processor
+INFO 09-16 15:01:34.876 [component_loader.py:1383] Loading scheduler using diffusers from /home/raqeeb/code/h3-optimization/fast-h3-v2/models/FastH3-V2-experimental-4-step/scheduler
+INFO 09-16 15:01:34.876 [composed_pipeline_base.py:626] Loaded module scheduler from /home/raqeeb/code/h3-optimization/fast-h3-v2/models/FastH3-V2-experimental-4-step/scheduler
+INFO 09-16 15:01:34.876 [component_loader.py:1383] Loading text_encoder using transformers from /home/raqeeb/code/h3-optimization/fast-h3-v2/models/FastH3-V2-experimental-4-step/text_encoder
+INFO 09-16 15:01:34.876 [component_loader.py:299] HF Model config: {'architectures': ['Qwen3VLForConditionalGeneration'], 'image_token_id': 151655, 'text_config': {'attention_bias': False, 'attention_dropout': 0.0, 'bos_token_id': 151643, 'dtype': 'bfloat16', 'eos_token_id': 151645, 'head_dim': 128, 'hidden_act': 'silu', 'hidden_size': 5120, 'initializer_range': 0.02, 'intermediate_size': 25600, 'max_position_embeddings': 262144, 'model_type': 'qwen3_vl_text', 'num_attention_heads': 64, 'num_hidden_layers': 64, 'num_key_value_heads': 8, 'rms_norm_eps': 1e-06, 'rope_scaling': {'mrope_interleaved': True, 'mrope_section': [24, 20, 20], 'rope_type': 'default'}, 'rope_theta': 5000000, 'use_cache': True, 'vocab_size': 151936}, 'tie_word_embeddings': False, 'video_token_id': 151656, 'vision_config': {'deepstack_visual_indexes': [8, 16, 24], 'depth': 27, 'hidden_act': 'gelu_pytorch_tanh', 'hidden_size': 1152, 'in_channels': 3, 'initializer_range': 0.02, 'intermediate_size': 4304, 'model_type': 'qwen3_vl', 'num_heads': 16, 'num_position_embeddings': 2304, 'out_hidden_size': 5120, 'patch_size': 16, 'spatial_merge_size': 2, 'temporal_patch_size': 2}, 'vision_end_token_id': 151653, 'vision_start_token_id': 151652}
+Loading safetensors checkpoint shards:   0% Completed | 0/14 [00:00<?, ?it/s]
+Loading safetensors checkpoint shards:   7% Completed | 1/14 [00:00<00:03,  4.23it/s]
+Loading safetensors checkpoint shards:  14% Completed | 2/14 [00:01<00:07,  1.65it/s]
+Loading safetensors checkpoint shards:  21% Completed | 3/14 [00:02<00:08,  1.33it/s]
+Loading safetensors checkpoint shards:  29% Completed | 4/14 [00:02<00:08,  1.23it/s]
+Loading safetensors checkpoint shards:  36% Completed | 5/14 [00:03<00:07,  1.19it/s]
+Loading safetensors checkpoint shards:  43% Completed | 6/14 [00:04<00:06,  1.16it/s]
+Loading safetensors checkpoint shards:  50% Completed | 7/14 [00:05<00:04,  1.47it/s]
+Loading safetensors checkpoint shards:  71% Completed | 10/14 [00:05<00:01,  2.62it/s]
+Loading safetensors checkpoint shards:  79% Completed | 11/14 [00:05<00:01,  2.55it/s]
+Loading safetensors checkpoint shards:  86% Completed | 12/14 [00:06<00:00,  2.50it/s]
+Loading safetensors checkpoint shards:  93% Completed | 13/14 [00:06<00:00,  2.44it/s]
+Loading safetensors checkpoint shards: 100% Completed | 14/14 [00:07<00:00,  2.37it/s]
+Loading safetensors checkpoint shards: 100% Completed | 14/14 [00:07<00:00,  1.92it/s]
+
+INFO 09-16 15:01:43.774 [component_loader.py:448] Loading weights took 7.38 seconds
+INFO 09-16 15:01:58.270 [composed_pipeline_base.py:626] Loaded module text_encoder from /home/raqeeb/code/h3-optimization/fast-h3-v2/models/FastH3-V2-experimental-4-step/text_encoder
+INFO 09-16 15:01:58.270 [component_loader.py:1383] Loading tokenizer using transformers from /home/raqeeb/code/h3-optimization/fast-h3-v2/models/FastH3-V2-experimental-4-step/tokenizer
+INFO 09-16 15:01:58.270 [component_loader.py:626] Loading tokenizer from /home/raqeeb/code/h3-optimization/fast-h3-v2/models/FastH3-V2-experimental-4-step/tokenizer
+INFO 09-16 15:01:58.414 [component_loader.py:724] Loaded tokenizer: Qwen2Tokenizer
+INFO 09-16 15:01:58.414 [composed_pipeline_base.py:626] Loaded module tokenizer from /home/raqeeb/code/h3-optimization/fast-h3-v2/models/FastH3-V2-experimental-4-step/tokenizer
+INFO 09-16 15:01:58.414 [composed_pipeline_base.py:596] Skipping module transformer
+INFO 09-16 15:01:58.414 [composed_pipeline_base.py:596] Skipping module transformer_ref
+INFO 09-16 15:01:58.414 [composed_pipeline_base.py:596] Skipping module vae
+INFO 09-16 15:01:58.414 [lora_pipeline.py:202] trainable_transformer_modules: dict_keys([])
+INFO 09-16 15:01:58.414 [__init__.py:61] Pipelines instantiated
+[1;36m(Worker pid=2277279)[0;0m INFO 09-16 15:01:58.414 [multiproc_executor.py:677] Worker 0 starting event loop...
+INFO 09-16 15:01:58.414 [multiproc_executor.py:668] 1 workers ready
+BENCHMARK warmup START
+INFO 09-16 15:01:58.416 [utils.py:691] Diffusers version: 0.36.0.dev0
+INFO 09-16 15:01:58.417 [video_generator.py:766] 
+INFO 09-16 15:01:58.417 [video_generator.py:766]                       height: 1280
+INFO 09-16 15:01:58.417 [video_generator.py:766]                        width: 736
+INFO 09-16 15:01:58.417 [video_generator.py:766]                 video_length: 243
+INFO 09-16 15:01:58.417 [video_generator.py:766]                       prompt: integrated_multimodal_description: A polished vertical social-media podcast advertisement in a warm modern studio with wooden shelves, soft amber practical lights, two beige lounge chairs, and bright pink broadcast microphones. Keep both hosts' faces, clothing, hair, and the studio layout consistent across all shots.
+INFO 09-16 15:01:58.417 [video_generator.py:766] 
+INFO 09-16 15:01:58.417 [video_generator.py:766] Shot 1, 0.0-3.5 seconds: Medium close-up of a confident Black woman with long straight black hair, black rectangular glasses, a fitted white top, and blue jeans, seated naturally beside the pink microphone. She gestures casually and says <d>[English] Have you tried that late-night taco place everyone keeps posting?</d>
+INFO 09-16 15:01:58.417 [video_generator.py:766] 
+INFO 09-16 15:01:58.417 [video_generator.py:766] Shot 2, 3.5-6.5 seconds: Clean cinematic food B-roll, an overhead close-up of black-gloved hands plating two colorful street tacos on brown paper, warm tortillas, grilled filling, purple cabbage, cilantro, lime, and glossy red salsa. Visible steam and crisp, realistic food texture. The second host begins speaking off camera: <d>[English] Yes. Fresh tortillas, incredible flavor, and honestly much better than I expected.</d>
+INFO 09-16 15:01:58.417 [video_generator.py:766] 
+INFO 09-16 15:01:58.417 [video_generator.py:766] Shot 3, 6.5-10.0 seconds: Cut back to the same podcast studio, medium close-up of the second host, a light-skinned brunette woman with shoulder-length wavy hair wearing a charcoal ribbed top, seated in the opposite beige chair. She finishes the sentence with natural conversational timing while the first host listens just off camera.
+INFO 09-16 15:01:58.417 [video_generator.py:766] 
+INFO 09-16 15:01:58.417 [video_generator.py:766] Realistic skin, restrained hand gestures, accurate anatomy, stable microphones, natural blinking and lip synchronization, native-looking UGC pacing. Do not render subtitles, logos, watermarks, signs, or on-screen text.
+INFO 09-16 15:01:58.417 [video_generator.py:766] 
+INFO 09-16 15:01:58.417 [video_generator.py:766] overall_soundscape: Clean close-mic podcast dialogue with two distinct natural female voices, subtle quiet studio room tone, and a brief soft tortilla sizzle and plating sound during the taco B-roll. Dialogue stays continuous across the visual cut and remains easy to understand.
+INFO 09-16 15:01:58.417 [video_generator.py:766] 
+INFO 09-16 15:01:58.417 [video_generator.py:766] non_diegetic_music: None.
+INFO 09-16 15:01:58.417 [video_generator.py:766]                       image_path: None
+INFO 09-16 15:01:58.417 [video_generator.py:766]                   neg_prompt: 
+INFO 09-16 15:01:58.417 [video_generator.py:766]                         seed: 42
+INFO 09-16 15:01:58.417 [video_generator.py:766]                  infer_steps: 5
+INFO 09-16 15:01:58.417 [video_generator.py:766]        num_videos_per_prompt: 1
+INFO 09-16 15:01:58.417 [video_generator.py:766]               guidance_scale: 1.0
+INFO 09-16 15:01:58.417 [video_generator.py:766]                     n_tokens: 897920
+INFO 09-16 15:01:58.417 [video_generator.py:766]                   flow_shift: None
+INFO 09-16 15:01:58.417 [video_generator.py:766]      embedded_guidance_scale: None
+INFO 09-16 15:01:58.417 [video_generator.py:766]                   save_video: True
+INFO 09-16 15:01:58.417 [video_generator.py:766]                   output_path: /home/raqeeb/code/h3-optimization/fast-h3-v2/run_4step/warmup.mp4
+INFO 09-16 15:01:58.417 [video_generator.py:766]         
+[1;36m(Worker pid=2277279)[0;0m INFO 09-16 15:01:58.418 [minimax_h3_pipeline.py:82] MiniMax-H3 geometry from config: patch_size=(1, 2, 2) spatial_compression_ratio=16 latent_channels=24
+[1;36m(Worker pid=2277279)[0;0m INFO 09-16 15:01:58.418 [minimax_h3_pipeline.py:195] FastH3 checkpoint schedule: 4 transformer forwards, DMD rungs=[999, 749, 500, 250], video/audio shifts=10.0/3.0
+[1;36m(Worker pid=2277279)[0;0m INFO 09-16 15:01:58.418 [composed_pipeline_base.py:388] Creating pipeline stages...
+[1;36m(Worker pid=2277279)[0;0m INFO 09-16 15:01:58.418 [minimax_h3_pipeline.py:425] Running MiniMax-H3 condition stages before loading DiT/VAE weights
+[1;36m(Worker pid=2277279)[0;0m INFO 09-16 15:01:58.418 [base.py:182] [input_preparation_stage|MiniMaxH3InputPreparationStage] Starting execution
+[1;36m(Worker pid=2277279)[0;0m INFO 09-16 15:01:58.418 [base.py:190] [input_preparation_stage|MiniMaxH3InputPreparationStage] Execution completed in 0.05081598646938801 ms
+[1;36m(Worker pid=2277279)[0;0m INFO 09-16 15:01:58.418 [base.py:182] [conditioning_stage|MiniMaxH3ConditioningStage] Starting execution
+[1;36m(Worker pid=2277279)[0;0m INFO 09-16 15:02:01.891 [base.py:190] [conditioning_stage|MiniMaxH3ConditioningStage] Execution completed in 3472.1960150636733 ms
+[1;36m(Worker pid=2277279)[0;0m INFO 09-16 15:02:01.902 [minimax_h3_pipeline.py:288] Released MiniMax-H3 text encoder after conditioning
+[1;36m(Worker pid=2277279)[0;0m INFO 09-16 15:02:03.023 [minimax_h3_pipeline.py:272] Loading MiniMax-H3 denoise modules after releasing the text encoder: ['vae', 'audio_vae', 'transformer']
+[1;36m(Worker pid=2277279)[0;0m INFO 09-16 15:02:03.024 [utils.py:544] Model already exists locally at /home/raqeeb/code/h3-optimization/fast-h3-v2/models/FastH3-V2-experimental-4-step
+[1;36m(Worker pid=2277279)[0;0m INFO 09-16 15:02:03.024 [composed_pipeline_base.py:471] Model path: /home/raqeeb/code/h3-optimization/fast-h3-v2/models/FastH3-V2-experimental-4-step
+[1;36m(Worker pid=2277279)[0;0m INFO 09-16 15:02:03.024 [utils.py:691] Diffusers version: 0.36.0.dev0
+[1;36m(Worker pid=2277279)[0;0m INFO 09-16 15:02:03.024 [composed_pipeline_base.py:532] Loading pipeline modules from config: {'_blocks_class_name': 'MiniMaxH3Blocks', '_class_name': 'MiniMaxH3ModularPipeline', '_diffusers_version': '0.36.0.dev0', 'audio_scheduler': ['diffusers', 'MiniMaxH3Scheduler', {'pretrained_model_name_or_path': 'FastVideo/FastVideo-FastH3-8-Step-V2', 'revision': None, 'subfolder': 'audio_scheduler', 'type_hint': ['diffusers', 'MiniMaxH3Scheduler'], 'variant': None}], 'audio_vae': ['diffusers', 'AutoencoderKLMiniMaxH3Audio', {'pretrained_model_name_or_path': 'FastVideo/FastVideo-FastH3-8-Step-V2', 'revision': None, 'subfolder': 'audio_vae', 'type_hint': ['diffusers', 'AutoencoderKLMiniMaxH3Audio'], 'variant': None}], 'processor': ['transformers', 'Qwen3VLProcessor', {'pretrained_model_name_or_path': 'FastVideo/FastVideo-FastH3-8-Step-V2', 'revision': None, 'subfolder': 'processor', 'type_hint': ['transformers', 'Qwen3VLProcessor'], 'variant': None}], 'scheduler': ['diffusers', 'MiniMaxH3Scheduler', {'pretrained_model_name_or_path': 'FastVideo/FastVideo-FastH3-8-Step-V2', 'revision': None, 'subfolder': 'scheduler', 'type_hint': ['diffusers', 'MiniMaxH3Scheduler'], 'variant': None}], 'text_encoder': ['transformers', 'Qwen3VLForConditionalGeneration', {'pretrained_model_name_or_path': 'FastVideo/FastVideo-FastH3-8-Step-V2', 'revision': None, 'subfolder': 'text_encoder', 'type_hint': ['transformers', 'Qwen3VLForConditionalGeneration'], 'variant': None}], 'tokenizer': ['transformers', 'Qwen2TokenizerFast', {'pretrained_model_name_or_path': 'FastVideo/FastVideo-FastH3-8-Step-V2', 'revision': None, 'subfolder': 'tokenizer', 'type_hint': ['transformers', 'Qwen2TokenizerFast'], 'variant': None}], 'transformer': ['diffusers', 'MiniMaxH3Transformer3DModel', {'pretrained_model_name_or_path': 'FastVideo/FastVideo-FastH3-8-Step-V2', 'revision': None, 'subfolder': 'transformer', 'type_hint': ['diffusers', 'MiniMaxH3Transformer3DModel'], 'variant': None}], 'transformer_ref': ['diffusers', 'MiniMaxH3Transformer3DModel', {'pretrained_model_name_or_path': 'MiniMaxAI/MiniMax-H3', 'revision': None, 'subfolder': 'transformer_ref', 'type_hint': ['diffusers', 'MiniMaxH3Transformer3DModel'], 'variant': None}], 'vae': ['diffusers', 'AutoencoderKLMiniMaxH3', {'pretrained_model_name_or_path': 'FastVideo/FastVideo-FastH3-8-Step-V2', 'revision': None, 'subfolder': 'vae', 'type_hint': ['diffusers', 'AutoencoderKLMiniMaxH3'], 'variant': None}]}
+[1;36m(Worker pid=2277279)[0;0m INFO 09-16 15:02:03.024 [composed_pipeline_base.py:571] Loading required modules: ['tokenizer', 'processor', 'vae', 'audio_vae', 'transformer', 'scheduler', 'audio_scheduler']
+[1;36m(Worker pid=2277279)[0;0m INFO 09-16 15:02:03.024 [composed_pipeline_base.py:576] Skipping non-module config entry _blocks_class_name=MiniMaxH3Blocks
+[1;36m(Worker pid=2277279)[0;0m INFO 09-16 15:02:03.024 [composed_pipeline_base.py:599] Using module audio_scheduler already provided
+[1;36m(Worker pid=2277279)[0;0m INFO 09-16 15:02:03.024 [component_loader.py:1383] Loading audio_vae using diffusers from /home/raqeeb/code/h3-optimization/fast-h3-v2/models/FastH3-V2-experimental-4-step/audio_vae
+[1;36m(Worker pid=2277279)[0;0m /home/raqeeb/code/h3-optimization/fast-h3-v2/.venv/lib/python3.12/site-packages/torch/nn/utils/weight_norm.py:144: FutureWarning: `torch.nn.utils.weight_norm` is deprecated in favor of `torch.nn.utils.parametrizations.weight_norm`.
+[1;36m(Worker pid=2277279)[0;0m   WeightNorm.apply(module, name, dim)
+[1;36m(Worker pid=2277279)[0;0m INFO 09-16 15:02:03.457 [composed_pipeline_base.py:626] Loaded module audio_vae from /home/raqeeb/code/h3-optimization/fast-h3-v2/models/FastH3-V2-experimental-4-step/audio_vae
+[1;36m(Worker pid=2277279)[0;0m INFO 09-16 15:02:03.457 [composed_pipeline_base.py:599] Using module processor already provided
+[1;36m(Worker pid=2277279)[0;0m INFO 09-16 15:02:03.457 [composed_pipeline_base.py:599] Using module scheduler already provided
+[1;36m(Worker pid=2277279)[0;0m INFO 09-16 15:02:03.457 [composed_pipeline_base.py:596] Skipping module text_encoder
+[1;36m(Worker pid=2277279)[0;0m INFO 09-16 15:02:03.457 [composed_pipeline_base.py:599] Using module tokenizer already provided
+[1;36m(Worker pid=2277279)[0;0m INFO 09-16 15:02:03.457 [component_loader.py:1383] Loading transformer using diffusers from /home/raqeeb/code/h3-optimization/fast-h3-v2/models/FastH3-V2-experimental-4-step/transformer
+[1;36m(Worker pid=2277279)[0;0m INFO 09-16 15:02:03.457 [component_loader.py:1042] transformer cls_name: MiniMaxH3Transformer3DModel
+[1;36m(Worker pid=2277279)[0;0m INFO 09-16 15:02:03.489 [component_loader.py:1094] Loading model from 14 safetensors files: ['/home/raqeeb/code/h3-optimization/fast-h3-v2/models/FastH3-V2-experimental-4-step/transformer/diffusion_pytorch_model-00004-of-00014.safetensors', '/home/raqeeb/code/h3-optimization/fast-h3-v2/models/FastH3-V2-experimental-4-step/transformer/diffusion_pytorch_model-00009-of-00014.safetensors', '/home/raqeeb/code/h3-optimization/fast-h3-v2/models/FastH3-V2-experimental-4-step/transformer/diffusion_pytorch_model-00007-of-00014.safetensors', '/home/raqeeb/code/h3-optimization/fast-h3-v2/models/FastH3-V2-experimental-4-step/transformer/diffusion_pytorch_model-00005-of-00014.safetensors', '/home/raqeeb/code/h3-optimization/fast-h3-v2/models/FastH3-V2-experimental-4-step/transformer/diffusion_pytorch_model-00001-of-00014.safetensors', '/home/raqeeb/code/h3-optimization/fast-h3-v2/models/FastH3-V2-experimental-4-step/transformer/diffusion_pytorch_model-00011-of-00014.safetensors', '/home/raqeeb/code/h3-optimization/fast-h3-v2/models/FastH3-V2-experimental-4-step/transformer/diffusion_pytorch_model-00012-of-00014.safetensors', '/home/raqeeb/code/h3-optimization/fast-h3-v2/models/FastH3-V2-experimental-4-step/transformer/diffusion_pytorch_model-00002-of-00014.safetensors', '/home/raqeeb/code/h3-optimization/fast-h3-v2/models/FastH3-V2-experimental-4-step/transformer/diffusion_pytorch_model-00013-of-00014.safetensors', '/home/raqeeb/code/h3-optimization/fast-h3-v2/models/FastH3-V2-experimental-4-step/transformer/diffusion_pytorch_model-00010-of-00014.safetensors', '/home/raqeeb/code/h3-optimization/fast-h3-v2/models/FastH3-V2-experimental-4-step/transformer/diffusion_pytorch_model-00006-of-00014.safetensors', '/home/raqeeb/code/h3-optimization/fast-h3-v2/models/FastH3-V2-experimental-4-step/transformer/diffusion_pytorch_model-00014-of-00014.safetensors', '/home/raqeeb/code/h3-optimization/fast-h3-v2/models/FastH3-V2-experimental-4-step/transformer/diffusion_pytorch_model-00008-of-00014.safetensors', '/home/raqeeb/code/h3-optimization/fast-h3-v2/models/FastH3-V2-experimental-4-step/transformer/diffusion_pytorch_model-00003-of-00014.safetensors']
+[1;36m(Worker pid=2277279)[0;0m INFO 09-16 15:02:03.489 [component_loader.py:1103] Loading model from MiniMaxH3Transformer3DModel, default_dtype: torch.bfloat16
+[1;36m(Worker pid=2277279)[0;0m INFO 09-16 15:02:03.489 [component_loader.py:1119] Worker 0 transformer attention backend: VIDEO_SPARSE_ATTN_H3
+[1;36m(Worker pid=2277279)[0;0m INFO 09-16 15:02:03.489 [fsdp_load.py:228] Loading model with default_dtype: torch.bfloat16
+[1;36m(Worker pid=2277279)[0;0m INFO 09-16 15:02:03.489 [minimax_h3.py:615] MiniMax H3 inference fusions enabled: modulate,qknorm_rope,swiglu (CUDA inference-only; grad-enabled forwards fall back to eager; torch.compile captures opaque custom-op boundaries).
+[1;36m(Worker pid=2277279)[0;0m WARNING 09-16 15:02:03.490 [selector.py:281] Requested attention backend VIDEO_SPARSE_ATTN_H3 is not supported by this layer; supported backends are ['TORCH_SDPA', 'FLASH_ATTN', 'ATTN_QAT_INFER']. Falling back to automatic selection.
+[1;36m(Worker pid=2277279)[0;0m INFO 09-16 15:02:03.491 [cuda.py:174] Trying FASTVIDEO_ATTENTION_BACKEND=VIDEO_SPARSE_ATTN_H3
+[1;36m(Worker pid=2277279)[0;0m INFO 09-16 15:02:03.491 [cuda.py:175] Selected backend: None
+[1;36m(Worker pid=2277279)[0;0m INFO 09-16 15:02:03.500 [cuda.py:332] Cannot use FlashAttention-2 backend because the flash_attn package is not found. Make sure that flash_attn was built and installed (on by default).
+[1;36m(Worker pid=2277279)[0;0m INFO 09-16 15:02:03.500 [cuda.py:339] Using Torch SDPA backend.
+[1;36m(Worker pid=2277279)[0;0m INFO 09-16 15:02:03.500 [cuda.py:174] Trying FASTVIDEO_ATTENTION_BACKEND=VIDEO_SPARSE_ATTN_H3
+[1;36m(Worker pid=2277279)[0;0m INFO 09-16 15:02:03.501 [cuda.py:175] Selected backend: AttentionBackendEnum.VIDEO_SPARSE_ATTN_H3
+[1;36m(Worker pid=2277279)[0;0m INFO 09-16 15:02:03.501 [cuda.py:249] Using MiniMax-H3 Video Sparse Attention backend.
+[1;36m(Worker pid=2277279)[0;0m INFO 09-16 15:02:03.515 [fsdp_load.py:282] Loading transformer weights with to_cpu=True
+[1;36m(Worker pid=2277279)[0;0m Loading safetensors checkpoint shards:   0% Completed | 0/14 [00:00<?, ?it/s]
+[1;36m(Worker pid=2277279)[0;0m Loading safetensors checkpoint shards: 100% Completed | 14/14 [00:00<00:00, 157.95it/s]
+[1;36m(Worker pid=2277279)[0;0m 
+[1;36m(Worker pid=2277279)[0;0m INFO 09-16 15:02:03.624 [component_loader.py:1155] Loaded model with 35.05B parameters
+[1;36m(Worker pid=2277279)[0;0m INFO 09-16 15:02:40.566 [composed_pipeline_base.py:626] Loaded module transformer from /home/raqeeb/code/h3-optimization/fast-h3-v2/models/FastH3-V2-experimental-4-step/transformer
+[1;36m(Worker pid=2277279)[0;0m INFO 09-16 15:02:40.567 [composed_pipeline_base.py:596] Skipping module transformer_ref
+[1;36m(Worker pid=2277279)[0;0m INFO 09-16 15:02:40.567 [component_loader.py:1383] Loading vae using diffusers from /home/raqeeb/code/h3-optimization/fast-h3-v2/models/FastH3-V2-experimental-4-step/vae
+[1;36m(Worker pid=2277279)[0;0m WARNING 09-16 15:02:41.136 [selector.py:281] Requested attention backend VIDEO_SPARSE_ATTN_H3 is not supported by this layer; supported backends are ['TORCH_SDPA', 'FLASH_ATTN']. Falling back to automatic selection.
+[1;36m(Worker pid=2277279)[0;0m INFO 09-16 15:02:41.137 [cuda.py:174] Trying FASTVIDEO_ATTENTION_BACKEND=VIDEO_SPARSE_ATTN_H3
+[1;36m(Worker pid=2277279)[0;0m INFO 09-16 15:02:41.137 [cuda.py:175] Selected backend: None
+[1;36m(Worker pid=2277279)[0;0m INFO 09-16 15:02:41.139 [cuda.py:332] Cannot use FlashAttention-2 backend because the flash_attn package is not found. Make sure that flash_attn was built and installed (on by default).
+[1;36m(Worker pid=2277279)[0;0m INFO 09-16 15:02:41.139 [cuda.py:339] Using Torch SDPA backend.
+[1;36m(Worker pid=2277279)[0;0m INFO 09-16 15:02:49.744 [composed_pipeline_base.py:626] Loaded module vae from /home/raqeeb/code/h3-optimization/fast-h3-v2/models/FastH3-V2-experimental-4-step/vae
+[1;36m(Worker pid=2277279)[0;0m INFO 09-16 15:02:49.744 [base.py:182] [latent_preparation_stage|MiniMaxH3LatentPreparationStage] Starting execution
+[1;36m(Worker pid=2277279)[0;0m INFO 09-16 15:02:49.766 [base.py:190] [latent_preparation_stage|MiniMaxH3LatentPreparationStage] Execution completed in 22.227650973945856 ms
+[1;36m(Worker pid=2277279)[0;0m INFO 09-16 15:02:49.767 [base.py:182] [denoising_stage|MiniMaxH3DenoisingStage] Starting execution
+[1;36m(Worker pid=2277279)[0;0m INFO 09-16 15:02:49.772 [cuda.py:174] Trying FASTVIDEO_ATTENTION_BACKEND=VIDEO_SPARSE_ATTN_H3
+[1;36m(Worker pid=2277279)[0;0m INFO 09-16 15:02:49.772 [cuda.py:175] Selected backend: AttentionBackendEnum.VIDEO_SPARSE_ATTN_H3
+[1;36m(Worker pid=2277279)[0;0m INFO 09-16 15:02:49.772 [cuda.py:249] Using MiniMax-H3 Video Sparse Attention backend.
+[1;36m(Worker pid=2277279)[0;0m INFO 09-16 15:04:52.105 [base.py:190] [denoising_stage|MiniMaxH3DenoisingStage] Execution completed in 122337.74910192005 ms
+[1;36m(Worker pid=2277279)[0;0m INFO 09-16 15:04:52.105 [base.py:182] [video_decoding_stage|MiniMaxH3VideoDecodingStage] Starting execution
+[1;36m(Worker pid=2277279)[0;0m INFO 09-16 15:05:20.797 [base.py:190] [video_decoding_stage|MiniMaxH3VideoDecodingStage] Execution completed in 28691.325441002846 ms
+[1;36m(Worker pid=2277279)[0;0m INFO 09-16 15:05:20.927 [base.py:182] [audio_decoding_stage|MiniMaxH3AudioDecodingStage] Starting execution
+[1;36m(Worker pid=2277279)[0;0m INFO 09-16 15:05:21.157 [base.py:190] [audio_decoding_stage|MiniMaxH3AudioDecodingStage] Execution completed in 229.70248479396105 ms
+[1;36m(Worker pid=2277279)[0;0m INFO 09-16 15:05:21.662 [multiproc_executor.py:677] Worker 0 starting event loop...
+INFO 09-16 15:05:21.664 [video_generator.py:858] Generated successfully in 203.25 seconds
+INFO 09-16 15:05:22.218 [video_generator.py:913] PostDecodeFrameProcessStage completed in 0.554 s
+INFO 09-16 15:05:22.632 [video_generator.py:1271] Wrote frames to ffmpeg stdin in 0.410 s
+INFO 09-16 15:05:22.654 [video_generator.py:984] Saved video to /home/raqeeb/code/h3-optimization/fast-h3-v2/run_4step/warmup.mp4
+INFO 09-16 15:05:22.654 [video_generator.py:986] VideoSaveStage completed in 0.436 s
+INFO 09-16 15:05:22.654 [video_generator.py:989] AudioMuxStage completed in 0.000 s
+INFO 09-16 15:05:22.654 [video_generator.py:994] End-to-end latency: 204.24 seconds
+BENCHMARK warmup COMPLETE 204.269s
+BENCHMARK measured START
+INFO 09-16 15:05:22.907 [utils.py:691] Diffusers version: 0.36.0.dev0
+INFO 09-16 15:05:22.908 [video_generator.py:766] 
+INFO 09-16 15:05:22.908 [video_generator.py:766]                       height: 1280
+INFO 09-16 15:05:22.908 [video_generator.py:766]                        width: 736
+INFO 09-16 15:05:22.908 [video_generator.py:766]                 video_length: 243
+INFO 09-16 15:05:22.908 [video_generator.py:766]                       prompt: integrated_multimodal_description: A polished vertical social-media podcast advertisement in a warm modern studio with wooden shelves, soft amber practical lights, two beige lounge chairs, and bright pink broadcast microphones. Keep both hosts' faces, clothing, hair, and the studio layout consistent across all shots.
+INFO 09-16 15:05:22.908 [video_generator.py:766] 
+INFO 09-16 15:05:22.908 [video_generator.py:766] Shot 1, 0.0-3.5 seconds: Medium close-up of a confident Black woman with long straight black hair, black rectangular glasses, a fitted white top, and blue jeans, seated naturally beside the pink microphone. She gestures casually and says <d>[English] Have you tried that late-night taco place everyone keeps posting?</d>
+INFO 09-16 15:05:22.908 [video_generator.py:766] 
+INFO 09-16 15:05:22.908 [video_generator.py:766] Shot 2, 3.5-6.5 seconds: Clean cinematic food B-roll, an overhead close-up of black-gloved hands plating two colorful street tacos on brown paper, warm tortillas, grilled filling, purple cabbage, cilantro, lime, and glossy red salsa. Visible steam and crisp, realistic food texture. The second host begins speaking off camera: <d>[English] Yes. Fresh tortillas, incredible flavor, and honestly much better than I expected.</d>
+INFO 09-16 15:05:22.908 [video_generator.py:766] 
+INFO 09-16 15:05:22.908 [video_generator.py:766] Shot 3, 6.5-10.0 seconds: Cut back to the same podcast studio, medium close-up of the second host, a light-skinned brunette woman with shoulder-length wavy hair wearing a charcoal ribbed top, seated in the opposite beige chair. She finishes the sentence with natural conversational timing while the first host listens just off camera.
+INFO 09-16 15:05:22.908 [video_generator.py:766] 
+INFO 09-16 15:05:22.908 [video_generator.py:766] Realistic skin, restrained hand gestures, accurate anatomy, stable microphones, natural blinking and lip synchronization, native-looking UGC pacing. Do not render subtitles, logos, watermarks, signs, or on-screen text.
+INFO 09-16 15:05:22.908 [video_generator.py:766] 
+INFO 09-16 15:05:22.908 [video_generator.py:766] overall_soundscape: Clean close-mic podcast dialogue with two distinct natural female voices, subtle quiet studio room tone, and a brief soft tortilla sizzle and plating sound during the taco B-roll. Dialogue stays continuous across the visual cut and remains easy to understand.
+INFO 09-16 15:05:22.908 [video_generator.py:766] 
+INFO 09-16 15:05:22.908 [video_generator.py:766] non_diegetic_music: None.
+INFO 09-16 15:05:22.908 [video_generator.py:766]                       image_path: None
+INFO 09-16 15:05:22.908 [video_generator.py:766]                   neg_prompt: 
+INFO 09-16 15:05:22.908 [video_generator.py:766]                         seed: 42
+INFO 09-16 15:05:22.908 [video_generator.py:766]                  infer_steps: 5
+INFO 09-16 15:05:22.908 [video_generator.py:766]        num_videos_per_prompt: 1
+INFO 09-16 15:05:22.908 [video_generator.py:766]               guidance_scale: 1.0
+INFO 09-16 15:05:22.908 [video_generator.py:766]                     n_tokens: 897920
+INFO 09-16 15:05:22.908 [video_generator.py:766]                   flow_shift: None
+INFO 09-16 15:05:22.908 [video_generator.py:766]      embedded_guidance_scale: None
+INFO 09-16 15:05:22.908 [video_generator.py:766]                   save_video: True
+INFO 09-16 15:05:22.908 [video_generator.py:766]                   output_path: /home/raqeeb/code/h3-optimization/fast-h3-v2/run_4step/measured.mp4
+INFO 09-16 15:05:22.908 [video_generator.py:766]         
+[1;36m(Worker pid=2277279)[0;0m INFO 09-16 15:05:22.909 [minimax_h3_pipeline.py:305] Reloading MiniMax-H3 text encoder for a subsequent request
+[1;36m(Worker pid=2277279)[0;0m INFO 09-16 15:05:22.909 [utils.py:544] Model already exists locally at /home/raqeeb/code/h3-optimization/fast-h3-v2/models/FastH3-V2-experimental-4-step
+[1;36m(Worker pid=2277279)[0;0m INFO 09-16 15:05:22.909 [composed_pipeline_base.py:471] Model path: /home/raqeeb/code/h3-optimization/fast-h3-v2/models/FastH3-V2-experimental-4-step
+[1;36m(Worker pid=2277279)[0;0m INFO 09-16 15:05:22.909 [utils.py:691] Diffusers version: 0.36.0.dev0
+[1;36m(Worker pid=2277279)[0;0m INFO 09-16 15:05:22.909 [composed_pipeline_base.py:532] Loading pipeline modules from config: {'_blocks_class_name': 'MiniMaxH3Blocks', '_class_name': 'MiniMaxH3ModularPipeline', '_diffusers_version': '0.36.0.dev0', 'audio_scheduler': ['diffusers', 'MiniMaxH3Scheduler', {'pretrained_model_name_or_path': 'FastVideo/FastVideo-FastH3-8-Step-V2', 'revision': None, 'subfolder': 'audio_scheduler', 'type_hint': ['diffusers', 'MiniMaxH3Scheduler'], 'variant': None}], 'audio_vae': ['diffusers', 'AutoencoderKLMiniMaxH3Audio', {'pretrained_model_name_or_path': 'FastVideo/FastVideo-FastH3-8-Step-V2', 'revision': None, 'subfolder': 'audio_vae', 'type_hint': ['diffusers', 'AutoencoderKLMiniMaxH3Audio'], 'variant': None}], 'processor': ['transformers', 'Qwen3VLProcessor', {'pretrained_model_name_or_path': 'FastVideo/FastVideo-FastH3-8-Step-V2', 'revision': None, 'subfolder': 'processor', 'type_hint': ['transformers', 'Qwen3VLProcessor'], 'variant': None}], 'scheduler': ['diffusers', 'MiniMaxH3Scheduler', {'pretrained_model_name_or_path': 'FastVideo/FastVideo-FastH3-8-Step-V2', 'revision': None, 'subfolder': 'scheduler', 'type_hint': ['diffusers', 'MiniMaxH3Scheduler'], 'variant': None}], 'text_encoder': ['transformers', 'Qwen3VLForConditionalGeneration', {'pretrained_model_name_or_path': 'FastVideo/FastVideo-FastH3-8-Step-V2', 'revision': None, 'subfolder': 'text_encoder', 'type_hint': ['transformers', 'Qwen3VLForConditionalGeneration'], 'variant': None}], 'tokenizer': ['transformers', 'Qwen2TokenizerFast', {'pretrained_model_name_or_path': 'FastVideo/FastVideo-FastH3-8-Step-V2', 'revision': None, 'subfolder': 'tokenizer', 'type_hint': ['transformers', 'Qwen2TokenizerFast'], 'variant': None}], 'transformer': ['diffusers', 'MiniMaxH3Transformer3DModel', {'pretrained_model_name_or_path': 'FastVideo/FastVideo-FastH3-8-Step-V2', 'revision': None, 'subfolder': 'transformer', 'type_hint': ['diffusers', 'MiniMaxH3Transformer3DModel'], 'variant': None}], 'transformer_ref': ['diffusers', 'MiniMaxH3Transformer3DModel', {'pretrained_model_name_or_path': 'MiniMaxAI/MiniMax-H3', 'revision': None, 'subfolder': 'transformer_ref', 'type_hint': ['diffusers', 'MiniMaxH3Transformer3DModel'], 'variant': None}], 'vae': ['diffusers', 'AutoencoderKLMiniMaxH3', {'pretrained_model_name_or_path': 'FastVideo/FastVideo-FastH3-8-Step-V2', 'revision': None, 'subfolder': 'vae', 'type_hint': ['diffusers', 'AutoencoderKLMiniMaxH3'], 'variant': None}]}
+[1;36m(Worker pid=2277279)[0;0m INFO 09-16 15:05:22.909 [composed_pipeline_base.py:571] Loading required modules: ['text_encoder']
+[1;36m(Worker pid=2277279)[0;0m INFO 09-16 15:05:22.909 [composed_pipeline_base.py:576] Skipping non-module config entry _blocks_class_name=MiniMaxH3Blocks
+[1;36m(Worker pid=2277279)[0;0m INFO 09-16 15:05:22.909 [composed_pipeline_base.py:596] Skipping module audio_scheduler
+[1;36m(Worker pid=2277279)[0;0m INFO 09-16 15:05:22.909 [composed_pipeline_base.py:596] Skipping module audio_vae
+[1;36m(Worker pid=2277279)[0;0m INFO 09-16 15:05:22.909 [composed_pipeline_base.py:596] Skipping module processor
+[1;36m(Worker pid=2277279)[0;0m INFO 09-16 15:05:22.909 [composed_pipeline_base.py:596] Skipping module scheduler
+[1;36m(Worker pid=2277279)[0;0m INFO 09-16 15:05:22.909 [component_loader.py:1383] Loading text_encoder using transformers from /home/raqeeb/code/h3-optimization/fast-h3-v2/models/FastH3-V2-experimental-4-step/text_encoder
+[1;36m(Worker pid=2277279)[0;0m INFO 09-16 15:05:22.910 [component_loader.py:299] HF Model config: {'architectures': ['Qwen3VLForConditionalGeneration'], 'image_token_id': 151655, 'text_config': {'attention_bias': False, 'attention_dropout': 0.0, 'bos_token_id': 151643, 'dtype': 'bfloat16', 'eos_token_id': 151645, 'head_dim': 128, 'hidden_act': 'silu', 'hidden_size': 5120, 'initializer_range': 0.02, 'intermediate_size': 25600, 'max_position_embeddings': 262144, 'model_type': 'qwen3_vl_text', 'num_attention_heads': 64, 'num_hidden_layers': 64, 'num_key_value_heads': 8, 'rms_norm_eps': 1e-06, 'rope_scaling': {'mrope_interleaved': True, 'mrope_section': [24, 20, 20], 'rope_type': 'default'}, 'rope_theta': 5000000, 'use_cache': True, 'vocab_size': 151936}, 'tie_word_embeddings': False, 'video_token_id': 151656, 'vision_config': {'deepstack_visual_indexes': [8, 16, 24], 'depth': 27, 'hidden_act': 'gelu_pytorch_tanh', 'hidden_size': 1152, 'in_channels': 3, 'initializer_range': 0.02, 'intermediate_size': 4304, 'model_type': 'qwen3_vl', 'num_heads': 16, 'num_position_embeddings': 2304, 'out_hidden_size': 5120, 'patch_size': 16, 'spatial_merge_size': 2, 'temporal_patch_size': 2}, 'vision_end_token_id': 151653, 'vision_start_token_id': 151652}
+[1;36m(Worker pid=2277279)[0;0m Loading safetensors checkpoint shards:   0% Completed | 0/14 [00:00<?, ?it/s]
+[1;36m(Worker pid=2277279)[0;0m Loading safetensors checkpoint shards:   7% Completed | 1/14 [00:00<00:03,  4.18it/s]
+[1;36m(Worker pid=2277279)[0;0m Loading safetensors checkpoint shards:  14% Completed | 2/14 [00:01<00:07,  1.67it/s]
+[1;36m(Worker pid=2277279)[0;0m Loading safetensors checkpoint shards:  21% Completed | 3/14 [00:01<00:08,  1.36it/s]
+[1;36m(Worker pid=2277279)[0;0m Loading safetensors checkpoint shards:  29% Completed | 4/14 [00:03<00:11,  1.18s/it]
+[1;36m(Worker pid=2277279)[0;0m Loading safetensors checkpoint shards:  36% Completed | 5/14 [00:06<00:14,  1.57s/it]
+[1;36m(Worker pid=2277279)[0;0m Loading safetensors checkpoint shards:  43% Completed | 6/14 [00:07<00:10,  1.35s/it]
+[1;36m(Worker pid=2277279)[0;0m Loading safetensors checkpoint shards:  50% Completed | 7/14 [00:07<00:07,  1.03s/it]
+[1;36m(Worker pid=2277279)[0;0m Loading safetensors checkpoint shards:  71% Completed | 10/14 [00:08<00:02,  1.68it/s]
+[1;36m(Worker pid=2277279)[0;0m Loading safetensors checkpoint shards:  79% Completed | 11/14 [00:09<00:01,  1.50it/s]
+[1;36m(Worker pid=2277279)[0;0m Loading safetensors checkpoint shards:  86% Completed | 12/14 [00:14<00:03,  1.76s/it]
+[1;36m(Worker pid=2277279)[0;0m Loading safetensors checkpoint shards:  93% Completed | 13/14 [00:15<00:01,  1.55s/it]
+[1;36m(Worker pid=2277279)[0;0m Loading safetensors checkpoint shards: 100% Completed | 14/14 [00:16<00:00,  1.39s/it]
+[1;36m(Worker pid=2277279)[0;0m Loading safetensors checkpoint shards: 100% Completed | 14/14 [00:16<00:00,  1.17s/it]
+[1;36m(Worker pid=2277279)[0;0m 
+[1;36m(Worker pid=2277279)[0;0m INFO 09-16 15:05:41.356 [component_loader.py:448] Loading weights took 16.46 seconds
+[1;36m(Worker pid=2277279)[0;0m INFO 09-16 15:06:02.291 [composed_pipeline_base.py:626] Loaded module text_encoder from /home/raqeeb/code/h3-optimization/fast-h3-v2/models/FastH3-V2-experimental-4-step/text_encoder
+[1;36m(Worker pid=2277279)[0;0m INFO 09-16 15:06:02.292 [composed_pipeline_base.py:596] Skipping module tokenizer
+[1;36m(Worker pid=2277279)[0;0m INFO 09-16 15:06:02.292 [composed_pipeline_base.py:596] Skipping module transformer
+[1;36m(Worker pid=2277279)[0;0m INFO 09-16 15:06:02.292 [composed_pipeline_base.py:596] Skipping module transformer_ref
+[1;36m(Worker pid=2277279)[0;0m INFO 09-16 15:06:02.292 [composed_pipeline_base.py:596] Skipping module vae
+[1;36m(Worker pid=2277279)[0;0m INFO 09-16 15:06:02.292 [minimax_h3_pipeline.py:423] Running MiniMax-H3 condition stages before denoise (subsequent request)
+[1;36m(Worker pid=2277279)[0;0m INFO 09-16 15:06:02.292 [base.py:182] [input_preparation_stage|MiniMaxH3InputPreparationStage] Starting execution
+[1;36m(Worker pid=2277279)[0;0m INFO 09-16 15:06:02.293 [base.py:190] [input_preparation_stage|MiniMaxH3InputPreparationStage] Execution completed in 0.5474700592458248 ms
+[1;36m(Worker pid=2277279)[0;0m INFO 09-16 15:06:02.293 [base.py:182] [conditioning_stage|MiniMaxH3ConditioningStage] Starting execution
+[1;36m(Worker pid=2277279)[0;0m INFO 09-16 15:06:05.737 [base.py:190] [conditioning_stage|MiniMaxH3ConditioningStage] Execution completed in 3443.7517900951207 ms
+[1;36m(Worker pid=2277279)[0;0m INFO 09-16 15:06:05.739 [minimax_h3_pipeline.py:288] Released MiniMax-H3 text encoder after conditioning
+[1;36m(Worker pid=2277279)[0;0m INFO 09-16 15:06:08.413 [base.py:182] [latent_preparation_stage|MiniMaxH3LatentPreparationStage] Starting execution
+[1;36m(Worker pid=2277279)[0;0m INFO 09-16 15:06:08.441 [base.py:190] [latent_preparation_stage|MiniMaxH3LatentPreparationStage] Execution completed in 27.579620014876127 ms
+[1;36m(Worker pid=2277279)[0;0m INFO 09-16 15:06:08.441 [base.py:182] [denoising_stage|MiniMaxH3DenoisingStage] Starting execution
+[1;36m(Worker pid=2277279)[0;0m INFO 09-16 15:07:54.757 [base.py:190] [denoising_stage|MiniMaxH3DenoisingStage] Execution completed in 106316.01526704617 ms
+[1;36m(Worker pid=2277279)[0;0m INFO 09-16 15:07:54.758 [base.py:182] [video_decoding_stage|MiniMaxH3VideoDecodingStage] Starting execution
+[1;36m(Worker pid=2277279)[0;0m INFO 09-16 15:08:26.207 [base.py:190] [video_decoding_stage|MiniMaxH3VideoDecodingStage] Execution completed in 31449.651058996096 ms
+[1;36m(Worker pid=2277279)[0;0m INFO 09-16 15:08:26.341 [base.py:182] [audio_decoding_stage|MiniMaxH3AudioDecodingStage] Starting execution
+[1;36m(Worker pid=2277279)[0;0m INFO 09-16 15:08:26.672 [base.py:190] [audio_decoding_stage|MiniMaxH3AudioDecodingStage] Execution completed in 330.9055999852717 ms
+[1;36m(Worker pid=2277279)[0;0m INFO 09-16 15:08:27.393 [multiproc_executor.py:677] Worker 0 starting event loop...
+INFO 09-16 15:08:27.436 [video_generator.py:858] Generated successfully in 184.53 seconds
+INFO 09-16 15:08:28.245 [video_generator.py:913] PostDecodeFrameProcessStage completed in 0.802 s
+INFO 09-16 15:08:28.611 [video_generator.py:1271] Wrote frames to ffmpeg stdin in 0.340 s
+INFO 09-16 15:08:28.636 [video_generator.py:984] Saved video to /home/raqeeb/code/h3-optimization/fast-h3-v2/run_4step/measured.mp4
+INFO 09-16 15:08:28.636 [video_generator.py:986] VideoSaveStage completed in 0.390 s
+INFO 09-16 15:08:28.636 [video_generator.py:989] AudioMuxStage completed in 0.000 s
+INFO 09-16 15:08:28.636 [video_generator.py:994] End-to-end latency: 185.73 seconds
+BENCHMARK measured COMPLETE 185.787s
+INFO 09-16 15:08:29.587 [multiproc_executor.py:337] Shutting down MultiprocExecutor...
+[1;36m(Worker pid=2277279)[0;0m INFO 09-16 15:08:29.588 [gpu_worker.py:108] Worker 0 shutting down...
+[1;36m(Worker pid=2277279)[0;0m INFO 09-16 15:08:29.932 [gpu_worker.py:117] Worker 0 shutdown complete
+[1;36m(Worker pid=2277279)[0;0m INFO 09-16 15:08:30.089 [gpu_worker.py:108] Worker 0 shutting down...
+[1;36m(Worker pid=2277279)[0;0m INFO 09-16 15:08:30.320 [gpu_worker.py:117] Worker 0 shutdown complete
+INFO 09-16 15:08:38.570 [multiproc_executor.py:392] MultiprocExecutor shutdown complete

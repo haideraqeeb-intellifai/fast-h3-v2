@@ -1,0 +1,7 @@
+nsight-work/systems.json filter=lfs diff=lfs merge=lfs -text
+nsight-work/measured.nsys-rep filter=lfs diff=lfs merge=lfs -text
+nsight-work/measured.sqlite filter=lfs diff=lfs merge=lfs -text
+nsight-work/gpu_metrics_raw.csv.gz filter=lfs diff=lfs merge=lfs -text
+h3-ref2va-4step-nsight-reproduction/assets/measured.nsys-rep filter=lfs diff=lfs merge=lfs -text
+h3-ref2va-4step-nsight-reproduction/assets/gpu_metrics_raw.csv.gz filter=lfs diff=lfs merge=lfs -text
+h3-ref2va-4step-nsight-reproduction/assets/measured.sqlite.gz filter=lfs diff=lfs merge=lfs -text

@@ -1,0 +1,9 @@
+[submodule "fastvideo-kernel/include/tk"]
+	path = work/FastVideo/fastvideo-kernel/include/tk
+	url = https://github.com/HazyResearch/ThunderKittens.git
+[submodule "fastvideo-kernel/include/cutlass"]
+	path = work/FastVideo/fastvideo-kernel/include/cutlass
+	url = https://github.com/NVIDIA/cutlass.git
+[submodule "fastvideo/third_party/eval/vbench"]
+	path = work/FastVideo/fastvideo/third_party/eval/vbench
+	url = https://github.com/Vchitect/VBench.git
