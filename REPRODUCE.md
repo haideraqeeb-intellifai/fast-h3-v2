@@ -1,5 +1,7 @@
 # Reproduce the FastH3 V2 configurations
 
+Both benchmark experiments were run on **September 16, 2026 (UTC)**, as recorded in their saved `report.json` timestamps.
+
 The recorded environment was Linux, Python 3.12.13, PyTorch 2.12.0+cu130, Triton 3.7.0 and an NVIDIA RTX 5090 with 32 GB VRAM. The full installed package list is `work/packages.txt`; its editable-package path is historical. Model weights occupy approximately 148 GB on disk. CPU offloading needs substantial host RAM; see `work/hardware.json` and the saved memory samples. Do not infer sufficient RAM from GPU capacity alone.
 
 ## Get the publication and install

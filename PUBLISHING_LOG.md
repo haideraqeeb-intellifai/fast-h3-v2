@@ -16,3 +16,7 @@ Validation: decoder switching round-trip and wrong-policy rejection passed; root
 Large non-weight resources use Git LFS. GitHub's [large-file rules](https://docs.github.com/en/repositories/working-with-files/managing-large-files/about-large-files-on-github) and [LFS per-file limits](https://docs.github.com/en/repositories/working-with-files/managing-large-files/about-git-large-file-storage) were checked on the publication date. The largest object is the 1,988,030,464-byte Nsight SQLite trace.
 
 GitHub initially rejected two vendored upstream blobs as possible Mistral keys. Review found their shared 32-character match was the public Python model class name `Mistral3ForConditionalGeneration`, defined in `fastvideo/models/encoders/mistral3.py` and used by the registry and Flux2 parity test. GitHub accepted the specific `false_positive` resolution through its push-protection API. Source was preserved and repository secret protection was not disabled.
+
+## 2026-09-25 21:41:02 UTC — document experiment date
+
+Added September 16, 2026 (UTC) as the experiment date in the README and reproduction guide. Verified both runs' start and finish timestamps in their saved reports fall on that date. The eight-step benchmark process ran from 14:25:08 to 14:36:06 UTC; the four-step no-copyback process ran from 15:35:17 to 15:42:13 UTC. These windows include initialization, warm-up and measured generation.

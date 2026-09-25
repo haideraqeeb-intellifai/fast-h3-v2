@@ -1,5 +1,7 @@
 # FastH3 V2 — RTX 5090 benchmark configurations
 
+**Experiment date: September 16, 2026 (UTC)** for both configurations, verified from the timestamps in `run/report.json` and `run_4step_no_copyback/report.json`.
+
 Code, patches, model metadata, generated videos and measurement evidence for two matched-input FastH3 V2 runs:
 
 | Configuration | Measured full generation | Denoising | Saved run |
